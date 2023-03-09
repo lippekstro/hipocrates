@@ -21,6 +21,9 @@
     margin: 0 1rem;
     margin-top: 1.5rem;
 }
+#logo:hover{
+    cursor: pointer;
+}
 
 #user-logo {
     display: flex;
@@ -34,15 +37,33 @@
 .user-btn {
     /* background-color: rgb(64, 90, 208); */
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
 }
 .cores{
-    background-color: rgb(97, 83, 255);
-    padding: 10px;
+    background-color: rgb(83, 100, 255);
+    padding: 1rem;
+    margin-top: 3rem;
 }
 .cores:hover{
     cursor: pointer;
+    transition: 1.5s;
+    background-color: rgb(51, 62, 164);
 }
+.txt-center{
+    font-size: 45pt;
+    margin-left: 11%;
+    color: aliceblue;
+}
+
+.conteiner{
+    background-color: rgb(62, 62, 203);
+    width: 10px;
+}
+.horarios{
+    background-color: rgb(62, 62, 203);
+    margin-top: 5rem;
+}
+
 
 a {
     margin: 0 1.5rem;
