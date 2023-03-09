@@ -6,9 +6,3 @@
     box-sizing: border-box;
     /* coloque o font-family adequado */
 }
-#nav-bar{
-    margin-left: 1.5rem;
-}
-.cabeçalho{
-background-color: rgb(67, 130, 255);
-}
