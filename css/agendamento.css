@@ -7,11 +7,6 @@
     /* coloque o font-family adequado */
 }
 
-#nav-bar {
-    /* margin-left: 1.5rem; */
-    /* margin-top: 5.5rem; */
-}
-
 .cabeçalho {
     background-color: rgb(16, 46, 106);
 }
@@ -44,6 +39,9 @@
 .cores{
     background-color: rgb(97, 83, 255);
     padding: 10px;
+}
+.cores:hover{
+    cursor: pointer;
 }
 
 a {
