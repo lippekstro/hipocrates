@@ -14,6 +14,9 @@
 
 .cabeçalho {
     background-color: rgb(16, 46, 106);
+    display:flex;
+    position: relative;
+    
 }
 
 #list {
@@ -44,6 +47,10 @@
 .cores{
     background-color: rgb(97, 83, 255);
     padding: 10px;
+    position: absolute;
+    right:0;
+    bottom: 50%;
+    transform: 0 -50%;
 }
 
 a {
