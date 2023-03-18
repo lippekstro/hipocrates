@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hipócrates</title>
     <link rel="shortcut icon" href="" type="image/x-icon" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="css/style.css" />
 </head>
 
@@ -17,17 +18,17 @@
             <div class="iconBar">
                 <div id="mySidenav" class="sidenav">
                     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                    <a href="#"><img src="logo" alt="logo" /><span>Segurança e Saúde</span></a>
-                    <a href="#">Agendar Consulta</a>
-                    <a href="#">Histórico de Consultas</a>
-                    <a href="#">Doações</a>
-                    <a href="#">Meus Dados</a>
+                    <a href="#"><img src="./imgs/SUS.png" alt="logo" width="100px" />
+                        <a href="#">Agendar Consulta</a>
+                        <a href="#">Histórico de Consultas</a>
+                        <a href="#">Doações</a>
+                        <a href="#">Meus Dados</a>
                 </div>
                 <div id="main">
                     <span style="font-size: 30px; cursor: pointer; color:white" onclick="openNav()">&#9776;</span>
                 </div>
                 <div class="logo">
-                    <img src="logo" alt="logo" />
+                    <img src="./imgs/SUS.png" alt="logo" width="100px" />
                 </div>
             </div>
 
@@ -51,8 +52,8 @@
                         </div>
                     </div>
                 </nav>
-                <div class="LOGIN">
-                    <button type="button">Login</button>
+                <div class="login">
+                    <input type="submit" class="submit" value="Login">
                 </div>
             </div>
 
