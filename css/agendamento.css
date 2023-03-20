@@ -17,7 +17,8 @@
 }
 
 #logo {
-    width: 100px;
+    width: 3%;
+    height: 2%;
     margin: 0 1rem;
     margin-top: 1.5rem;
 }
@@ -33,6 +34,9 @@
     /* background-color: rgb(64, 90, 208); */
 
 }
+#user-class{
+    font-size: 25pt;
+}
 
 .user-btn {
     /* background-color: rgb(64, 90, 208); */
@@ -41,27 +45,37 @@
 }
 .cores{
     background-color: rgb(83, 100, 255);
-    padding: 1rem;
-    margin-top: 3rem;
+    padding: 0.5rem;
+    margin-top: 2rem;
+    align-self: center;
 }
+
 .cores:hover{
     cursor: pointer;
     transition: 1.5s;
     background-color: rgb(51, 62, 164);
 }
 .txt-center{
-    font-size: 45pt;
-    margin-left: 11%;
+    font-size: 35pt;
+    margin-left: 6rem;
     color: aliceblue;
 }
 
 .conteiner{
-    background-color: rgb(62, 62, 203);
-    width: 10px;
+    display:flex;
+    flex-direction: column;
+    
+    
 }
-.horarios{
-    background-color: rgb(62, 62, 203);
-    margin-top: 5rem;
+.horarios > p{
+    background-color: rgb(111, 111, 255);
+    margin-top: 2.5rem;
+    padding-top:1rem ;
+    padding-bottom:1rem;
+}
+
+.horarios > p:hover{
+    cursor: pointer;
 }
 
 
