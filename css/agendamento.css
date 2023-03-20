@@ -9,6 +9,9 @@
 
 .cabeçalho {
     background-color: rgb(16, 46, 106);
+    display:flex;
+    position: relative;
+    
 }
 
 #list {
@@ -19,7 +22,7 @@
 #logo {
     width: 3%;
     height: 2%;
-    margin: 0 1rem;
+    margin: 1rem;
     margin-top: 1.5rem;
 }
 #logo:hover{
@@ -30,7 +33,7 @@
     display: flex;
     justify-content: flex-end;
     font-size: 30pt;
-    color: aliceblue;
+    color: pink;
     /* background-color: rgb(64, 90, 208); */
 
 }
@@ -45,9 +48,8 @@
 }
 .cores{
     background-color: rgb(83, 100, 255);
-    padding: 0.5rem;
-    margin-top: 2rem;
-    align-self: center;
+    padding: 1rem;
+    margin-top: 3rem;
 }
 
 .cores:hover{
