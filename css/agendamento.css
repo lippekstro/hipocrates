@@ -18,7 +18,7 @@ body {
 .cabeçalho {
     background-color: rgb(16, 46, 106);
     display: flex;
-
+    justify-content: center;
 }
 
 #list {
@@ -27,7 +27,7 @@ body {
 }
 
 #logo {
-    width: 3%;
+    width: 6%;
     height: 2%;
     margin: 1rem;
     margin-top: 1.5rem;
@@ -50,6 +50,21 @@ body {
     font-size: 25pt;
 }
 
+#calendario{
+    font-size: 20pt;
+}
+.calendario{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    
+}
+.calendario > p{
+    font-size: 20pt;
+    color: aliceblue;
+}
 .user-btn {
     /* background-color: rgb(64, 90, 208); */
     display: flex;
@@ -84,9 +99,9 @@ body {
 .horarios>p {
     background-color: rgb(16 46 106);
     color: aliceblue;
-    margin-top: 2.5rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    margin-top: 1.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
     font-size: 17pt;
 }
 
