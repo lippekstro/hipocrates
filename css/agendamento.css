@@ -7,11 +7,18 @@
     /* coloque o font-family adequado */
 }
 
+body {
+    background-image: linear-gradient(to right, rgba(16, 46, 106, 0.786), rgba(16, 46, 106, 0.78)), url("https://www.cliquemedicos.com.br/blog/wp-content/uploads/2020/01/Cl%C3%ADnico-M%C3%A9dico-scaled.jpg");
+    background-position: 0 2rem;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
 .cabeçalho {
     background-color: rgb(16, 46, 106);
-    display:flex;
-    position: relative;
-    
+    display: flex;
+    justify-content: center;
 }
 
 #list {
@@ -20,12 +27,13 @@
 }
 
 #logo {
-    width: 3%;
+    width: 6%;
     height: 2%;
     margin: 1rem;
     margin-top: 1.5rem;
 }
-#logo:hover{
+
+#logo:hover {
     cursor: pointer;
 }
 
@@ -33,36 +41,55 @@
     display: flex;
     justify-content: flex-end;
     font-size: 30pt;
-    color: pink;
+    color: rgb(255, 255, 255);
     /* background-color: rgb(64, 90, 208); */
 
 }
-#user-class{
+
+#user-class {
     font-size: 25pt;
 }
 
+#calendario{
+    font-size: 20pt;
+}
+.calendario{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    
+}
+.calendario > p{
+    font-size: 20pt;
+    color: aliceblue;
+}
 .user-btn {
     /* background-color: rgb(64, 90, 208); */
     display: flex;
     justify-content: space-between;
 }
-.cores{
+
+.cores {
     background-color: rgb(83, 100, 255);
     padding: 1rem;
     margin-top: 3rem;
 }
 
-.cores:hover{
+.cores:hover {
     cursor: pointer;
     transition: 1.5s;
     background-color: rgb(51, 62, 164);
 }
-.txt-center{
+
+.txt-center {
     font-size: 35pt;
     margin-left: 6rem;
     color: aliceblue;
 }
 
+<<<<<<< HEAD
 .principal{
     display:flex;
     flex-direction: row;
@@ -94,6 +121,25 @@
 }
 
 .horarios > p{
+=======
+.conteiner {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+
+}
+
+.horarios>p {
+    background-color: rgb(16 46 106);
+    color: aliceblue;
+    margin-top: 1.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-size: 17pt;
+}
+
+.horarios>p:hover {
+>>>>>>> 3a6aba56cd222133f68a0e8d528a99b44fa17ca1
     cursor: pointer;
 }
 
@@ -110,9 +156,28 @@ p {
     font-family: Comic Sans MS;
 }
 
+<<<<<<< HEAD
 .horarios > p{
    
     width: 3rem;
     height: 30px;
     overflow: auto;
+=======
+.main-conteiner {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.conteiner-side {
+    display: flex;
+    width: 20%;
+
+}
+
+.hora-certa {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-evenly;
+>>>>>>> 3a6aba56cd222133f68a0e8d528a99b44fa17ca1
 }
