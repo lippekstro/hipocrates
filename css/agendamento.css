@@ -121,11 +121,28 @@ header{
     color: aliceblue;
 }
 
-.conteiner {
-    display: flex;
-    flex-direction: column;
-    width: 80%;
+.principal{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    position: absolute;
+    width: 100%;
+}
 
+.calendario{
+    display:flex;
+    position: relative;
+    width: 50%;
+   
+}
+
+.conteiner{
+    display:flex;
+    position: relative;
+    width: 50%;
+    flex-direction: column;
+    
+    
 }
 
 .horarios>p {
@@ -134,10 +151,10 @@ header{
     margin-top: 1.5rem;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
-    font-size: 20pt;
+    font-size: 17pt;
 }
 
-.horarios>p:hover {
+.horarios > p{
     cursor: pointer;
 }
 
@@ -157,20 +174,9 @@ p {
     font-family: Comic Sans MS;
 }
 
-.main-conteiner {
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.conteiner-side {
-    display: flex;
-    width: 20%;
-
-}
-
-.hora-certa {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    justify-content: space-evenly;
+.horarios > p{
+   
+    width: 3rem;
+    height: 30px;
+    overflow: auto;
 }
