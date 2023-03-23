@@ -14,11 +14,26 @@ body {
     background-attachment: fixed;
     background-size: cover;
 }
+header{
+    position: sticky;
+    top: 0;
+}
 
 .cabeçalho {
     background-color: rgb(16, 46, 106);
     display: flex;
     justify-content: center;
+}
+
+#txt-usr-btn {
+    display: flex;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+#nav-bar {
+    width: 100%;
 }
 
 #list {
@@ -27,8 +42,7 @@ body {
 }
 
 #logo {
-    width: 6%;
-    height: 2%;
+    width: 3rem;
     margin: 1rem;
     margin-top: 1.5rem;
 }
@@ -40,52 +54,70 @@ body {
 #user-logo {
     display: flex;
     justify-content: flex-end;
-    font-size: 30pt;
+    font-size: 25pt;
     color: rgb(255, 255, 255);
-    /* background-color: rgb(64, 90, 208); */
-
 }
 
 #user-class {
-    font-size: 25pt;
+    font-size: 22pt;
 }
 
-#calendario{
+#calendario {
     font-size: 20pt;
+    font-family: Comic Sans MS;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    border-radius: 14px;
 }
-.calendario{
+
+.calendario {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     width: 100%;
-    
+
 }
-.calendario > p{
+
+.calendario>p {
     font-size: 20pt;
     color: aliceblue;
 }
+
 .user-btn {
-    /* background-color: rgb(64, 90, 208); */
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+
+.menu>span {
+    font-size: -webkit-xxx-large;
+    color: white;
+    display: block;
+}
+
+.menu>span:hover {
+    cursor: pointer;
 }
 
 .cores {
     background-color: rgb(83, 100, 255);
-    padding: 1rem;
-    margin-top: 3rem;
+    padding: 0.5rem;
+    margin-top: rem;
+}
+
+.cores>p {
+    font-size: 20pt;
 }
 
 .cores:hover {
     cursor: pointer;
-    transition: 1.5s;
+    transition: 1s;
     background-color: rgb(51, 62, 164);
 }
 
 .txt-center {
-    font-size: 35pt;
-    margin-left: 6rem;
+    font-size: 2.5rem;
     color: aliceblue;
 }
 
@@ -102,13 +134,16 @@ body {
     margin-top: 1.5rem;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
-    font-size: 17pt;
+    font-size: 20pt;
 }
 
 .horarios>p:hover {
     cursor: pointer;
 }
 
+#add-icon {
+    color: aliceblue;
+}
 
 a {
     margin: 0 1.5rem;

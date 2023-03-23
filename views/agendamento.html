@@ -10,6 +10,10 @@
     <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/883/883309.png" type="image/x-icon">
 
     <!-- chamando o icones do google -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
@@ -24,16 +28,25 @@
                 <!-- botão do usuário !-->
 
                 <div class="user-btn">
-                    <!-- Logo do projeto !-->
-                    <img src="../imgs/icon.png" alt="Hipocrates Logo" id="logo">
-                    <div class="txt-center">
-                        <p>Saude & esperança</p>
-                    </div>
-                    <div class="cores">
-                        <span class="material-symbols-outlined" id="user-logo">
-                            person
-                            <p id="user-class">Usuário-Fulero</p>
+                    <div class="menu">
+                        <span class="material-symbols-outlined">
+                            menu
                         </span>
+                    </div>
+                    <div id="logo-img">
+                        <!-- Logo do projeto !-->
+                        <img src="../imgs/icon.png" alt="Hipocrates Logo" id="logo">
+                    </div>
+                    <div id="txt-usr-btn">
+                        <div class="txt-center">
+                            <p>Saude & esperança</p>
+                        </div>
+                        <div class="cores">
+                            <span class="material-symbols-outlined" id="user-logo">
+                                person
+                                <p id="user-class">Usuário-Fulero</p>
+                            </span>
+                        </div>
                     </div>
                 </div>
                 <br>
@@ -63,49 +76,126 @@
                 <div class="conteiner"> <!--Aqui ficam os horários-->
                     <div class="hora-certa">
                         <div class="horarios">
-                            <p>08:00</p>
+                            <div class="add-icon">
+                            </div>
+                            <p>
+                                <span class="material-symbols-outlined">
+                                    add_circle
+                                </span>
+                                08:00
+                            </p>
                         </div>
                         <div class="horarios">
-                            <p>08:30</p>
+                            <div class="add-icon">
+                            </div>
+                            <p>
+                                <span class="material-symbols-outlined">
+                                    add_circle
+                                </span>
+                                09:00
+                            </p>
                         </div>
                         <div class="horarios">
-                            <p>09:00</p>
+                            <div class="add-icon">
+                            </div>
+                            <p>
+                                <span class="material-symbols-outlined">
+                                    add_circle
+                                </span>
+                                10:00
+                            </p>
                         </div>
                         <div class="horarios">
-                            <p>09:30</p>
+                            <div class="add-icon">
+                            </div>
+                            <p>
+                                <span class="material-symbols-outlined">
+                                    add_circle
+                                </span>
+                                11:00
+                            </p>
                         </div>
                         <div class="horarios">
-                            <p>10:00</p>
+                            <div class="add-icon">
+                            </div>
+                            <p>
+                                <span class="material-symbols-outlined">
+                                    add_circle
+                                </span>
+                                12:00
+                            </p>
+                        </div>
+
+                        <div class="horarios">
+                            <div class="add-icon">
+                            </div>
+                            <p>
+                                <span class="material-symbols-outlined">
+                                    add_circle
+                                </span>
+                                13:00
+                            </p>
+                        </div>
+
+                        <div class="horarios">
+                            <div class="add-icon">
+                            </div>
+                            <p>
+                                <span class="material-symbols-outlined">
+                                    add_circle
+                                </span>
+                                14:00
+                            </p>
+                        </div>
+
+
+                        <div class="horarios">
+                            <div class="add-icon">
+                            </div>
+                            <p>
+                                <span class="material-symbols-outlined">
+                                    add_circle
+                                </span>
+                                15:00
+                            </p>
+                        </div>
+
+                        <div class="horarios">
+                            <div class="add-icon">
+                            </div>
+                            <p>
+                                <span class="material-symbols-outlined">
+                                    add_circle
+                                </span>
+                                16:00
+                            </p>
                         </div>
                         <div class="horarios">
-                            <p>10:30</p>
+                            <div class="add-icon">
+                            </div>
+                            <p>
+                                <span class="material-symbols-outlined">
+                                    add_circle
+                                </span>
+                                17:00
+                            </p>
                         </div>
+
                         <div class="horarios">
-                            <p>11:00</p>
-                        </div>
-                        <div class="horarios">
-                            <p>11:30</p>
-                        </div>
-                        <div class="horarios">
-                            <p>12:00</p>
-                        </div>
-                        <div class="horarios">
-                            <p>13:00</p>
-                        </div>
-                        <div class="horarios">
-                            <p>14:00</p>
-                        </div>
-                        <div class="horarios">
-                            <p>15:00</p>
-                        </div>
-                        <div class="horarios">
-                            <p>16:00</p>
+                            <div class="add-icon">
+                            </div>
+                            <p>
+                                <span class="material-symbols-outlined">
+                                    add_circle
+                                </span>
+                                18:00
+                            </p>
                         </div>
                     </div>
                 </div>
                 <div class="conteiner-side"> <!--Calendario-->
                     <div class="calendario">
-                        <p>O dia da sua consulta</p>
+                        <p>Agende o dia da sua consulta</p>
                         <label for="date"></label>
                         <input type="date" name="date" id="calendario">
 
@@ -120,7 +210,7 @@
     </footer>
     <!-- chamar os js aqui embaixo -->
     <script src="../js/agendamento.js"></script>
-    
+
 </body>
 
 </html>
