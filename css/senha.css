@@ -64,6 +64,7 @@ p {
 }
 
 .login {
+    margin: 10rem;
     background-color: #375F90;
     margin-left: 25%;
     margin-right: 25%;
