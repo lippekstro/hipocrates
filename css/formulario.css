@@ -1,0 +1,78 @@
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+form > input{
+    padding-left: 0.3rem;
+    width: 25%;
+    margin: 0.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+
+    background-color: rgba(95, 95, 255, 0.757);
+    color: aliceblue;
+    outline: none;
+    border-color: blue;
+    border-radius: 10px;
+}
+
+form > input::placeholder {
+    color: aliceblue;
+    text-align: center;
+    font-size: 15pt;
+}
+
+form > select{
+    width: 25%;
+    text-align: center;
+    margin:0.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem; 
+
+    background-color: rgba(95, 95, 255, 0.757);
+    border-color: blue;
+    color: aliceblue;
+    border-radius: 10px;
+    outline: none;
+    font-size: 15pt;
+}
+
+label{
+    color:white;
+    font-size: 15pt;
+}
+
+#txt-centro{
+    text-align: center;
+    color: aliceblue;
+    font-size: 20pt;
+}
+#btn-agend{
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    background-color: rgba(95, 95, 255, 0.757);
+    border-color: blue;
+    color: aliceblue;
+    border-radius: 10px;
+    outline: none;
+    font-size: 15pt;
+}
+.formulario{
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
