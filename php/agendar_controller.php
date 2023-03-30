@@ -1,5 +1,5 @@
 <?php
-require_once "paciente.php";
+require_once "../hipocrates/php/paciente.php";
 try {
     $cpf = $_POST['cpf'];
     $paciente = $_POST['paciente'];

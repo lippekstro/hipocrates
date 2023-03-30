@@ -1,7 +1,7 @@
 
 <div class="formulario">
 <p id="txt-centro">Agende sua consulta</p>
-<form action="agendar_controller.php" method="post">
+<form action="/php/agendar_controller.php" method="post">
     <label for="CPF">CPF: </label>
     <input type="number" name="CPF" id="CPF" placeholder="Digite seu CPF" required>
     <label for="pac">Paciente: </label>

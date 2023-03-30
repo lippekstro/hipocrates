@@ -1,11 +1,13 @@
 <?php
-require_once "conexao.php";
+require_once "../hipocrates/php/conexao.php";
 class Paciente
 {
     public $cpf;
     public $paciente;
     public $idade;
-
+    public $id_pessoa;
+    public $nome;
+    public $telefone;
     // CRUD
     // CREATE = criar
     // READ = ler ou buscar

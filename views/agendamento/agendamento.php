@@ -15,7 +15,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/templates/cabecalho.php";
                     08:00</button>
                 <div class="panel">
                     <?php
-                    require "php/form.php";
+                    require $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/php/form.php";
                     ?>
                 </div>
             </div>
@@ -28,7 +28,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/templates/cabecalho.php";
                     08:30</button>
                 <div class="panel">
                     <?php
-                    require "php/form.php";
+                    require $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/php/form.php";
                     ?>
                 </div>
             </div>
@@ -40,7 +40,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/templates/cabecalho.php";
                     09:00</button>
                 <div class="panel">
                     <?php
-                    require "php/form.php";
+                    require $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/php/form.php";
                     ?>
                 </div>
             </div>
@@ -52,7 +52,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/templates/cabecalho.php";
                     09:00</button>
                 <div class="panel">
                     <?php
-                    require "php/form.php";
+                    require $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/php/form.php";
                     ?>
                 </div>
             </div>
@@ -64,7 +64,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/templates/cabecalho.php";
                     09:30</button>
                 <div class="panel">
                     <?php
-                    require "php/form.php";
+                    require $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/php/form.php";
                     ?>
                 </div>
             </div>
@@ -76,7 +76,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/templates/cabecalho.php";
                     10:00</button>
                 <div class="panel">
                     <?php
-                    require "php/form.php";
+                    require $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/php/form.php";
                     ?>
                 </div>
             </div>
@@ -88,7 +88,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/templates/cabecalho.php";
                     10:30</button>
                 <div class="panel">
                     <?php
-                    require "php/form.php";
+                    require $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/php/form.php";
                     ?>
                 </div>
             </div>
@@ -100,7 +100,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/templates/cabecalho.php";
                     11:00</button>
                 <div class="panel">
                     <?php
-                    require "php/form.php";
+                    require $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/php/form.php";
                     ?>
                 </div>
             </div>
@@ -113,7 +113,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/templates/cabecalho.php";
                     11:30</button>
                 <div class="panel">
                     <?php
-                    require "php/form.php";
+                    require $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/php/form.php";
                     ?>
                 </div>
             </div>
@@ -126,7 +126,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/templates/cabecalho.php";
                     12:00</button>
                 <div class="panel">
                     <?php
-                    require "php/form.php";
+                    require $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/php/form.php";
                     ?>
                 </div>
             </div>
@@ -139,7 +139,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/templates/cabecalho.php";
                     12:30</button>
                 <div class="panel">
                     <?php
-                    require "php/form.php";
+                    require $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/php/form.php";
                     ?>
                 </div>
             </div>
@@ -152,7 +152,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/templates/cabecalho.php";
                     13:30</button>
                 <div class="panel">
                     <?php
-                    require "php/form.php";
+                    require $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/php/form.php";
                     ?>
                 </div>
             </div>
@@ -165,7 +165,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/templates/cabecalho.php";
                     14:00</button>
                 <div class="panel">
                     <?php
-                    require "php/form.php";
+                    require $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/php/form.php";
                     ?>
                 </div>
             </div>
@@ -178,7 +178,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/templates/cabecalho.php";
                     14:30</button>
                 <div class="panel">
                     <?php
-                    require "php/form.php";
+                    require $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/php/form.php";
                     ?>
                 </div>
             </div>
@@ -190,7 +190,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/templates/cabecalho.php";
                     15:00</button>
                 <div class="panel">
                     <?php
-                    require "php/form.php";
+                    require $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/php/form.php";
                     ?>
                 </div>
             </div>
@@ -203,7 +203,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/templates/cabecalho.php";
                     15:30</button>
                 <div class="panel">
                     <?php
-                    require "php/form.php";
+                    require $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/php/form.php";
                     ?>
                 </div>
             </div>
@@ -216,7 +216,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/templates/cabecalho.php";
                     16:00</button>
                 <div class="panel">
                     <?php
-                    require "php/form.php";
+                    require $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/php/form.php";
                     ?>
                 </div>
             </div>
@@ -229,7 +229,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/templates/cabecalho.php";
                     16:30</button>
                 <div class="panel">
                     <?php
-                    require "php/form.php";
+                    require $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/php/form.php";
                     ?>
                 </div>
             </div>
@@ -242,7 +242,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/templates/cabecalho.php";
                     17:00</button>
                 <div class="panel">
                     <?php
-                    require "php/form.php";
+                    require $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/php/form.php";
                     ?>
                 </div>
             </div>
@@ -255,7 +255,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/templates/cabecalho.php";
                     17:30</button>
                 <div class="panel">
                     <?php
-                    require "php/form.php";
+                    require $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/php/form.php";
                     ?>
                 </div>
             </div>
@@ -268,7 +268,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/templates/cabecalho.php";
                     18:00</button>
                 <div class="panel">
                     <?php
-                    require "php/form.php";
+                    require $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/php/form.php";
                     ?>
                 </div>
             </div>
@@ -279,7 +279,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/templates/cabecalho.php";
 
 
         <!--Calendario-->
-        <?php require_once 'php/calendario.php';
+        <?php require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/php/calendario.php";
         ?>
     </main>
 
@@ -287,7 +287,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/templates/cabecalho.php";
         <!-- rodape aqui -->
     </footer>
     <!-- chamar os js aqui embaixo -->
-    <script src="js/sapatenis.js"></script>
+    <script src="../../js/sapatenis.js"></script>
 
 </body>
 
