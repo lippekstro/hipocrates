@@ -1,7 +1,6 @@
-    <footer>
-    </footer>
-    <script src="js/script.js"></script>
-    <script src="js/menu-lateral.js"></script>
-    </body>
+      </section>
 
-    </html>
+      <script src="/hipocrates/js/script.js"></script>
+      </body>
+
+      </html>

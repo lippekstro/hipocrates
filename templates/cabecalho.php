@@ -1,62 +1,135 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-Br" dir="ltr">
 
 <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Drop Down Sidebar Menu | CodingLab</title>
+    <link rel="stylesheet" href="/hipocrates/css/style.css" />
+    <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hipócrates</title>
-    <link rel="shortcut icon" href="" type="image/x-icon" />
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
-    <header>
-        <div class="container">
-            <div class="iconBar">
-                <div id="mySidenav" class="sidenav">
-                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                    <a href="#"><img src="./imgs/SUS.png" alt="logo" width="100px" />
-                        <a href="#">Agendar Consulta</a>
-                        <a href="#">Histórico de Consultas</a>
-                        <a href="#">Doações</a>
-                        <a href="#">Meus Dados</a>
-                </div>
-                <div id="main">
-                    <span style="font-size: 30px; cursor: pointer; color:white" onclick="openNav()">&#9776;</span>
-                </div>
-                <div class="logo">
-                    <img src="./imgs/SUS.png" alt="logo" width="100px" />
-                </div>
-            </div>
-
-            <div class="containerMenu">
-                <nav>
-                    <div class="menu">
-                        <div>
-                            <a href="">Inicio</a>
-                        </div>
-                        <div>
-                            <a href="">Sobre</a>
-                        </div>
-                        <div>
-                            <a href="">Serviços</a>
-                        </div>
-                        <div>
-                            <a href="">Noticias</a>
-                        </div>
-                        <div>
-                            <a href="">Fale conosco</a>
-                        </div>
-                    </div>
-                </nav>
-                <div class="login">
-                    <input type="submit" class="submit" value="Login">
-                </div>
-            </div>
-
-
+    <div class="sidebar close">
+        <div class="logo-details">
+            <i class="bx bxl-c-plus-plus"></i>
+            <span class="logo_name">CodingLab</span>
         </div>
-    </header>
+        <ul class="nav-links">
+            <li>
+                <a href="#">
+                    <i class="bx bx-home"></i>
+                    <span class="link_name">Inicio</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="#">Inicio</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="iocn-link">
+                    <a href="#">
+                        <i class="bx bx-collection"></i>
+                        <span class="link_name">Serviços</span>
+                    </a>
+                    <i class="bx bxs-chevron-down arrow"></i>
+                </div>
+                <ul class="sub-menu">
+                    <li><a class="link_name" href="#">Serviços</a></li>
+                    <li><a href="#">Minhas Consultas</a></li>
+                    <li><a href="#">Histórico de Consultas</a></li>
+                    <li><a href="#">Prontuario Digital</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="iocn-link">
+                    <a href="#">
+                        <i class="bx bx-donate-heart"></i>
+                        <span class="link_name">Doações</span>
+                    </a>
+                    <i class="bx bxs-chevron-down arrow"></i>
+                </div>
+                <ul class="sub-menu">
+                    <li><a class="link_name" href="#">Doações</a></li>
+                    <li><a href="#">Doação de Sangue</a></li>
+                    <li><a href="#">Doação de Medula</a></li>
+                    <li><a href="#">Doação de Órgãos</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="iocn-link">
+                    <a href="#">
+                        <i class="bx bx-calendar"></i>
+                        <span class="link_name">Agendamentos</span>
+                    </a>
+                    <i class="bx bxs-chevron-down arrow"></i>
+                </div>
+                <ul class="sub-menu">
+                    <li><a class="link_name" href="#">Agendamentos</a></li>
+                    <li><a href="#">Clinico Geral</a></li>
+                    <li><a href="#">Psicologia</a></li>
+                    <li><a href="#">Odontologia</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="bx bx-detail"></i>
+                    <span class="link_name">Noticias</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="#">Noticias</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="bx bx-compass"></i>
+                    <span class="link_name">Sobre...</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="#">Sobre...</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="bx bx-chat"></i>
+                    <span class="link_name">Fale Conosco</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="#">Fale Conosco</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="bx bx-pulse"></i>
+                    <span class="link_name">Consultório</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="#">Consultório</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="bx bx-cog"></i>
+                    <span class="link_name">Configurações</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="#">Configurações</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="profile-details">
+                    <div class="profile-content">
+                        <img src="#" alt="profileImg" />
+                    </div>
+                    <div class="name-job">
+                        <div class="profile_name">Usuário 1</div>
+                        <div class="job">Paciente</div>
+                    </div>
+                    <i class="bx bx-log-out"></i>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <section class="home-section">
+        <div class="home-content">
+            <i class="bx bx-menu"></i>
+        </div>
