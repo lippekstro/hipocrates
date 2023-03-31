@@ -253,7 +253,6 @@ body {
 
 .home-section {
   position: relative;
-  background: #fff;
   height: 100vh;
   left: 300px;
   width: calc(100% - 300px);
@@ -325,8 +324,8 @@ body {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 1000px;
-  height: 600px;
+  width: 100%;
+  height: 100%;
   padding: 50px;
   background-color: #f5f5f5;
   box-shadow: 0 30px 50px #dbdbdb;

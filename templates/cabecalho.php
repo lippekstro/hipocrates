@@ -17,6 +17,11 @@
         </div>
         <ul class="nav-links">
             <li>
+                <div class="home-content">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </li>
+            <li>
                 <a href="#">
                     <i class="bx bx-home"></i>
                     <span class="link_name">Inicio</span>
@@ -131,5 +136,5 @@
     </div>
     <section class="home-section">
         <div class="home-content">
-            <i class="bx bx-menu"></i>
+            <i class='bx bx-menu'></i>
         </div>
