@@ -49,8 +49,8 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/templates/cabecalho.php"
       </div>
     </div>
     <div class="buttons">
-      <button id="prev"><i class="fa-solid fa-angle-left"></i></button>
-      <button id="next"><i class="fa-solid fa-angle-right"></i></button>
+      <button id="prev"><i class='bx bx-skip-previous'></i></button>
+      <button id="next"><i class='bx bx-skip-next'></i></button>
     </div>
   </div>
 </main>

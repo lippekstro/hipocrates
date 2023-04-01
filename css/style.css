@@ -447,6 +447,10 @@ body {
   transition: 0.5s;
 }
 
+.buttons button i {
+  font-size: 40px;
+}
+
 .buttons button:hover {
   background-color: #bac383;
 }
