@@ -392,12 +392,26 @@ body {
   font-family: system-ui;
 }
 
+.block {
+  background-color: rgba(0, 0, 0, 0.247);
+  border-radius: 2%;
+}
+
+/* .content {
+  position: absolute;
+  top: 50%;
+  left: 100px;
+  width: 300px;
+  background-color: white;
+} */
+
 .item:nth-child(2) .content {
   display: block;
   z-index: 11111;
 }
 
 .item .name {
+  padding: 0.5rem 0 0 1rem;
   font-size: 40px;
   font-weight: bold;
   opacity: 0;
@@ -405,12 +419,14 @@ body {
 }
 
 .item .des {
+  padding: 0 1rem 0 1rem;
   margin: 20px 0;
   opacity: 0;
   animation: showcontent 1s ease-in-out 0.3s 1 forwards;
 }
 
 .item button {
+  /*   padding: 0 0 0.5rem 1rem; */
   padding: 10px 20px;
   border: none;
   opacity: 0;

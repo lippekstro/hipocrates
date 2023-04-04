@@ -6,42 +6,42 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/models/cabecalho.php"
   <div class="container">
     <div id="slide">
       <div class="item" style="background-image: url(imgs/1.jpg);">
-        <div class="content">
-          <div class="name">LUNDEV</div>
-          <div class="des">Tinh ru anh di chay pho, chua kip chay pho thi anhchay mat tieu</div>
+        <div class="content block">
+          <div class="name">Doações</div>
+          <div class="des">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad in est, ut cumque quae nihil earum temporibus quisquam exercitationem ratione autem quasi illo, corrupti dolor voluptatum ab quam dicta deleniti?</div>
           <button>See more</button>
         </div>
       </div>
       <div class="item" style="background-image: url(imgs/2.jpg);">
-        <div class="content">
+        <div class="content block">
           <div class="name">LUNDEV</div>
-          <div class="des">Tinh ru anh di chay pho, chua kip chay pho thi anhchay mat tieu</div>
+          <div class="des">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad in est, ut cumque quae nihil earum temporibus quisquam exercitationem ratione autem quasi illo, corrupti dolor voluptatum ab quam dicta deleniti?</div>
           <button>See more</button>
         </div>
       </div>
       <div class="item" style="background-image: url(imgs/3.jpg);">
-        <div class="content">
+        <div class="content block">
           <div class="name">LUNDEV</div>
           <div class="des">Tinh ru anh di chay pho, chua kip chay pho thi anhchay mat tieu</div>
           <button>See more</button>
         </div>
       </div>
       <div class="item" style="background-image: url(imgs/4.jpg);">
-        <div class="content">
+        <div class="content block">
           <div class="name">LUNDEV</div>
           <div class="des">Tinh ru anh di chay pho, chua kip chay pho thi anhchay mat tieu</div>
           <button>See more</button>
         </div>
       </div>
       <div class="item" style="background-image: url(imgs/5.jpg);">
-        <div class="content">
+        <div class="content block">
           <div class="name">LUNDEV</div>
           <div class="des">Tinh ru anh di chay pho, chua kip chay pho thi anhchay mat tieu</div>
           <button>See more</button>
         </div>
       </div>
       <div class="item" style="background-image: url(imgs/6.jpg);">
-        <div class="content">
+        <div class="content block">
           <div class="name">LUNDEV</div>
           <div class="des">Tinh ru anh di chay pho, chua kip chay pho thi anhchay mat tieu</div>
           <button>See more</button>
