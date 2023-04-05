@@ -320,20 +320,8 @@ body {
 }
 
 .container {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
   width: 100%;
   height: 100%;
-  padding: 50px;
-  background-color: #f5f5f5;
-  box-shadow: 0 30px 50px #dbdbdb;
-}
-
-#slide {
-  width: max-content;
-  margin-top: 50px;
 }
 
 .item {
@@ -380,33 +368,30 @@ body {
 }
 
 .item .content {
-  position: absolute;
+  display: flex;
+  position: relative;
   top: 50%;
   left: 100px;
-  width: 300px;
+  width: 500px;
   text-align: left;
   padding: 0;
   color: #eee;
   transform: translate(0, -50%);
   display: none;
   font-family: system-ui;
-}
-
-.block {
-  background-color: rgba(0, 0, 0, 0.247);
+  background-color: rgba(0, 0, 0, 0.4);
   border-radius: 2%;
+  transition: 0.3s;
+  animation: 3s ease-in 1s infinite reverse both running slidein;
 }
 
-/* .content {
-  position: absolute;
-  top: 50%;
-  left: 100px;
-  width: 300px;
-  background-color: white;
-} */
+.content:hover {
+  box-shadow: 3px 7px 9px 3px rgba(0, 0, 0, 0.2);
+}
 
 .item:nth-child(2) .content {
-  display: block;
+  display: flex;
+  flex-direction: column;
   z-index: 11111;
 }
 
@@ -418,19 +403,47 @@ body {
   animation: showcontent 1s ease-in-out 1 forwards;
 }
 
-.item .des {
+.item .text {
   padding: 0 1rem 0 1rem;
   margin: 20px 0;
   opacity: 0;
   animation: showcontent 1s ease-in-out 0.3s 1 forwards;
 }
 
-.item button {
-  /*   padding: 0 0 0.5rem 1rem; */
-  padding: 10px 20px;
+.item .button-page {
+  font-family: sans-serif;
+  font-size: 17px;
+  background: transparent;
+  color: #ffff;
+  border-radius: 4px;
+  display: flex;
+  align-self: self-start;
+  width: 10.3rem;
+  margin: 0 0 1rem 1rem;
+  padding: 10px;
   border: none;
+  cursor: pointer;
+  transition-duration: 0.2s;
+  text-decoration: none;
   opacity: 0;
   animation: showcontent 1s ease-in-out 0.6s 1 forwards;
+}
+
+.button-page:before {
+  content: "»";
+  opacity: 0;
+  margin-left: -15px;
+  transition-duration: 0.2s;
+}
+
+.button-page:hover:before {
+  margin-left: 0px;
+  opacity: 1;
+}
+
+.button-page:hover {
+  color: white;
+  background: rgba(245, 245, 220, 0.4);
 }
 
 @keyframes showcontent {
