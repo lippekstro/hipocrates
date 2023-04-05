@@ -7,6 +7,20 @@
   font-family: "Poppins", sans-serif;
 }
 
+:root {
+  --color-1: #00A6FB;
+  --color-2: #0582CA;
+  --color-3: #006494;
+  --color-4: #003554;
+  --color-5: #00509D;
+  --color-6: #003F88;
+  --color-7: #00296B;
+  --color-8: #051923;
+  --color-9: #FDC500;
+  --color-10: #FFD500;
+
+}
+
 body {
   overflow: hidden;
 }
