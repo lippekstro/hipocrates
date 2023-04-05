@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperação</title>
+    <link rel="stylesheet" href="/css/rec.css">
+</head>
+
+<body>
+    <img src="imgs/icon do proj integrador.png" alt="">
+    <h2 style="color: white; display: inline-block; vertical-align: top; margin-top: 3%;  margin-right: 3%;">ESPERANÇA &
+        <br>
+        SAÚDE
+    </h2>
+
+
+    <nav><!-- navegadores -->
+        <div class="comeco">
+            <a href="#">Home |</a>
+            <a href="#">Sobre |</a>
+            <a href="#">Serviços |</a>
+            <a href="#">Noticias |</a>
+            <a href="#">Fale Conosco</a>
+
+        </div>
+        <br>
+    </nav>
+
+    <div class="entra">
+        <hr><b>RECUPERAÇÃO DE SENHA</b>
+        <hr>
+    </div>
+
+
+
+    <br><br><br>
+
+    <section class="area_login">
+        <div class="login">
+            <div>
+
+                <form action="/views/PgUser.html" method="post">
+                    <fieldset>
+
+                        <input onclick="validaSenha()" type="password" name="senha1" id="senha1" placeholder="NOVA SENHA" autofocus required>
+                        <br><br>
+                        <input type="password" name="senha2" id="senha2" placeholder="CONFIRMAR NOVA SENHA" required>
+                        <br>
+
+                        <button onclick="return validarSenha();">Avançar</button>
+                        
+                    </fieldset>
+                </form>
+
+
+
+            </div>
+
+        </div>
+
+    </section>
+</body>
+<script src="/js/teste.js"></script>
+
+</html>
