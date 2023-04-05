@@ -1,8 +1,7 @@
+  let paragrafos = document.getElementsByClassName("pzinho")
 
-function Data() {
-    $("#datepicker").datepicker({
-        showOn: "button",
-        buttonImageOnly: true,
-        buttonText: "Select date"
-    });
-}
+ function modificaParagrafo(){
+   
+    paragrafos[0].innerHTML =  `aoba ,`
+    
+ }
