@@ -6,3 +6,34 @@
     box-sizing: border-box;
     /* coloque o font-family adequado */
 }
+
+.tit1 {
+    margin-left: 7rem;
+    width: 50%;
+    justify-content: flex-start;
+    display: flex;
+    color: #fff;
+    font-size: 40px;
+}
+
+/*texto*/
+.text1 {
+    text-align: justify;
+    display: flex;
+    justify-content: flex-end;
+    width: 50%;
+    color: #fff;
+
+}
+
+H1 {
+    color: white;
+    margin-left: 5rem;
+}
+
+body {
+    height: 100%;
+    overflow-y: hidden;
+
+    background-color: rgb(17, 42, 88);
+}
