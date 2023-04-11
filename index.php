@@ -14,7 +14,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/models/cabecalho.php"
       </div>
       <div class="item" style="background-image: url(imgs/2.jpg);">
         <div class="content">
-          <div class="name">Agentamentos</div>
+          <div class="name">Agendamentos</div>
           <div class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas iste assumenda sit officia itaque corporis? Vero fugiat iure ut qui? Iusto consequuntur dolores quaerat accusamus voluptas voluptates maiores, alias iure?</div>
           <a class="button-page" href="#">Mais Informações</a>
         </div>
