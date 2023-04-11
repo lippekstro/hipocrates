@@ -1,5 +1,5 @@
 <?php
-require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/models/cabecalho.php"
+require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/templates/cabecalho.php"
 ?>
 
 <main>
@@ -56,5 +56,5 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/models/cabecalho.php"
 </main>
 
 <?php
-require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/models/rodape.php"
+require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/templates/rodape.php"
 ?>
