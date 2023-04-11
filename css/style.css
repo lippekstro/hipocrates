@@ -56,3 +56,39 @@ margin-right:15%;
     padding-top: 0.7rem;
 }
 /* cadastro */
+
+/* verificacao cadastro */
+.reenvio{
+    text-decoration: underline;
+}
+.hj{
+    border-radius: 50px;
+}
+
+.verificacao{
+    display: flex;
+    align-items: center;
+    outline: none;
+}
+
+.verificacao input{
+    text-align: center;
+    font-size: 1.125rem;
+}
+
+form input{
+    width: 45px;
+    height: 42px;
+}
+
+.verificacao input::-webkit-inner-spin-button,
+.verificacao input::-webkit-inner-outer-button{
+    display: none;
+}
+
+
+.text-sms{
+    padding-top: 2rem;
+    padding-left: 4rem;
+}
+/* verificacao cadastro */
