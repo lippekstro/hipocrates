@@ -7,11 +7,37 @@
     /* coloque o font-family adequado */
 }
 
+<<<<<<< HEAD
+=======
+body {
+    background-image: linear-gradient(to right, rgba(16, 46, 106, 0.786), rgba(16, 46, 106, 0.78)), url("https://www.cliquemedicos.com.br/blog/wp-content/uploads/2020/01/Cl%C3%ADnico-M%C3%A9dico-scaled.jpg");
+    background-position: 0 2rem;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+header{
+    position: sticky;
+    top: 0;
+}
+
+>>>>>>> e9c3ea2d6165167099fd583f802cc0b125a052a2
 .cabeçalho {
     background-color: rgb(16, 46, 106);
     display:flex;
     position: relative;
     
+}
+
+#txt-usr-btn {
+    display: flex;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+#nav-bar {
+    width: 100%;
 }
 
 #list {
@@ -20,8 +46,12 @@
 }
 
 #logo {
+<<<<<<< HEAD
     width: 3%;
     height: 2%;
+=======
+    width: 3rem;
+>>>>>>> e9c3ea2d6165167099fd583f802cc0b125a052a2
     margin: 1rem;
     margin-top: 1.5rem;
 }
@@ -32,6 +62,7 @@
 #user-logo {
     display: flex;
     justify-content: flex-end;
+<<<<<<< HEAD
     font-size: 30pt;
     color: pink;
     /* background-color: rgb(64, 90, 208); */
@@ -41,25 +72,77 @@
     font-size: 25pt;
 }
 
+=======
+    font-size: 25pt;
+    color: rgb(255, 255, 255);
+}
+
+#user-class {
+    font-size: 22pt;
+}
+
+#calendario {
+    font-size: 20pt;
+    font-family: Comic Sans MS;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    border-radius: 14px;
+}
+
+.calendario {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+
+}
+
+.calendario>p {
+    font-size: 20pt;
+    color: aliceblue;
+}
+
+>>>>>>> e9c3ea2d6165167099fd583f802cc0b125a052a2
 .user-btn {
-    /* background-color: rgb(64, 90, 208); */
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+
+.menu>span {
+    font-size: -webkit-xxx-large;
+    color: white;
+    display: block;
+}
+
+.menu>span:hover {
+    cursor: pointer;
 }
 .cores{
     background-color: rgb(83, 100, 255);
-    padding: 1rem;
-    margin-top: 3rem;
+    padding: 0.5rem;
+    margin-top: rem;
+}
+
+.cores>p {
+    font-size: 20pt;
 }
 
 .cores:hover{
     cursor: pointer;
-    transition: 1.5s;
+    transition: 1s;
     background-color: rgb(51, 62, 164);
 }
+<<<<<<< HEAD
 .txt-center{
     font-size: 35pt;
     margin-left: 6rem;
+=======
+
+.txt-center {
+    font-size: 2.5rem;
+>>>>>>> e9c3ea2d6165167099fd583f802cc0b125a052a2
     color: aliceblue;
 }
 
@@ -86,6 +169,7 @@
     
     
 }
+<<<<<<< HEAD
 .horarios{
     background-color: rgb(111, 111, 255);
     text-align: center;
@@ -93,12 +177,25 @@
     padding-top:2rem ;
     padding-bottom:1rem;
     border: solid 10px black;
+=======
+
+.horarios>p {
+    background-color: rgb(16 46 106);
+    color: aliceblue;
+    margin-top: 1.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-size: 17pt;
+>>>>>>> e9c3ea2d6165167099fd583f802cc0b125a052a2
 }
 
 .horarios > p{
     cursor: pointer;
 }
 
+#add-icon {
+    color: aliceblue;
+}
 
 a {
     margin: 0 1.5rem;
