@@ -26,8 +26,8 @@ CREATE TABLE IF NOT EXISTS paciente(
     orgao_emissor ENUM("SSP", "SJC", "SJT") NOT NULL,
     estado_civil ENUM("Solteiro", "Casado", "Divorciado") NOT NULL,
     -- senha VARCHAR(8) CHECK ((length(senha)>=6)AND(length(senha)<=8)),
-    limitacoes SET ("Cognitiva", "Locomoção", "Audição", "Sem Deficiência ") NOT NULL
-    ,
+    limitacoes SET ("Cognitiva", "Locomoção", "Audição", "Sem Deficiência ") NOT NULL 
+    , 
     data_hora_cadastro DATETIME,
     etinia ENUM ("Negro", "Branco", "Pardo") NOT NULL,
     tipo_saguineo ENUM("A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-"),

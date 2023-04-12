@@ -19,6 +19,7 @@ class Paciente
     public $etinia;
     public $tipo_saguineo;
 
+
     public function inserir()
     {
         $sql = "INSERT INTO paciente (foto,cpf,rg,cns,nome,idade,genero,data_nascimento,nacionalidade,orgao_emissor,estado_civil, limitacoes,data_hora_cadastro,etinia,tipo_saguineo) VALUES (:foto, :cpf, :rg, :cns, :nome, :idade, :genero, :data_nascimento, :nacionalidade, :orgao_emissor, :estado_civil, :limitacoes, :data_hora_cadastro, :etinia, :tipo_saguineo )";

@@ -100,7 +100,7 @@ require_once "paciente.php";
                         <option value="">SC</option>
                         <option value="">SP</option>
                         <option value="">SE</option>
-                        <optopcoesion value="">TO</optopcoesion>
+                        <option value="">TO</option>
                     </select>
                 </div>
                 <div class="contato">
@@ -114,10 +114,10 @@ require_once "paciente.php";
                 <div class="limitacoes">
                     <fieldset>
                         <legend>Limitações</legend>
+                        <input type="checkbox" name="limitacoes[]" value="Sem Deficiência"> Sem Deficiência<br>
                         <input type="checkbox" name="limitacoes[]" value="Cognitiva"> Cognitiva<br>
                         <input type="checkbox" name="limitacoes[]" value="Locomoção"> Locomoção<br>
                         <input type="checkbox" name="limitacoes[]" value="Audição"> Audição<br>
-                        <input type="checkbox" name="limitacoes[]" value="Sem Deficiência"> Sem Deficiência<br>
                     </fieldset>
                 </div>
                 <div class="cadastro">
