@@ -4,7 +4,92 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+      font-family: "Poppins", sans-serif;
+}
+
+/* cadastro */
+input{
+    border: 0px;
+    margin: 10px;
+    padding: 5px;
+  border-radius: 120px;
+}
+
+.esticar90{
+    padding-bottom:10px ;
+    padding-top:10px ;
+    width: 90%;
+  }
+
+  .esticar40{
+    padding-bottom:10px ;
+    padding-top:10px ;
+    width: 30%;
+  }
+
+.App{
+    background-color: #3d7ec476;
+    border-radius: 35px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: relative;
+    margin-top: 5%;
+margin-right:15%;
+    margin-left: 15%;
+}
+
+.espacamento{
+    padding-top: 0.7rem;
+}
+
+.password{
+    padding-top: 0.7rem;
+}
+
+.ns{
+    padding-top: 0.7rem;
+}
+
+.tel{
+    padding-top: 0.7rem;
+}
+/* cadastro */
+
+/* verificacao cadastro */
+.reenvio{
+    text-decoration: underline;
+}
+.hj{
+    border-radius: 50px;
+}
+
+.verificacao{
+    display: flex;
+    align-items: center;
+    outline: none;
+}
+
+.verificacao input{
+    text-align: center;
+    font-size: 1.125rem;
+}
+
+form input{
+    width: 45px;
+    height: 42px;
+}
+
+.verificacao input::-webkit-inner-spin-button,
+.verificacao input::-webkit-inner-outer-button{
+    display: none;
+}
+
+
+.text-sms{
+    padding-top: 2rem;
+    padding-left: 4rem;
 }
 
 .tit1 {
