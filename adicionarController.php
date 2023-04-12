@@ -21,10 +21,10 @@ try {
     $etinia = $_POST['etinia'];
     $tipo_saguineo = $_POST['tipo_saguineo'];
 
-    if(!empty($_FILES['imagem']['tmp_name'])){
+    if (!empty($_FILES['imagem']['tmp_name'])) {
         $foto = file_get_contents($_FILES['imagem']['tmp_name']);
     }
-    
+
     $paciente = new Paciente();
     $paciente->foto = $foto;
     $paciente->cpf = $cpf;
@@ -42,11 +42,10 @@ try {
     $paciente->data_hora_cadastro = $data_hora_cadastro;
     $paciente->etinia = $etinia;
     $paciente->tipo_saguineo = $tipo_saguineo;
-    
+
 
     $paciente->inserir();
-
-
 } catch (Exception $e) {
     echo "Erro ao inserir paciente: " . $e->getMessage();
 }
+// RESPONSAVE 

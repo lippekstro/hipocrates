@@ -46,4 +46,22 @@ class Paciente
         $stmt->bindValue(":tipo_saguineo", $this->tipo_saguineo);
         $stmt->execute();
     }
+
+    public function dadosPessoais()
+    {
+        $sql = "INSERT INTO paciente (foto,cpf,rg,cns,nome,idade,genero,data_nascimento,nacionalidade,orgao_emissor) VALUES (:foto,:cpf,:rg,:cns,:nome,:idade,:genero,:data_nascimento,:nacionalidade,:orgao_emissor)";
+        $conexao = Conexao::conectar();
+        $stmt = $conexao->prepare($sql);
+        $stmt->bindValue(":foto", $this->foto);
+        $stmt->bindValue(":cpf", $this->cpf);
+        $stmt->bindValue(":rg", $this->rg);
+        $stmt->bindValue(":cns", $this->cns);
+        $stmt->bindValue(":nome", $this->nome);
+        $stmt->bindValue(":idade", $this->idade);
+        $stmt->bindValue(":genero", $this->genero);
+        $stmt->bindValue(":data_nascimento", $this->data_nascimento);
+        $stmt->bindValue(":nacionalidade", $this->nacionalidade);
+        $stmt->bindValue(":orgao_emissor", $this->orgao_emissor);
+        $stmt->execute();
+    }
 }
