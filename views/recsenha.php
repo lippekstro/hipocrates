@@ -8,7 +8,7 @@
         <div class="login">
             <div>
 
-                <form action="/views/PgUser.html" method="post">
+                <form action="/hipocrates/views/PgUser.php" method="post">
                     <fieldset>
 
                         <input onclick="validaSenha()" type="password" name="senha1" id="senha1" placeholder="NOVA SENHA" autofocus required>
@@ -29,7 +29,7 @@
 
     </section>
 </body>
-<script src="/js/teste.js"></script>
+<script src="/hipocrates/js/teste.js"></script>
 
 <?php
     require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/templates/rodape.php"

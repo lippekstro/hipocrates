@@ -17,6 +17,7 @@ h3 {
 }
 
 h4 {
+    
     color: white;
     font-size: 20px;
     font-family: system-ui;
@@ -29,7 +30,8 @@ p {
 }
 
 .entra {
-    text-align:center ; color: white;
+    text-align: center;
+    color: white;
 }
 
 .area_login input {
@@ -44,8 +46,8 @@ p {
 
 .comeco {
     text-align: right;
-     margin-left: auto; 
-     padding: 5px;
+    margin-left: auto;
+    padding: 5px;
 }
 
 .login form {
@@ -63,15 +65,14 @@ p {
 }
 
 button {
-    
+
     border-radius: 30px;
     width: 180px;
     height: 50px;
-cursor: pointer;
-font-size: 20px;
-font: bold;
-transition-duration: 0.4s
-
+    cursor: pointer;
+    font-size: 20px;
+    font: bold;
+    transition-duration: 0.4s;
 }
 
 img {
@@ -86,15 +87,15 @@ img {
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-    -webkit-appearance:none;
+    -webkit-appearance: none;
 }
 
 button:hover {
     background-color: #4b87d0;
     color: rgb(255, 255, 255);
-  }
+}
 
-  a:hover {
+a:hover {
 
     color: #4b87d0;
-  }
+}

@@ -58,5 +58,5 @@ inputs.forEach((input,idex1) => {
       }
       
       function assinar(){
-        window.location.href = "/views/PgUser.html"
+        window.location.href = "/hipocrates/views/PgUser.php"
       }

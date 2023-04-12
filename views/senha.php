@@ -20,7 +20,7 @@
 
                         <h4>Não recebeu o código de confirmação? Reenvia</h4>
 
-                        <button onclick="window.open('/views/recsenha.html');">Avançar</button>
+                        <button onclick="window.open('/hipocrates/views/recsenha.php') ;">Avançar</button>
                     </fieldset>
                 </form>
 
@@ -32,7 +32,7 @@
 
     </section>
 </body>
-<script src="/js/ver.js"></script>
+<script src="/hipocrates/js/ver.js"></script>
 
 </html>
 

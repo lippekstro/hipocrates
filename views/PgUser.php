@@ -16,7 +16,7 @@
 
 
 
-                    <h4>Esqueceu sua senha ?<a href="/views/senha.html">Redefinir</a> </h4>
+                    <h4>Esqueceu sua senha ?<a href="/hipocrates/views/senha.php">Redefinir</a> </h4>
                     <button>Avançar</button>
 
 
@@ -32,7 +32,7 @@
 
     </section>
 
- <script src="/js/login.js"></script>
+ <script src="/hipocrates/js/login.js"></script>
  <?php
     require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/templates/rodape.php"
  ?>
