@@ -30,6 +30,7 @@ require_once $_SERVER["DOCUMENT_ROOT"]. "/hipocrates/templates/cabecalho.php";
     </form>
   </div>
 
+  
   <?php
 require_once $_SERVER["DOCUMENT_ROOT"]. "/hipocrates/templates/rodape.php";
 ?>

@@ -35,4 +35,5 @@ inputs.forEach((input,idex1) => {
 })
 
 window.addEventListener("load", () => inputs[0].focus());
+
 /* verificacao cadastro */
