@@ -2,8 +2,7 @@ CREATE DATABASE hipocrates;
 
 USE hipocrates;
 
-##############################################################
-CREATE TABLE relacoes(
+CREATE TABLE IF NOT EXISTS relacoes(
     cpf BIGINT NOT NULL,
     nome_mae VARCHAR(80) NOT NULL,
     nome_pai VARCHAR(80) NOT NULL,
@@ -12,7 +11,7 @@ CREATE TABLE relacoes(
     PRIMARY KEY (cpf)
 ) DEFAULT CHARSET utf8mb4;
 
-CREATE TABLE paciente(
+CREATE TABLE IF NOT EXISTS paciente(
     foto LONGBLOB,
     cpf BIGINT NOT NULL,
     cpf_responsavel BIGINT,
@@ -25,20 +24,16 @@ CREATE TABLE paciente(
     nacionalidade VARCHAR(20) NOT NULL,
     orgao_emissor ENUM("SSP", "SJC", "SJT") NOT NULL,
     estado_civil ENUM("Solteiro", "Casado", "Divorciado") NOT NULL,
-    #senha VARCHAR(8) CHECK ((length(senha)>=6)AND(length(senha)<=8)), #POSSIBILITAS SENHAS DE 6 ATE 8 DIGITOS# #mott null tirado pra teste
-    limitacoes
-    SET
-        ("Cognitiva", "Locomoção", "Audição", "Outros"),
-        #O SET POSSIBILITA POR MAIS DE UMA OPCAO#
-        data_hora_cadastro DATETIME,
-        #ISSO VAI SERVIR PARA HORARIO E DATA EM QUE FOI FEITO O CADASTRTO LA EM BAIXO TEM UM EXEMPLO DE COMO INSERIR ESSE DADO#
-        etinia ENUM ("Negro", "Branco", "Pardo") NOT NULL,
-        tipo_saguineo ENUM("A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-"),
-        PRIMARY KEY(cpf),
-        FOREIGN KEY (cpf_responsavel) REFERENCES relacoes (cpf)
+    #senha VARCHAR(8) CHECK ((length(senha)>=6)AND(length(senha)<=8)),
+    limitacoes VARCHAR ("Cognitiva", "Locomoção", "Audição", "Outros"),
+    data_hora_cadastro DATETIME,
+    etinia ENUM ("Negro", "Branco", "Pardo") NOT NULL,
+    tipo_saguineo ENUM("A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-"),
+    PRIMARY KEY(cpf),
+    FOREIGN KEY (cpf_responsavel) REFERENCES relacoes (cpf)
 ) DEFAULT CHARSET utf8mb4;
 
-CREATE TABLE endereco(
+CREATE TABLE IF NOT EXISTS endereco(
     cpf_paciente BIGINT,
     cep INT NOT NULL,
     logradouro VARCHAR(100) NOT NULL,
@@ -85,7 +80,7 @@ CREATE TABLE contato(
     FOREIGN KEY (cpf_paciente) REFERENCES paciente (cpf)
 ) DEFAULT CHARSET utf8mb4;
 
-CREATE TABLE edu_tra(
+CREATE TABLE IF NOT EXISTS edu_tra(
     cpf_paciente BIGINT,
     escolaridade ENUM (
         "Analfabeto",
@@ -98,7 +93,7 @@ CREATE TABLE edu_tra(
     FOREIGN KEY (cpf_paciente) REFERENCES paciente (cpf)
 ) DEFAULT CHARSET utf8mb4;
 
-CREATE TABLE medico(
+CREATE TABLE IF NOT EXISTS medico(
     cpf BIGINT NOT NULL,
     crm INT NOT NULL UNIQUE,
     nome_medico VARCHAR(50) NOT NULL,
@@ -106,7 +101,7 @@ CREATE TABLE medico(
     PRIMARY KEY (cpf)
 ) DEFAULT CHARSET utf8mb4;
 
-CREATE TABLE consulta(
+CREATE TABLE IF NOT EXISTS consulta(
     id INT AUTO_INCREMENT,
     cpf_paciente BIGINT,
     cpf_medico BIGINT,
@@ -143,19 +138,4 @@ FROM
 
 SHOW TABLES;
 
-#drop database hipocrates;
-#describe paciente;
-#############################################################
-#TESTE DE COMO SE DA O INSERT DO HORARIO ATUAL DO SITEMA...##
-#############################################################
-/*
- CREATE TABLE logs_ (
- id INT NOT NULL AUTO_INCREMENT,
- data_hora_atual DATETIME NOT NULL,
- message TEXT,
- PRIMARY KEY (id)
- );
- INSERT INTO logs_ (id, timestamp_, message) VALUES (default, NOW(), 'Esta é uma mensagem de log.');
- select*from logs_;
- */
-################################################
+-- drop database hipocrates;

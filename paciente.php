@@ -1,8 +1,6 @@
 <?php
 require_once "conexao.php";
 
-//paciente
-
 class Paciente
 {
     public $foto;
@@ -16,16 +14,16 @@ class Paciente
     public $nacionalidade;
     public $orgao_emissor;
     public $estado_civil;
-    /* public $senha; */
+    // public $senha;
     public $limitacoes;
     public $opicao;
     public $data_hora_cadastro;
     public $etinia;
     public $tipo_saguineo;
-    
+
     public function inserir()
     {
-        
+
         $sql = "INSERT INTO paciente (foto,cpf,rg,cns,nome,idade,genero,data_nascimento,nacionalidade,orgao_emissor,estado_civil,/* senha, */limitacoes,data_hora_cadastro,etinia,tipo_saguineo)
         VALUES (:foto, :cpf, :rg, :cns, :nome, :idade, :genero, :data_nascimento, :nacionalidade, :orgao_emissor, :estado_civil, /* :senha, */ :limitacoes, :data_hora_cadastro, :etinia, :tipo_saguineo )";
         $conexao = Conexao::conectar();
@@ -46,10 +44,7 @@ class Paciente
         $stmt->bindValue(":data_hora_cadastro", $this->data_hora_cadastro);
         $stmt->bindValue(":etinia", $this->etinia);
         $stmt->bindValue(":tipo_saguineo", $this->tipo_saguineo);
-       
-        $stmt->execute();
-        
-        
-    }
 
+        $stmt->execute();
+    }
 }

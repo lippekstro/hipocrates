@@ -15,7 +15,7 @@ try {
     $nacionalidade = $_POST['nacionalidade'];
     $orgao_emissor = $_POST['orgao_emissor'];
     $estado_civil = $_POST['estado_civil'];
-    /* $senha = $_POST['senha']; */
+    // $senha = $_POST['senha'];
     $limitacoes = $_POST['limitacoes'];
     $data_hora_cadastro = $_POST['data_hora_cadastro'];
     $etinia = $_POST['etinia'];
@@ -50,5 +50,3 @@ try {
 } catch (Exception $e) {
     echo "Erro ao inserir paciente: " . $e->getMessage();
 }
-
-?>

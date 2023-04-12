@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
@@ -18,7 +18,7 @@
                     <!-- <input type="file" id="foto" name="foto" > -->
                     <!-- <img src="data:foto/jpg;charset=utf8;base64, <?= base64_encode($_POST['foto']); ?>" alt=""> -->
                 </div>
-                <div class="dados_indentificacao">
+                <div class="dados_indetificacao">
 
                     <label for="nome">Nome completo</label>
                     <input type="text" name="nome" id="nome" value="" placeholder="Digite seu nome completo">
@@ -44,7 +44,7 @@
                     <fieldset>
                         <legend>Estado civil</legend>
                         <input type="radio" name="estado_civil" value="solteiro" id="solteiro">
-                        <label for="solteiroro">Solteiro</label>
+                        <label for="solteiro">Solteiro</label>
 
                         <input type="radio" name="estado_civil" value="casado" id="casado">
                         <label for="casado">Casado</label>
@@ -61,7 +61,7 @@
                     <label for="rg">Seu RG</label>
                     <input type="number" name="rg" id="rg" value="" placeholder="Digite seu RG">
 
-                    <label for="orgao_emissor">Orgão Emissor</label>
+                    <label for="orgao_emissor">Órgão Emissor</label>
                     <select name="orgao_emissor" id="orgao_emissor">
                         <option value="">selecione</option>
                         <option value="SSP">SSP</option>
@@ -76,8 +76,8 @@
                     <label for="cep">CEP</label>
                     <input type="number" name="cep" id="cep" value="" placeholder="Digite seu CEP">
 
-                    <label for="logradouro">Longradouro</label>
-                    <input type="text" name="logradouro" id="logradouro" value="" placeholder="Digite o longradouro">
+                    <label for="logradouro">Logradouro</label>
+                    <input type="text" name="logradouro" id="logradouro" value="" placeholder="Digite o logradouro">
 
                     <label for="numero">Numero</label>
                     <input type="number" name="numero" id="numero" value="" placeholder="Numero da casa">
@@ -138,8 +138,8 @@
                 <div class="limitacoes">
                     <fieldset>
 
-                    <label for="limitacoes">Limitações</label>
-                    <input type="text" name="limitacoes" id="limitacoes" placeholder="Escreva sua deficiencia">
+                        <label for="limitacoes">Limitações</label>
+                        <input type="text" name="limitacoes" id="limitacoes" placeholder="Escreva sua deficiência">
 
                     </fieldset>
 
@@ -208,7 +208,7 @@
 
                 </div>
                 <div class="educaçãoTrabalho">
-                    <label for="eduTra">Nivel de escolaridade</label>
+                    <label for="eduTra">Nível de escolaridade</label>
                     <select name="eduTra" id="eduTra">
                         <option value="">selecione</option>
                         <option value="">Analfabeto</option>
