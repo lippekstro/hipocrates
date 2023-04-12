@@ -1,10 +1,41 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.tit1 {
+    margin-left: 7rem;
+    width: 50%;
+    justify-content: flex-start;
+    display: flex;
+    color: #fff;
+    font-size: 40px;
+}
+
+/*texto*/
+.text1 {
+    text-align: justify;
+    display: flex;
+    justify-content: flex-end;
+    width: 50%;
+    color: #fff;
+
+}
+
+H1 {
+    color: white;
+    margin-left: 5rem;
+}
+
+body {
+    height: 100%;
+    overflow-y: hidden;
+
+    background-color: rgb(17, 42, 88);
 }
 
 :root {
@@ -19,10 +50,6 @@
   --color-9: #FDC500;
   --color-10: #FFD500;
 
-}
-
-body {
-  overflow: hidden;
 }
 
 .sidebar {
