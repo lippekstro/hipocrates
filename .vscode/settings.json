@@ -2,6 +2,7 @@
     "cSpell.words": [
         "conexao",
         "Conexao",
+        "conjuge",
         "endereco",
         "ERRMODE",
         "etinia",
@@ -19,5 +20,20 @@
         "saguineo",
         "sanguineo",
         "USUARIO"
+    ],
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "MySQL",
+            "database": "MySQL",
+            "username": "root",
+            "askForPassword": true
+        }
     ]
 }

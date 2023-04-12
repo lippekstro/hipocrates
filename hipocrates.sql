@@ -1,3 +1,4 @@
+-- SQLBook: Code
 CREATE DATABASE hipocrates;
 
 USE hipocrates;
@@ -7,7 +8,7 @@ CREATE TABLE IF NOT EXISTS relacoes(
     nome_mae VARCHAR(80) NOT NULL,
     nome_pai VARCHAR(80) NOT NULL,
     nome_responsavel VARCHAR(80),
-    nome_conjugue VARCHAR(80),
+    nome_conjuge VARCHAR(80),
     PRIMARY KEY (cpf)
 ) DEFAULT CHARSET utf8mb4;
 
@@ -24,8 +25,9 @@ CREATE TABLE IF NOT EXISTS paciente(
     nacionalidade VARCHAR(20) NOT NULL,
     orgao_emissor ENUM("SSP", "SJC", "SJT") NOT NULL,
     estado_civil ENUM("Solteiro", "Casado", "Divorciado") NOT NULL,
-    #senha VARCHAR(8) CHECK ((length(senha)>=6)AND(length(senha)<=8)),
-    limitacoes VARCHAR ("Cognitiva", "Locomoção", "Audição", "Outros"),
+    -- senha VARCHAR(8) CHECK ((length(senha)>=6)AND(length(senha)<=8)),
+    limitacoes SET ("Cognitiva", "Locomoção", "Audição", "Sem Deficiência ") NOT NULL
+    ,
     data_hora_cadastro DATETIME,
     etinia ENUM ("Negro", "Branco", "Pardo") NOT NULL,
     tipo_saguineo ENUM("A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-"),
@@ -137,5 +139,7 @@ FROM
     endereco;
 
 SHOW TABLES;
+
+DROP DATABASE hipocrates;
 
 -- drop database hipocrates;
