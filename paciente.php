@@ -44,7 +44,6 @@ class Paciente
         $stmt->bindValue(":data_hora_cadastro", $this->data_hora_cadastro);
         $stmt->bindValue(":etinia", $this->etinia);
         $stmt->bindValue(":tipo_saguineo", $this->tipo_saguineo);
-
         $stmt->execute();
     }
 }

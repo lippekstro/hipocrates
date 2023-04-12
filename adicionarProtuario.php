@@ -1,3 +1,7 @@
+<?php
+require_once "paciente.php";
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -128,8 +132,8 @@
                     <label for="telefone_1">Celular</label>
                     <input type="tel" name="telefone_1" id="telefone_1" placeholder="Digite seu número">
 
-                    <label for="telefone_2">Telefone</label>
-                    <input type="tel" name="telefone_2" id="telefone_2" placeholder="Digite seu telefone(opcional)">
+                    <label for="telefone_2">Telefone Fixo</label>
+                    <input type="tel" name="telefone_2" id="telefone_2" placeholder="Digite seu telefone fixo(opcional)">
 
                     <label for="email">E-mail</label>
                     <input type="email" name="email" id="email" value="" placeholder="Digite seu E-mail">
@@ -137,25 +141,10 @@
                 </div>
                 <div class="limitacoes">
                     <fieldset>
-
                         <label for="limitacoes">Limitações</label>
                         <input type="text" name="limitacoes" id="limitacoes" placeholder="Escreva sua deficiência">
-
                     </fieldset>
 
-                </div>
-                <div class="atendimento">
-
-                    <label for="nome_medico">Nome do medico</label>
-                    <input type="text" name="nome_medico" id="nome_medico" value="" placeholder="Nome do medico">
-
-                    <label for="categoria">Categoria</label>
-                    <select name="categoria" id="categoria">
-                        <option value="">selecione</option>
-                        <option value="">Clinico Geral</option>
-                        <option value="">Odontologia</option>
-                        <option value="">Psicologia</option>
-                    </select>
                 </div>
                 <div class="cadastro">
 
