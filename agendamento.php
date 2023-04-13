@@ -1,5 +1,6 @@
 <?php
 require_once "paciente.php";
+date_default_timezone_set('America/Sao_Paulo');
 ?>
 
 <!DOCTYPE html>
@@ -14,7 +15,7 @@ require_once "paciente.php";
 
 <body>
     <div>
-        <form action="adicionarController.php" method="post" enctype="multipart/form-data">
+        <form action="controller.php" method="post" enctype="multipart/form-data" id="forms">
             <div class="indetificacao">
                 <div class="img_indetificacao">
                     <input type="file" name="imagem" id="imagem">
@@ -24,8 +25,6 @@ require_once "paciente.php";
                 <div class="dados_indetificacao">
                     <label for="nome">Nome completo</label>
                     <input type="text" name="nome" id="nome" value="" placeholder="Digite seu nome completo">
-                    <label for="idade">Idade</label>
-                    <input type="number" name="idade" id="idade" value="" placeholder="Digite sua idade">
                     <fieldset>
                         <legend>Gênero</legend>
                         <input type="radio" name="genero" value="Masculino" id="masculino">
@@ -35,8 +34,6 @@ require_once "paciente.php";
                     </fieldset>
                     <label for="data_nascimento">Data Nascimento</label>
                     <input type="date" name="data_nascimento" id="data_nascimento" value="" placeholder="Data nascimento">
-                    <label for="nacionalidade">Nacionalidade</label>
-                    <input type="text" name="nacionalidade" id="nacionalidade" value="" placeholder="Nacionalidade">
                     <fieldset>
                         <legend>Estado civil</legend>
                         <input type="radio" name="estado_civil" value="solteiro" id="solteiro">
@@ -52,56 +49,40 @@ require_once "paciente.php";
                     <input type="number" name="rg" id="rg" value="" placeholder="Digite seu RG">
                     <label for="orgao_emissor">Órgão Emissor</label>
                     <select name="orgao_emissor" id="orgao_emissor">
-                        <option value="">selecione</option>
-                        <option value="SSP">SSP</option>
-                        <option value="SJC">SJC</option>
-                        <option value="SJT">SJT</option>
+                        <option value="SSP">SSP - Secretaria de Segurança Pública</option>
+                        <option value="PC">PC - Polícia Civil</option>
+                        <option value="PM">PM - Polícia Militar</option>
+                        <option value="DETRAN">DETRAN - Departamento Estadual de Trânsito</option>
+                        <option value="DPF">DPF - Departamento de Polícia Federal</option>
+                        <option value="CREA">CREA - Conselho Regional de Engenharia e Agronomia</option>
+                        <option value="OAB">OAB - Ordem dos Advogados do Brasil</option>
+                        <option value="CRM">CRM - Conselho Regional de Medicina</option>
+                        <option value="COREN">COREN - Conselho Regional de Enfermagem</option>
+                        <option value="CRO">CRO - Conselho Regional de Odontologia</option>
                     </select>
                 </div>
-                <div class="endereço">
-                    <label for="cep">CEP</label>
-                    <input type="number" name="cep" id="cep" value="" placeholder="Digite seu CEP">
-                    <label for="logradouro">Logradouro</label>
-                    <input type="text" name="logradouro" id="logradouro" value="" placeholder="Digite o logradouro">
-                    <label for="numero">Numero</label>
-                    <input type="number" name="numero" id="numero" value="" placeholder="Numero da casa">
-                    <label for="complemento">Complemento</label>
-                    <input type="text" name="complemento" id="complemento" value="" placeholder="Digite um complemento">
-                    <label for="bairro">Bairro</label>
-                    <input type="text" name="bairro" id="bairro" value="" placeholder="Digite qual é seu bairro">
-                    <label for="cidade">Cidade</label>
-                    <input type="text" name="cidade" id="cidade" value="" placeholder="Digite qual é sua cidade">
-                    <label for="uf">UF</label>
-                    <select name="uf" id="uf">
-                        <option value="">selecione</option>
-                        <option value="">AC</option>
-                        <option value="">AL</option>
-                        <option value="">AP</option>
-                        <option value="">AM</option>
-                        <option value="">BA</option>
-                        <option value="">CE</option>
-                        <option value="">DF</option>
-                        <option value="">ES</option>
-                        <option value="">GO</option>
-                        <option value="">MA</option>
-                        <option value="">MT</option>
-                        <option value="">MS</option>
-                        <option value="">MG</option>
-                        <option value="">PA</option>
-                        <option value="">PB</option>
-                        <option value="">PR</option>
-                        <option value="">PE</option>
-                        <option value="">PI</option>
-                        <option value="">RJ</option>
-                        <option value="">RN</option>
-                        <option value="">RS</option>
-                        <option value="">RO</option>
-                        <option value="">RR</option>
-                        <option value="">SC</option>
-                        <option value="">SP</option>
-                        <option value="">SE</option>
-                        <option value="">TO</option>
-                    </select>
+                <div class="endereco">
+                    <label for="cep">CEP:</label>
+                    <input type="text" id="cep" name="cep">
+                    <br><br>
+                    <label for="logradouro">Logradouro:</label>
+                    <input type="text" id="logradouro" name="logradouro">
+                    <br><br>
+                    <label for="numero">Numero:</label>
+                    <input type="number" id="numero" name="numero">
+                    <br><br>
+                    <label for="complemento">Complemento:</label>
+                    <input type="text" id="complemento" name="complemento">
+                    <br><br>
+                    <label for="bairro">Bairro:</label>
+                    <input type="text" id="bairro" name="bairro">
+                    <br><br>
+                    <label for="cidade">Cidade:</label>
+                    <input type="text" id="cidade" name="cidade">
+                    <br><br>
+                    <label for="estado">Estado:</label>
+                    <input type="text" id="estado" name="estado">
+                    <br><br>
                 </div>
                 <div class="contato">
                     <label for="telefone_1">Celular</label>
@@ -121,8 +102,6 @@ require_once "paciente.php";
                     </fieldset>
                 </div>
                 <div class="cadastro">
-                    <label for="data_hora_cadastro">Momento em que foi cadastrado</label>
-                    <input type="datetime" id="data_hora_cadastro" name="data_hora_cadastro" value="">
                     <fieldset>
                         <legend>Etinia</legend>
                         <input type="radio" name="etinia" value="Negro" id="negro">
@@ -178,12 +157,13 @@ require_once "paciente.php";
                     <input type="text" name="empresa" value="" id="empresa" placeholder="Campo não obrigatorio">
                 </div>
                 <div>
-                    <button type="submit">Cadastrar</button>
-                    <button type="">Editar</button>
+                    <button type="submit">Enviar</button>
                 </div>
             </div>
         </form>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>

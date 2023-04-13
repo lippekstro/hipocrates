@@ -22,11 +22,18 @@ CREATE TABLE
         rg BIGINT NOT NULL UNIQUE,
         cns int not null,
         nome VARCHAR(80) NOT NULL,
-        idade SMALLINT NOT NULL,
         genero ENUM("Masculino", "Feminino") NOT NULL,
         data_nascimento DATE NOT NULL,
-        nacionalidade VARCHAR(20) NOT NULL,
-        orgao_emissor ENUM("SSP", "SJC", "SJT") NOT NULL,
+        orgao_emissor ENUM(
+            "SSP",
+            "SSD",
+            "SSM",
+            "PC",
+            "PF",
+            "PM",
+            "CGPI",
+            "CNIG"
+        ) NOT NULL,
         estado_civil ENUM(
             "Solteiro",
             "Casado",
@@ -38,7 +45,7 @@ CREATE TABLE
             "Audição",
             "Sem Deficiência "
         ) NOT NULL,
-        data_hora_cadastro DATETIME,
+        dataHora TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
         etinia ENUM ("Negro", "Branco", "Pardo") NOT NULL,
         tipo_saguineo ENUM(
             "A+",
@@ -59,6 +66,8 @@ CREATE TABLE
         cpf_paciente BIGINT,
         cep VARCHAR(8) NOT NULL,
         logradouro VARCHAR(255) NOT NULL,
+        numero VARCHAR(6) NOT NULL,
+        complemento VARCHAR(255) NULL,
         bairro VARCHAR(255) NOT NULL,
         cidade VARCHAR(255) NOT NULL,
         estado CHAR(2) NOT NULL,
