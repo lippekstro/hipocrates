@@ -1,39 +1,40 @@
 {
-    "cSpell.words": [
-        "conexao",
-        "Conexao",
-        "conjuge",
-        "endereco",
-        "ERRMODE",
-        "etinia",
-        "genero",
-        "hipocrates",
-        "horario",
-        "indetificacao",
-        "limitacoes",
-        "obrigatorio",
-        "opicao",
-        "orgao",
-        "profissao",
-        "relacoes",
-        "responsavel",
-        "saguineo",
-        "sanguineo",
-        "USUARIO"
-    ],
-    "sqltools.connections": [
-        {
-            "mysqlOptions": {
-                "authProtocol": "default"
-            },
-            "previewLimit": 50,
-            "server": "localhost",
-            "port": 3306,
-            "driver": "MySQL",
-            "name": "MySQL",
-            "database": "MySQL",
-            "username": "root",
-            "askForPassword": true
-        }
-    ]
+  "cSpell.words": [
+    "conexao",
+    "Conexao",
+    "conjuge",
+    "COREN",
+    "endereco",
+    "ERRMODE",
+    "etinia",
+    "genero",
+    "hipocrates",
+    "horario",
+    "indetificacao",
+    "limitacoes",
+    "obrigatorio",
+    "opicao",
+    "orgao",
+    "profissao",
+    "relacoes",
+    "responsavel",
+    "saguineo",
+    "sanguineo",
+    "USUARIO"
+  ],
+  "sqltools.connections": [
+    {
+      "mysqlOptions": {
+        "authProtocol": "default"
+      },
+      "previewLimit": 50,
+      "server": "localhost",
+      "port": 3306,
+      "driver": "MySQL",
+      "name": "MySQL",
+      "database": "MySQL",
+      "username": "root",
+      "askForPassword": true
+    }
+  ]
 }

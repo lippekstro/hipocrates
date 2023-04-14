@@ -1,4 +1,5 @@
 -- SQLBook: Code
+
 CREATE DATABASE hipocrates;
 
 USE hipocrates;
