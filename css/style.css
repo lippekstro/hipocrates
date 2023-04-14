@@ -22,7 +22,6 @@
 }
 
 body {
-  height: 100%;
   background-color: #2F4C73;
   background-image: linear-gradient(to right, rgba(17, 42, 88, 0.749), rgba(17, 42, 88, 0.749)), url("/hipocrates/imgs/esteto.jpg");
   background-attachment: fixed;
@@ -365,7 +364,7 @@ h1 {
 
 .home-section {
   position: relative;
-  height: 100vh;
+  height: 100vw;
   left: 300px;
   width: calc(100% - 300px);
   transition: all 0.5s ease;
@@ -542,7 +541,7 @@ h1 {
 
 .buttons {
   position: absolute;
-  bottom: 30px;
+  bottom: 10%;
   z-index: 222222;
   text-align: center;
   width: 100%;
@@ -570,6 +569,15 @@ h1 {
   align-items: center;
   margin: 1rem;
   padding-bottom: 5rem;
+}
+
+footer {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  background-color: #051923;
+  padding: 1rem;
+  z-index: 1;
 }
 
 @media screen and (max-width: 400px) {

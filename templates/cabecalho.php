@@ -1,9 +1,14 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
-<html lang="pt-Br" dir="ltr">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8" />
     <title>Hipócrates</title>
+    <link rel="shortcut icon" href="/hipocrates/imgs/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="/hipocrates/css/style.css" />
     <link rel="stylesheet" href="/hipocrates/css/agendamento.css" />
     <link rel="stylesheet" href="/hipocrates/css/formulario.css" />
@@ -18,8 +23,8 @@
 <body>
     <div class="sidebar close">
         <div class="logo-details">
-            <i class="bx bxl-c-plus-plus"></i>
-            <span class="logo_name">CodingLab</span>
+            <i class='bx bx-health'></i>
+            <span class="logo_name">Hipócrates</span>
         </div>
         <ul class="nav-links">
             <li>
@@ -51,7 +56,7 @@
                     <li><a href="#">Prontuario Digital</a></li>
                 </ul>
             </li>
-            <!-- <li>
+            <li>
                 <div class="iocn-link">
                     <a href="#">
                         <i class="bx bx-donate-heart"></i>
@@ -65,31 +70,18 @@
                     <li><a href="#">Doação de Medula</a></li>
                     <li><a href="#">Doação de Órgãos</a></li>
                 </ul>
-            </li> -->
+            </li>
             <li>
                 <div class="iocn-link">
                     <a href="/hipocrates/views/agendamento.php">
                         <i class="bx bx-calendar"></i>
                         <span class="link_name">Agendamentos</span>
                     </a>
-                    <i class="bx bxs-chevron-down arrow"></i>
                 </div>
                 <ul class="sub-menu">
                     <li><a class="link_name" href="/hipocrates/views/agendamento.php">Agendamentos</a></li>
-                    <!-- <li><a href="#">Clinico Geral</a></li>
-                    <li><a href="#">Psicologia</a></li>
-                    <li><a href="#">Odontologia</a></li> -->
                 </ul>
             </li>
-            <!-- <li>
-                <a href="#">
-                    <i class="bx bx-detail"></i>
-                    <span class="link_name">Noticias</span>
-                </a>
-                <ul class="sub-menu blank">
-                    <li><a class="link_name" href="#">Noticias</a></li>
-                </ul>
-            </li> -->
             <li>
                 <a href="/hipocrates/views/sobre.php">
                     <i class="bx bx-compass"></i>
@@ -109,26 +101,28 @@
                 </ul>
             </li>
             <li>
-                <div class="profile-details">
-                    <a href="/hipocrates/views/PgUser.php">
-                        <span class="material-symbols-outlined">login</span>
-                        <span class="link_name">Entrar</span>
-                    </a>
-                    <ul class="sub-menu blank">
-                        <li><a class="link_name" href="/hipocrates/views/PgUser.php">Entrar</a></li>
-                    </ul>
-                </div>
-
-                <!-- <div class="profile-details">
-                    <div class="profile-content">
-                        <img src="#" alt="profileImg" />
+                <?php if (!isset($_SESSION['usuario']['cpf'])) : ?>
+                    <div class="profile-details">
+                        <a href="/hipocrates/views/PgUser.php">
+                            <span class="material-symbols-outlined">login</span>
+                            <span class="link_name">Entrar</span>
+                        </a>
+                        <ul class="sub-menu blank">
+                            <li><a class="link_name" href="/hipocrates/views/PgUser.php">Entrar</a></li>
+                        </ul>
                     </div>
-                    <div class="name-job">
-                        <div class="profile_name">Usuário 1</div>
-                        <div class="job">Paciente</div>
+                <?php else : ?>
+                    <div class="profile-details">
+                        <div class="profile-content">
+                            <img src="https://source.unsplash.com/random/1920x1080/?robot" alt="profileImg" />
+                        </div>
+                        <div class="name-job">
+                            <div class="profile_name"><?= $usuario->nome ?></div>
+                            <div class="job"><?= $usuario->tipo ?></div>
+                        </div>
+                        <i class="bx bx-log-out"></i>
                     </div>
-                    <i class="bx bx-log-out"></i>
-                </div> -->
+                <?php endif; ?>
             </li>
         </ul>
     </div>
