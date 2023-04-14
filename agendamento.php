@@ -46,10 +46,10 @@ date_default_timezone_set('America/Sao_Paulo');
                     <label for="cpf">Seu CPF</label>
                     <input type="text" name="cpf" id="cpf" value="" placeholder="Digite seu CPF" maxlength="14">
                     <label for="rg">Seu RG</label>
-                    <input type="number" name="rg" id="rg" value="" placeholder="Digite seu RG">
+                    <input type="text" name="rg" id="rg" value="" placeholder="Digite seu RG">
                     <label for="orgao_emissor">Órgão Emissor</label>
                     <select name="orgao_emissor" id="orgao_emissor">
-                        <option value=""></option>
+                        <option value="">Selecione...</option>
                         <option value="SSP">SSP - Secretaria de Segurança Pública</option>
                         <option value="PC">PC - Polícia Civil</option>
                         <option value="PM">PM - Polícia Militar</option>
@@ -87,7 +87,7 @@ date_default_timezone_set('America/Sao_Paulo');
                 </div>
                 <div class="contato">
                     <label for="telefone_1">Celular</label>
-                    <input type="tel" name="telefone_1" id="telefone_1" placeholder="Digite seu número">
+                    <input type="text" name="telefone_1" id="telefone_1" placeholder="Digite seu número">
                     <label for="telefone_2">Telefone Fixo</label>
                     <input type="tel" name="telefone_2" id="telefone_2" placeholder="Digite seu telefone fixo(opcional)">
                     <label for="email">E-mail</label>
@@ -97,9 +97,9 @@ date_default_timezone_set('America/Sao_Paulo');
                     <fieldset>
                         <legend>Limitações</legend>
                         <input type="checkbox" name="limitacoes[]" value="Sem Deficiência"> Sem Deficiência<br>
-                        <input type="checkbox" name="limitacoes[]" value="Cognitiva"> Cognitiva<br>
-                        <input type="checkbox" name="limitacoes[]" value="Locomoção"> Locomoção<br>
-                        <input type="checkbox" name="limitacoes[]" value="Audição"> Audição<br>
+                        <input type="checkbox" name="limitacoes[]" value="Cognitiva">Cognitiva<br>
+                        <input type="checkbox" name="limitacoes[]" value="Locomoção">Locomoção<br>
+                        <input type="checkbox" name="limitacoes[]" value="Audição">Audição<br>
                     </fieldset>
                 </div>
                 <div class="cadastro">
@@ -165,6 +165,7 @@ date_default_timezone_set('America/Sao_Paulo');
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="script.js"></script>
+    <script src="jquery.mask.js"></script>
 </body>
 
 </html>

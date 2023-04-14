@@ -77,8 +77,8 @@ CREATE TABLE
 CREATE TABLE
     contato(
         cpf_paciente BIGINT,
-        telefone_1 BIGINT NOT NULL,
-        telefone_2 BIGINT,
+        phone_DDD BIGINT NOT NULL,
+        phone_fixe BIGINT NULL,
         email VARCHAR(50),
         FOREIGN KEY (cpf_paciente) REFERENCES paciente (cpf)
     ) DEFAULT CHARSET utf8mb4;
@@ -147,6 +147,8 @@ CREATE TABLE
 SELECT * FROM paciente;
 
 SELECT * FROM endereco;
+
+SELECT * FROM contato;
 
 SHOW TABLES;
 

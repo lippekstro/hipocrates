@@ -6,7 +6,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     try {
         $cpf = $_POST['cpf'];
+        $cpf = str_replace(".", "", $cpf);
+        $cpf = str_replace("-", "", $cpf);
+        $cpf = (int)$cpf;
         $rg = $_POST['rg'];
+        $rg = str_replace("-", "", $rg);
+        $rg = (int)$rg;
         $cns = $_POST['cns'];
         $nome = $_POST['nome'];
         $genero = $_POST['genero'];

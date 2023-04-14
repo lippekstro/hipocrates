@@ -21,16 +21,13 @@ $(document).ready(function () {
   });
 });
 
-function mascaraCPF(cpf) {
-  cpf = cpf.replace(/\D/g, ""); // remove caracteres não numéricos
-  cpf = cpf.replace(/(\d{3})(\d)/, "$1.$2"); // insere o primeiro ponto
-  cpf = cpf.replace(/(\d{3})(\d)/, "$1.$2"); // insere o segundo ponto
-  cpf = cpf.replace(/(\d{3})(\d{1,2})$/, "$1-$2"); // insere o traço
-  return cpf;
-}
-
-let cpfInput = document.getElementById("cpf");
-
-cpfInput.addEventListener("input", function (event) {
-  event.target.value = mascaraCPF(event.target.value);
+$(document).ready(function () {
+  $("#telefone_2").mask("0000-0000");
+  $("#telefone_1").mask("(00) 00000-0000");
+  $("#cpf").mask("000.000.000-00", {
+    reverse: true,
+  });
+  $("#rg").mask("000000000000-0", {
+    reverse: true,
+  });
 });
