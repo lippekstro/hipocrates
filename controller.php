@@ -1,7 +1,7 @@
 <?php
 require_once "paciente.php";
 require_once "endereco.php";
-require_once "responsavel.php";
+require_once "relacoes.php";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
