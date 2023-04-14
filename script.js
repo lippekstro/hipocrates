@@ -20,3 +20,17 @@ $(document).ready(function () {
     });
   });
 });
+
+function mascaraCPF(cpf) {
+  cpf = cpf.replace(/\D/g, ""); // remove caracteres não numéricos
+  cpf = cpf.replace(/(\d{3})(\d)/, "$1.$2"); // insere o primeiro ponto
+  cpf = cpf.replace(/(\d{3})(\d)/, "$1.$2"); // insere o segundo ponto
+  cpf = cpf.replace(/(\d{3})(\d{1,2})$/, "$1-$2"); // insere o traço
+  return cpf;
+}
+
+let cpfInput = document.getElementById("cpf");
+
+cpfInput.addEventListener("input", function (event) {
+  event.target.value = mascaraCPF(event.target.value);
+});

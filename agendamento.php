@@ -44,11 +44,12 @@ date_default_timezone_set('America/Sao_Paulo');
                         <label for="divorciado">Divorciado</label>
                     </fieldset>
                     <label for="cpf">Seu CPF</label>
-                    <input type="number" name="cpf" id="cpf" value="" placeholder="Digite seu CPF">
+                    <input type="text" name="cpf" id="cpf" value="" placeholder="Digite seu CPF" maxlength="14">
                     <label for="rg">Seu RG</label>
                     <input type="number" name="rg" id="rg" value="" placeholder="Digite seu RG">
                     <label for="orgao_emissor">Órgão Emissor</label>
                     <select name="orgao_emissor" id="orgao_emissor">
+                        <option value=""></option>
                         <option value="SSP">SSP - Secretaria de Segurança Pública</option>
                         <option value="PC">PC - Polícia Civil</option>
                         <option value="PM">PM - Polícia Militar</option>
