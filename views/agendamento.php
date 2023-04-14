@@ -46,18 +46,6 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/templates/cabecalho.php";
             <span class="material-symbols-outlined" type="button">
                 add_circle
             </span>
-            09:00</button>
-        <div class="panel">
-            <?php
-            require $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/php/form.php";
-            ?>
-        </div>
-    </div>
-    <div id="hora-teste">
-        <button class="accordion">
-            <span class="material-symbols-outlined" type="button">
-                add_circle
-            </span>
             09:30</button>
         <div class="panel">
             <?php
@@ -134,6 +122,18 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/templates/cabecalho.php";
                 add_circle
             </span>
             12:30</button>
+        <div class="panel">
+            <?php
+            require $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/php/form.php";
+            ?>
+        </div>
+    </div>
+    <div id="hora-teste">
+        <button class="accordion">
+            <span class="material-symbols-outlined" type="button">
+                add_circle
+            </span>
+            13:00</button>
         <div class="panel">
             <?php
             require $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/php/form.php";
@@ -271,18 +271,14 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/templates/cabecalho.php";
     </div>
 </div>
 
-
-
-
-
 <!--Calendario-->
-<?php 
+<?php
 require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/php/calendario.php";
 ?>
 
 <!-- chamar os js aqui embaixo -->
 <script src="/hipocrates/js/sapatenis.js"></script>
 
-<?php 
+<?php
 require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/templates/rodape.php";
 ?>

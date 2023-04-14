@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="/hipocrates/css/formulario.css" />
     <link rel="stylesheet" href="/hipocrates/css/form.css" />
     <link rel="stylesheet" href="/hipocrates/css/login.css">
-    <link rel="stylesheet" href="/hipocrates/css/rec.css">
     <link rel="stylesheet" href="/hipocrates/css/senha.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
@@ -109,26 +108,18 @@
                     <li><a class="link_name" href="#">Fale Conosco</a></li>
                 </ul>
             </li>
-           <!--  <li>
-                <a href="#">
-                    <i class="bx bx-pulse"></i>
-                    <span class="link_name">Consultório</span>
-                </a>
-                <ul class="sub-menu blank">
-                    <li><a class="link_name" href="#">Consultório</a></li>
-                </ul>
-            </li> -->
-            <!-- <li>
-                <a href="#">
-                    <i class="bx bx-cog"></i>
-                    <span class="link_name">Configurações</span>
-                </a>
-                <ul class="sub-menu blank">
-                    <li><a class="link_name" href="#">Configurações</a></li>
-                </ul>
-            </li> -->
             <li>
                 <div class="profile-details">
+                    <a href="/hipocrates/views/PgUser.php">
+                        <span class="material-symbols-outlined">login</span>
+                        <span class="link_name">Entrar</span>
+                    </a>
+                    <ul class="sub-menu blank">
+                        <li><a class="link_name" href="/hipocrates/views/PgUser.php">Entrar</a></li>
+                    </ul>
+                </div>
+
+                <!-- <div class="profile-details">
                     <div class="profile-content">
                         <img src="#" alt="profileImg" />
                     </div>
@@ -137,7 +128,7 @@
                         <div class="job">Paciente</div>
                     </div>
                     <i class="bx bx-log-out"></i>
-                </div>
+                </div> -->
             </li>
         </ul>
     </div>

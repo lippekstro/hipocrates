@@ -1,164 +1,164 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-/* área das tags */
-body{
-    background-image:linear-gradient(to right, rgba(17, 42, 88, 0.749),rgba(17, 42, 88, 0.749)), url("https://media.istockphoto.com/id/1319031310/pt/foto/doctor-writing-a-medical-prescription.jpg?s=1024x1024&w=is&k=20&c=Il2qA08tTZ6Is5-GioQunHo0S3_yBW-cge_LNQSkpwU=");
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-}
-h1{
+h1 {
     display: flex;
     justify-content: center;
-    color:white;
+    color: white;
     text-decoration: none;
 }
 
-ol{
+ol {
     display: flex;
     flex-direction: row;
-    margin-right:1rem;
+    margin-right: 1rem;
 }
-header{
+
+header {
     background-color: rgb(17, 42, 88);
     box-shadow: 2px 2px #625adb52;
     position: sticky;
     top: 0;
 }
-main{
+
+main {
     display: flex;
 }
+
 /* área dos id's */
 
-#hora-teste{
+#hora-teste {
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
 }
-#logo{
+
+#logo {
     width: 5%;
-    margin-top:0.5rem;
+    margin-top: 0.5rem;
 }
-#nav-bar{
+
+#nav-bar {
     display: flex;
     justify-content: flex-end;
     flex-direction: row;
 }
-#nav-bar  a{
+
+#nav-bar a {
     margin: 0 1.5rem;
     text-decoration: none;
     color: aliceblue;
 }
-#menu{
+
+#menu {
     display: flex;
     align-items: center;
     font-size: 28pt;
 }
-#menu:hover{
+
+#menu:hover {
     cursor: pointer;
 }
-#main-txt{
+
+#main-txt {
     width: 80%;
     font-size: 20pt;
 }
-#color{
+
+#color {
     background-color: rgb(61, 127, 196);
     padding: 0.8rem;
     display: flex;
 }
-#color:hover{
+
+#color:hover {
     background-color: rgb(36, 78, 122);
     transition: 0.5s;
     cursor: pointer;
 }
-#user-icon{
-    display: flex;   
+
+#user-icon {
+    display: flex;
 }
-#datepicker{
+
+#datepicker {
     display: flex;
     align-items: center;
-    padding-left: 2.1rem;
-    padding-right: 2.1rem;
     font-size: 20pt;
-    margin-left: 0.5rem;
     color: aliceblue;
     background-color: #233c6c96;
     border-color: #4a6eff;
     outline: none;
 }
-#datepicker:hover{
+
+#datepicker:hover {
     cursor: pointer;
 }
+
 /* área do class */
-.conteiner{
-    width: 70%;
+.conteiner {
+    width: 55%;
     display: flex;
     flex-direction: column;
-    margin: 1rem 0 0 0;
 }
-.conteiner-side{
-    position: absolute;
-    /* display: flex;
-    width: 30%;
-    justify-content: center;
-    align-items: center; */
-}
-.cabecalho{
+
+.cabecalho {
     display: flex;
     justify-content: space-between;
-    
+
 }
-.cabecalho p,span{
+
+.cabecalho p,
+span {
     color: aliceblue;
 }
-.user-btn{
+
+.user-btn {
     width: 10%;
     display: flex;
     align-items: center;
 }
-.cabecalho p{
+
+.cabecalho p {
     display: flex;
     align-items: center;
     text-align: center;
 }
-.horarios p{
-    background-color:rgb(17, 42, 88);
+
+.horarios p {
+    background-color: rgb(17, 42, 88);
     margin: 1rem 0 0 0;
     color: aliceblue;
     font-size: 20pt;
 }
-.calendario p{
+
+.calendario p {
     font-size: 26pt;
     color: aliceblue;
 }
-.calendario{
+
+.calendario {
     position: fixed;
-    left: 75%;
-    top: 25%;
+    left: 65%;
+    top: 50%;
     background-color: #2a3b95b8;
     box-shadow: 5px 4px #202c669e;
-    padding-left: 3rem;
-    padding-right: 3rem;
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+    padding: 2rem;
     border-radius: 14px;
-    /* display: flex;
+    translate: 0 -50%;
+    display: flex;
     flex-direction: column;
-    align-items: center; */
+    align-items: center;
 }
-.horarios span{
+
+.horarios span {
     display: flex;
     align-items: center;
-    margin-right:1rem;
+    margin-right: 1rem;
     margin-left: 0.5rem;
 }
-.horarios p{
+
+.horarios p {
     display: flex;
     align-items: center;
 }
-/*KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK*/
+
 .accordion {
     background-color: rgb(17, 42, 88);
     color: #ffffff;
@@ -170,15 +170,18 @@ main{
     outline: none;
     font-size: 18pt;
     transition: 0.4s;
-  }
-  
-  .active, .accordion:hover {
-    background-color: rgb(27, 58, 117); 
-  }
-  
-  .panel {
+    display: flex;
+    align-items: center;
+}
+
+.active,
+.accordion:hover {
+    background-color: rgb(27, 58, 117);
+}
+
+.panel {
     padding: 0 18px;
     display: none;
     background-color: rgba(63, 75, 207, 0.519);
     overflow: hidden;
-  }
+}

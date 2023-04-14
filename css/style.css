@@ -1,128 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-      font-family: "Poppins", sans-serif;
-}
-
-/* cadastro */
-input{
-    border: 0px;
-    margin: 10px;
-    padding: 5px;
-  border-radius: 120px;
-}
-
-.esticar90{
-    padding-bottom:10px ;
-    padding-top:10px ;
-    width: 90%;
-  }
-
-  .esticar40{
-    padding-bottom:10px ;
-    padding-top:10px ;
-    width: 30%;
-  }
-
-.App{
-    background-color: #3d7ec476;
-    border-radius: 35px;
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    position: relative;
-    margin-top: 5%;
-margin-right:15%;
-    margin-left: 15%;
-}
-
-.espacamento{
-    padding-top: 0.7rem;
-}
-
-.password{
-    padding-top: 0.7rem;
-}
-
-.ns{
-    padding-top: 0.7rem;
-}
-
-.tel{
-    padding-top: 0.7rem;
-}
-/* cadastro */
-
-/* verificacao cadastro */
-.reenvio{
-    text-decoration: underline;
-}
-.hj{
-    border-radius: 50px;
-}
-
-.verificacao{
-    display: flex;
-    align-items: center;
-    outline: none;
-}
-
-.verificacao input{
-    text-align: center;
-    font-size: 1.125rem;
-}
-
-form input{
-    width: 45px;
-    height: 42px;
-}
-
-.verificacao input::-webkit-inner-spin-button,
-.verificacao input::-webkit-inner-outer-button{
-    display: none;
-}
-
-
-.text-sms{
-    padding-top: 2rem;
-    padding-left: 4rem;
-}
-
-.tit1 {
-    margin-left: 7rem;
-    width: 50%;
-    justify-content: flex-start;
-    display: flex;
-    color: #fff;
-    font-size: 40px;
-}
-
-/*texto*/
-.text1 {
-    text-align: justify;
-    display: flex;
-    justify-content: flex-end;
-    width: 50%;
-    color: #fff;
-
-}
-
-H1 {
-    color: white;
-    margin-left: 5rem;
-}
-
-body {
-    height: 100%;
-    overflow-y: hidden;
-
-    background-color: rgb(17, 42, 88);
-}
-
 :root {
   --color-1: #00A6FB;
   --color-2: #0582CA;
@@ -135,6 +12,115 @@ body {
   --color-9: #FDC500;
   --color-10: #FFD500;
 
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  height: 100%;
+  background-color: #2F4C73;
+  background-image: linear-gradient(to right, rgba(17, 42, 88, 0.749), rgba(17, 42, 88, 0.749)), url("/hipocrates/imgs/esteto.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+.esticar90 {
+  padding-bottom: 10px;
+  padding-top: 10px;
+  width: 90%;
+}
+
+.esticar40 {
+  padding-bottom: 10px;
+  padding-top: 10px;
+  width: 30%;
+}
+
+.App {
+  background-color: #3d7ec476;
+  border-radius: 35px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  position: relative;
+  margin-top: 5%;
+  margin-right: 15%;
+  margin-left: 15%;
+}
+
+.espacamento {
+  padding-top: 0.7rem;
+}
+
+.password {
+  padding-top: 0.7rem;
+}
+
+.ns {
+  padding-top: 0.7rem;
+}
+
+.tel {
+  padding-top: 0.7rem;
+}
+
+/* cadastro */
+
+/* verificacao cadastro */
+.reenvio {
+  text-decoration: underline;
+}
+
+.hj {
+  border-radius: 50px;
+}
+
+.verificacao {
+  display: flex;
+  align-items: center;
+  outline: none;
+}
+
+.verificacao input {
+  text-align: center;
+  font-size: 1.125rem;
+}
+
+.verificacao input::-webkit-inner-spin-button,
+.verificacao input::-webkit-inner-outer-button {
+  display: none;
+}
+
+
+.text-sms {
+  padding-top: 2rem;
+  padding-left: 4rem;
+}
+
+.tit1 {
+  width: 100%;
+  justify-content: space-evenly;
+  display: flex;
+  color: #fff;
+  font-size: 40px;
+}
+
+.text1 {
+  text-align: justify;
+  display: flex;
+  color: #fff;
+  padding: 0 10rem;
+}
+
+h1 {
+  color: white;
 }
 
 .sidebar {
@@ -386,7 +372,7 @@ body {
   padding: 12px;
 }
 
-.sidebar.close ~ .home-section {
+.sidebar.close~.home-section {
   left: 78px;
   width: calc(100% - 78px);
 }
@@ -411,38 +397,6 @@ body {
 .home-section .home-content .text {
   font-size: 26px;
   font-weight: 600;
-}
-
-@media screen and (max-width: 400px) {
-  .sidebar {
-    width: 240px;
-  }
-
-  .sidebar.close {
-    width: 78px;
-  }
-
-  .sidebar .profile-details {
-    width: 240px;
-  }
-
-  .sidebar.close .profile-details {
-    background: none;
-  }
-
-  .sidebar.close .profile-details {
-    width: 78px;
-  }
-
-  .home-section {
-    left: 240px;
-    width: calc(100% - 240px);
-  }
-
-  .sidebar.close ~ .home-section {
-    left: 78px;
-    width: calc(100% - 78px);
-  }
 }
 
 .container {
@@ -608,4 +562,44 @@ body {
 
 .buttons button:hover {
   background-color: #bac383;
+}
+
+.sobre {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem;
+  padding-bottom: 5rem;
+}
+
+@media screen and (max-width: 400px) {
+  .sidebar {
+    width: 240px;
+  }
+
+  .sidebar.close {
+    width: 78px;
+  }
+
+  .sidebar .profile-details {
+    width: 240px;
+  }
+
+  .sidebar.close .profile-details {
+    background: none;
+  }
+
+  .sidebar.close .profile-details {
+    width: 78px;
+  }
+
+  .home-section {
+    left: 240px;
+    width: calc(100% - 240px);
+  }
+
+  .sidebar.close~.home-section {
+    left: 78px;
+    width: calc(100% - 78px);
+  }
 }

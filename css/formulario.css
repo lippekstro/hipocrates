@@ -1,55 +1,39 @@
-form{
+form {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
-form > input{
-    padding-left: 0.3rem;
-    width: 25%;
+
+input, select {
+    font-size: 2rem;
+    width: 100%;
     margin: 0.5rem;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-
     background-color: rgba(95, 95, 255, 0.757);
     color: aliceblue;
-    outline: none;
-    border-color: blue;
+    border: none;
     border-radius: 10px;
+    text-align: center;
+    padding: 0.5rem;
 }
 
-form > input::placeholder {
+input::placeholder {
     color: aliceblue;
     text-align: center;
+}
+
+label {
+    color: white;
     font-size: 15pt;
 }
 
-form > select{
-    width: 25%;
-    text-align: center;
-    margin:0.5rem;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem; 
-
-    background-color: rgba(95, 95, 255, 0.757);
-    border-color: blue;
-    color: aliceblue;
-    border-radius: 10px;
-    outline: none;
-    font-size: 15pt;
-}
-
-label{
-    color:white;
-    font-size: 15pt;
-}
-
-#txt-centro{
+#txt-centro {
     text-align: center;
     color: aliceblue;
     font-size: 20pt;
 }
-#btn-agend{
+
+#btn-agend {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     padding-left: 1rem;
@@ -63,16 +47,9 @@ label{
     outline: none;
     font-size: 15pt;
 }
-.formulario{
-}
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-/* Firefox */
-input[type=number] {
-  -moz-appearance: textfield;
+    -webkit-appearance: none;
+    margin: 0;
 }

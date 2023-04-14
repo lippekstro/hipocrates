@@ -1,6 +1,6 @@
-       </section>
+</section>
 
-       <script src="/hipocrates/js/script.js"></script>
-       </body>
+<script src="/hipocrates/js/script.js"></script>
+</body>
 
-       </html>
+</html>
