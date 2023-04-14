@@ -15,12 +15,11 @@ class Paciente
     public $limitacoes;
     public $etinia;
     public $tipo_saguineo;
-    public $cpf_responsavel;
 
 
     public function inserir()
     {
-        $sql = "INSERT INTO paciente (foto, cpf, rg, cns, nome, genero, data_nascimento, orgao_emissor, estado_civil, limitacoes, etinia, tipo_saguineo, cpf_responsavel) VALUES (:foto, :cpf, :rg, :cns, :nome, :genero, :data_nascimento, :orgao_emissor, :estado_civil, :limitacoes, :etinia, :tipo_saguineo, :cpf_responsavel)";
+        $sql = "INSERT INTO paciente (foto, cpf, rg, cns, nome, genero, data_nascimento, orgao_emissor, estado_civil, limitacoes, etinia, tipo_saguineo) VALUES (:foto, :cpf, :rg, :cns, :nome, :genero, :data_nascimento, :orgao_emissor, :estado_civil, :limitacoes, :etinia, :tipo_saguineo )";
         $conexao = Conexao::conectar();
         $stmt = $conexao->prepare($sql);
         $stmt->bindValue(":foto", $this->foto);
@@ -35,7 +34,6 @@ class Paciente
         $stmt->bindParam(':limitacoes', $this->limitacoes);
         $stmt->bindValue(":etinia", $this->etinia);
         $stmt->bindValue(":tipo_saguineo", $this->tipo_saguineo);
-        $stmt->bindValue(":cpf_responsavel", $this->cpf_responsavel);
         $stmt->execute();
     }
 }

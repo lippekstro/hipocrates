@@ -1,17 +1,16 @@
 -- SQLBook: Code
-
 CREATE DATABASE hipocrates;
 
 USE hipocrates;
 
 CREATE TABLE
     IF NOT EXISTS relacoes(
-        cpf BIGINT NOT NULL,
+        cpf_responsavel BIGINT,
         nome_mae VARCHAR(80) NOT NULL,
         nome_pai VARCHAR(80) NOT NULL,
         nome_responsavel VARCHAR(80),
         nome_conjuge VARCHAR(80),
-        PRIMARY KEY (cpf)
+        PRIMARY KEY (cpf_responsavel)
     ) DEFAULT CHARSET utf8mb4;
 
 CREATE TABLE
@@ -62,7 +61,7 @@ CREATE TABLE
         ),
         dataHora TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
         PRIMARY KEY(cpf),
-        FOREIGN KEY (cpf_responsavel) REFERENCES relacoes (cpf)
+        FOREIGN KEY (cpf_responsavel) REFERENCES relacoes (cpf_responsavel)
     ) DEFAULT CHARSET utf8mb4;
 
 CREATE TABLE
@@ -153,6 +152,8 @@ SELECT * FROM paciente;
 SELECT * FROM endereco;
 
 SELECT * FROM contato;
+
+SELECT * FROM relacoes;
 
 SHOW TABLES;
 

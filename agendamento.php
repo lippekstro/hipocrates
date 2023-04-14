@@ -116,36 +116,24 @@ date_default_timezone_set('America/Sao_Paulo');
                         <input type="radio" name="etinia" value="Pardo" id="pardo">
                         <label for="pardo">Pardo</label>
                     </fieldset>
-                    <label for="tipo_saguineo">Tipo saguineo</label>
-                    <select name="tipo_saguineo" id="tipo_sanguineo">
-                        <option value="">selecione</option>
-                        <option value="A+">A+</option>
-                        <option value="A-">A-</option>
-                        <option value="B+">B+</option>
-                        <option value="B-">B-</option>
-                        <option value="AB+">AB+</option>
-                        <option value="AB-">AB-</option>
-                        <option value="O+">O+</option>
-                        <option value="O-">O-</option>
-                    </select>
                     <label for="cns">CNS</label>
                     <input type="number" name="cns" value="cns" id="cns" placeholder="Digite o CNS">
                 </div>
                 <div class="relacoes">
-                    <label for="nomeMae">Nome da mãe</label>
-                    <input type="text" name="nomeMae" value="" id="nomeMae" placeholder="Nome do Mãe">
+                    <label for="nome_mae">Nome da mãe</label>
+                    <input type="text" name="nome_mae" value="" id="nome_mae" placeholder="Nome do Mãe">
 
-                    <label for="nomePai">Nome do Pai</label>
-                    <input type="text" name="nomePai" value="" id="nomePai" placeholder="Nome da Pai">
+                    <label for="nome_pai">Nome do Pai</label>
+                    <input type="text" name="nome_pai" value="" id="nome_pai" placeholder="Nome da Pai">
 
-                    <label for="conjugue">Conjugue</label>
-                    <input type="text" name="conjugue" value="" id="conjugue" placeholder="Nome do Conjugue">
+                    <label for="nome_conjuge">Conjugue</label>
+                    <input type="text" name="nome_conjuge" value="" id="nome_conjuge" placeholder="Nome do Conjugue">
 
-                    <label for="nomeResponsavel">Nome do Responsavel</label>
-                    <input type="text" name="nomeResponsavel" value="" id="nomeResponsavel" placeholder="Nome do Responsavel">
+                    <label for=" nome_responsavel">Nome do Responsavel</label>
+                    <input type="text" name=" nome_responsavel" value="" id="nome_responsavel" placeholder="Nome do Responsavel">
 
-                    <label for="cpfResponsavel">CPF do Responsavel</label>
-                    <input type="number" name="cpfResponsavel" value="cpfResponsavel" id="cpfResponsavel" placeholder="CPF do Responsavel">
+                    <label for="cpf_responsavel">CPF do Responsavel</label>
+                    <input type="number" name="cpf_responsavel" value="cpf_responsavel" id="cpf_responsavel" placeholder="CPF do Responsavel">
                 </div>
                 <div class="educaçãoTrabalho">
                     <label for="eduTra">Nível de escolaridade</label>

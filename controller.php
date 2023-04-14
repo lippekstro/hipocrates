@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $limitacoes = $_POST["limitacoes"];
         $limitacoes = implode(",", $limitacoes);
         $etinia = $_POST['etinia'];
-        $tipo_saguineo = $_POST['tipo_saguineo'];
+        $cpf_responsavel = $_POST['cpf_responsavel'];
         if (!empty($_FILES['imagem']['tmp_name'])) {
             $foto = file_get_contents($_FILES['imagem']['tmp_name']);
         }
@@ -38,8 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $paciente->estado_civil = $estado_civil;
         $paciente->limitacoes = $limitacoes;
         $paciente->etinia = $etinia;
-        $paciente->tipo_saguineo = $tipo_saguineo;
-
+        $paciente->cpf_responsavel = $cpf_responsavel;
         $paciente->inserir();
     } catch (Exception $e) {
         echo "Erro ao inserir paciente: " . $e->getMessage();
@@ -68,20 +67,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     try {
-        $cpf = $_POST['cpf'];
+        $cpf_responsavel = $_POST['cpf_responsavel'];
         $nome_mae = $_POST['nome_mae'];
         $nome_pai = $_POST['nome_pai'];
         $nome_conjuge = $_POST['nome_conjuge'];
         $nome_responsavel = $_POST['nome_responsavel'];
 
-        $responsavel = new responsavel();
-
-        $responsavel->cpf = $cpf;
-        $responsavel->nome_mae = $nome_mae;
-        $responsavel->nome_pai = $nome_pai;
-        $responsavel->nome_conjuge = $nome_conjuge;
-        $responsavel->nome_responsavel = $nome_responsavel;
-        $responsavel->inserir();
+        $relacoes = new Relacoes();
+        $relacoes->cpf_responsavel = $cpf_responsavel;
+        $relacoes->nome_mae = $nome_mae;
+        $relacoes->nome_pai = $nome_pai;
+        $relacoes->nome_conjuge = $nome_conjuge;
+        $relacoes->nome_responsavel = $nome_responsavel;
+        $relacoes->inserir();
     } catch (Exception $e) {
         echo "Erro ao inserir responsavel: " . $e->getMessage();
     }
