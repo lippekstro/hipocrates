@@ -86,10 +86,10 @@ date_default_timezone_set('America/Sao_Paulo');
                     <br><br>
                 </div>
                 <div class="contato">
-                    <label for="telefone_1">Celular</label>
-                    <input type="text" name="telefone_1" id="telefone_1" placeholder="Digite seu número">
-                    <label for="telefone_2">Telefone Fixo</label>
-                    <input type="tel" name="telefone_2" id="telefone_2" placeholder="Digite seu telefone fixo(opcional)">
+                    <label for="phone_DDD">Celular</label>
+                    <input type="text" name="phone_DDD" id="phone_DDD" placeholder="Digite seu número">
+                    <label for="phone_fixe">Telefone Fixo</label>
+                    <input type="tel" name="phone_fixe" id="phone_fixe" placeholder="Digite seu telefone fixo(opcional)">
                     <label for="email">E-mail</label>
                     <input type="email" name="email" id="email" value="" placeholder="Digite seu E-mail">
                 </div>

@@ -22,8 +22,8 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
-  $("#telefone_2").mask("0000-0000");
-  $("#telefone_1").mask("(00) 00000-0000");
+  $("#phone_DDD").mask("(00) 00000-0000");
+  $("#phone_fixe").mask("0000-0000");
   $("#cpf").mask("000.000.000-00", {
     reverse: true,
   });
