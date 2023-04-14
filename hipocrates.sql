@@ -26,13 +26,15 @@ CREATE TABLE
         data_nascimento DATE NOT NULL,
         orgao_emissor ENUM(
             "SSP",
-            "SSD",
-            "SSM",
             "PC",
-            "PF",
             "PM",
-            "CGPI",
-            "CNIG"
+            "DETRAN",
+            "DPF",
+            "CREA",
+            "OAB",
+            "CRM",
+            "COREN",
+            "CRO"
         ) NOT NULL,
         estado_civil ENUM(
             "Solteiro",
