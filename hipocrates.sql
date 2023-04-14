@@ -39,7 +39,9 @@ CREATE TABLE
         estado_civil ENUM(
             "Solteiro",
             "Casado",
-            "Divorciado"
+            "Viúvo",
+            "Divorciado",
+            "União Estável"
         ) NOT NULL,
         limitacoes SET (
             "Cognitiva",
@@ -47,7 +49,6 @@ CREATE TABLE
             "Audição",
             "Sem Deficiência "
         ) NOT NULL,
-        dataHora TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
         etinia ENUM ("Negro", "Branco", "Pardo") NOT NULL,
         tipo_saguineo ENUM(
             "A+",
@@ -59,6 +60,7 @@ CREATE TABLE
             "O+",
             "O-"
         ),
+        dataHora TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
         PRIMARY KEY(cpf),
         FOREIGN KEY (cpf_responsavel) REFERENCES relacoes (cpf)
     ) DEFAULT CHARSET utf8mb4;
@@ -155,5 +157,3 @@ SELECT * FROM contato;
 SHOW TABLES;
 
 DROP DATABASE hipocrates;
-
--- drop database hipocrates;

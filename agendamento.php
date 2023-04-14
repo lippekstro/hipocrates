@@ -40,8 +40,12 @@ date_default_timezone_set('America/Sao_Paulo');
                         <label for="solteiro">Solteiro</label>
                         <input type="radio" name="estado_civil" value="casado" id="casado">
                         <label for="casado">Casado</label>
+                        <input type="radio" name="estado_civil" value="viuvo" id="viuvo">
+                        <label for="viuvo">Viúvo</label>
                         <input type="radio" name="estado_civil" value="divorciado" id="divorciado">
                         <label for="divorciado">Divorciado</label>
+                        <input type="radio" name="estado_civil" value="uniao_estavel" id="uniao_estavel">
+                        <label for="uniao_estavel">União Estável</label>
                     </fieldset>
                     <label for="cpf">Seu CPF</label>
                     <input type="text" name="cpf" id="cpf" value="" placeholder="Digite seu CPF" maxlength="14">
