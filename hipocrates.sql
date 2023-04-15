@@ -49,8 +49,8 @@ CREATE TABLE
             "Audição",
             "Sem Deficiência "
         ) NOT NULL,
-        etinia ENUM ("Negro", "Branco", "Pardo") NOT NULL,
-        tipo_saguineo ENUM(
+        etnia ENUM ("Negro", "Branco", "Pardo") NOT NULL,
+        tipo_sanguineo ENUM(
             "A+",
             "A-",
             "B+",

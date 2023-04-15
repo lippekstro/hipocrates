@@ -108,12 +108,12 @@ date_default_timezone_set('America/Sao_Paulo');
                 </div>
                 <div class="cadastro">
                     <fieldset>
-                        <legend>Etinia</legend>
-                        <input type="radio" name="etinia" value="Negro" id="negro">
+                        <legend>etnia</legend>
+                        <input type="radio" name="etnia" value="Negro" id="negro">
                         <label for="negro">Negro</label>
-                        <input type="radio" name="etinia" value="Branco" id="branco">
+                        <input type="radio" name="etnia" value="Branco" id="branco">
                         <label for="branco">Branco</label>
-                        <input type="radio" name="etinia" value="Pardo" id="pardo">
+                        <input type="radio" name="etnia" value="Pardo" id="pardo">
                         <label for="pardo">Pardo</label>
                     </fieldset>
                     <label for="cns">CNS</label>

@@ -13,14 +13,14 @@ class Paciente
     public $orgao_emissor;
     public $estado_civil;
     public $limitacoes;
-    public $etinia;
-    public $tipo_saguineo;
+    public $etnia;
+    public $tipo_sanguineo;
     public $cpf_responsavel;
 
 
     public function inserir()
     {
-        $sql = "INSERT INTO paciente (foto, cpf, rg, cns, nome, genero, data_nascimento, orgao_emissor, estado_civil, limitacoes, etinia, tipo_saguineo, cpf_responsavel) VALUES (:foto, :cpf, :rg, :cns, :nome, :genero, :data_nascimento, :orgao_emissor, :estado_civil, :limitacoes, :etinia, :tipo_saguineo, :cpf_responsavel)";
+        $sql = "INSERT INTO paciente (foto, cpf, rg, cns, nome, genero, data_nascimento, orgao_emissor, estado_civil, limitacoes, etnia, tipo_sanguineo, cpf_responsavel) VALUES (:foto, :cpf, :rg, :cns, :nome, :genero, :data_nascimento, :orgao_emissor, :estado_civil, :limitacoes, :etnia, :tipo_sanguineo, :cpf_responsavel)";
         $conexao = Conexao::conectar();
         $stmt = $conexao->prepare($sql);
         $stmt->bindValue(":foto", $this->foto);
@@ -33,8 +33,8 @@ class Paciente
         $stmt->bindValue(":orgao_emissor", $this->orgao_emissor);
         $stmt->bindValue(":estado_civil", $this->estado_civil);
         $stmt->bindParam(':limitacoes', $this->limitacoes);
-        $stmt->bindValue(":etinia", $this->etinia);
-        $stmt->bindValue(":tipo_saguineo", $this->tipo_saguineo);
+        $stmt->bindValue(":etnia", $this->etnia);
+        $stmt->bindValue(":tipo_sanguineo", $this->tipo_sanguineo);
         $stmt->bindValue(":cpf_responsavel", $this->cpf_responsavel);
         $stmt->execute();
     }
