@@ -14,6 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $rg = str_replace("-", "", $rg);
         $rg = (int)$rg;
         $cns = $_POST['cns'];
+        $cns = (int)$cns;
         $nome = $_POST['nome'];
         $genero = $_POST['genero'];
         $data_nascimento = $_POST['data_nascimento'];

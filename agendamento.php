@@ -79,7 +79,7 @@ date_default_timezone_set('America/Sao_Paulo');
                 </select>
                 <br><br>
                 <label for="cns">CNS</label>
-                <input type="text" name="cns" id="cns" placeholder="Digite o CNS">
+                <input type="text" name="cns" id="cns" placeholder="Digite o CNS" autocomplete="off" maxlength="15">
             </fieldset>
             <fieldset>
                 <legend>Endereço</legend>
