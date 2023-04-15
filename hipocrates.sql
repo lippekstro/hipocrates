@@ -49,16 +49,22 @@ CREATE TABLE
             "Audição",
             "Sem Deficiência "
         ) NOT NULL,
-        etnia ENUM ("Negro", "Branco", "Pardo") NOT NULL,
+        etnia ENUM (
+            "Branca",
+            "Preta",
+            "Parda",
+            "Amarela",
+            "Indígena"
+        ) NOT NULL,
         tipo_sanguineo ENUM(
-            "A+",
-            "A-",
-            "B+",
-            "B-",
-            "AB+",
-            "AB-",
-            "O+",
-            "O-"
+            "Tipo sanguíneo A positivo (A+)",
+            "Tipo sanguíneo A negativo (A-) ",
+            "Tipo sanguíneo B positivo (B+) ",
+            "Tipo sanguíneo B negativo (B-) ",
+            "Tipo sanguíneo AB positivo (AB+) ",
+            "Tipo sanguíneo AB negativo (AB-) ",
+            "Tipo sanguíneo O positivo (O+) ",
+            "Tipo sanguíneo O negativo (O-) "
         ),
         dataHora TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
         PRIMARY KEY(cpf),
@@ -92,9 +98,15 @@ CREATE TABLE
         cpf_paciente BIGINT,
         escolaridade ENUM (
             "Analfabeto",
-            "Ensino Fundamental",
-            "Ensino Médio",
-            "Ensino Superior"
+            "Semi-Analfabeto",
+            "Ensino Fundamental Incompleto",
+            "Ensino Fundamental Completo",
+            "Ensino Médio Incompleto",
+            "Ensino Médio Completo",
+            "Ensino Técnico Incompleto",
+            "Ensino Técnico Completo",
+            "Ensino Superior Incompleto",
+            "Ensino Superior Completo"
         ) NOT NULL,
         profissao VARCHAR(100),
         empresa VARCHAR(100),
@@ -137,7 +149,7 @@ CREATE TABLE
             'Odontologia',
             'Psicologia'
         ),
-        observaçoes TEXT,
+        observacoes TEXT,
         stts_paciente ENUM (
             "Ausente",
             "Presente",
@@ -148,14 +160,14 @@ CREATE TABLE
         FOREIGN KEY (cpf_medico) REFERENCES medico (cpf)
     );
 
-SELECT * FROM paciente;
+-- SELECT * FROM paciente;
 
-SELECT * FROM endereco;
+-- SELECT * FROM endereco;
 
-SELECT * FROM contato;
+-- SELECT * FROM contato;
 
-SELECT * FROM relacoes;
+-- SELECT * FROM relacoes;
 
-SHOW TABLES;
+-- SHOW TABLES;
 
-DROP DATABASE hipocrates;
+-- DROP DATABASE hipocrates;

@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $limitacoes = $_POST["limitacoes"];
         $limitacoes = implode(",", $limitacoes);
         $etnia = $_POST['etnia'];
-        $cpf_responsavel = $_POST['cpf_responsavel'];
+        // $cpf_responsavel = $_POST['cpf_responsavel'];
         if (!empty($_FILES['imagem']['tmp_name'])) {
             $foto = file_get_contents($_FILES['imagem']['tmp_name']);
         }
@@ -38,7 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $paciente->estado_civil = $estado_civil;
         $paciente->limitacoes = $limitacoes;
         $paciente->etnia = $etnia;
-        $paciente->cpf_responsavel = $cpf_responsavel;
+        // $paciente->cpf_responsavel = $cpf_responsavel;
         $paciente->inserir();
     } catch (Exception $e) {
         echo "Erro ao inserir paciente: " . $e->getMessage();

@@ -6,19 +6,24 @@
     "COREN",
     "endereco",
     "ERRMODE",
+    "estavel",
     "genero",
     "hipocrates",
     "horario",
     "indetificacao",
     "limitacoes",
     "obrigatorio",
+    "observacoes",
     "opicao",
     "orgao",
     "profissao",
     "relacoes",
     "responsavel",
     "sanguineo",
-    "USUARIO"
+    "stts",
+    "uniao",
+    "USUARIO",
+    "viuvo"
   ],
   "sqltools.connections": [
     {
