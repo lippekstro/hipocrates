@@ -1,6 +1,6 @@
 -- SQLBook: Code
 
-CREATE DATABASE hipocrates;
+CREATE DATABASE hipocrates DEFAULT CHARACTER SET = 'utf8mb4';
 
 USE hipocrates;
 
@@ -12,7 +12,7 @@ CREATE TABLE
         nome_responsavel VARCHAR(80),
         nome_conjuge VARCHAR(80),
         PRIMARY KEY (cpf_responsavel)
-    ) DEFAULT CHARSET utf8mb4;
+    );
 
 CREATE TABLE
     IF NOT EXISTS paciente(
@@ -63,7 +63,7 @@ CREATE TABLE
         dataHora TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
         PRIMARY KEY(cpf),
         FOREIGN KEY (cpf_responsavel) REFERENCES relacoes (cpf_responsavel)
-    ) DEFAULT CHARSET utf8mb4;
+    );
 
 CREATE TABLE
     IF NOT EXISTS endereco(
@@ -76,7 +76,7 @@ CREATE TABLE
         cidade VARCHAR(255) NOT NULL,
         estado CHAR(2) NOT NULL,
         FOREIGN KEY (cpf_paciente) REFERENCES paciente (cpf)
-    ) DEFAULT CHARSET utf8mb4;
+    );
 
 CREATE TABLE
     contato(
@@ -85,7 +85,7 @@ CREATE TABLE
         phone_fixe BIGINT NULL,
         email VARCHAR(50),
         FOREIGN KEY (cpf_paciente) REFERENCES paciente (cpf)
-    ) DEFAULT CHARSET utf8mb4;
+    );
 
 CREATE TABLE
     IF NOT EXISTS edu_tra(
@@ -99,7 +99,7 @@ CREATE TABLE
         profissao VARCHAR(100),
         empresa VARCHAR(100),
         FOREIGN KEY (cpf_paciente) REFERENCES paciente (cpf)
-    ) DEFAULT CHARSET utf8mb4;
+    );
 
 CREATE TABLE
     IF NOT EXISTS medico(
@@ -112,7 +112,7 @@ CREATE TABLE
             'Psicologia'
         ),
         PRIMARY KEY (cpf)
-    ) DEFAULT CHARSET utf8mb4;
+    );
 
 CREATE TABLE
     IF NOT EXISTS consulta(
@@ -146,7 +146,7 @@ CREATE TABLE
         PRIMARY KEY(id),
         FOREIGN KEY (cpf_paciente) REFERENCES paciente (cpf),
         FOREIGN KEY (cpf_medico) REFERENCES medico (cpf)
-    ) DEFAULT CHARSET utf8mb4;
+    );
 
 SELECT * FROM paciente;
 
