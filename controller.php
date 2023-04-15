@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $orgao_emissor = $_POST['orgao_emissor'];
         $estado_civil = $_POST['estado_civil'];
         $limitacoes = $_POST["limitacoes"];
-        $limitacoes = implode(",", $limitacoes);
+        $limitacoes = implode(", ", $limitacoes);
         $etnia = $_POST['etnia'];
         // $cpf_responsavel = $_POST['cpf_responsavel'];
         if (!empty($_FILES['imagem']['tmp_name'])) {
