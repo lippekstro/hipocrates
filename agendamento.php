@@ -79,30 +79,30 @@ date_default_timezone_set('America/Sao_Paulo');
                 </select>
                 <br><br>
                 <label for="cns">CNS</label>
-                <input type="text" name="cns" id="cns" placeholder="Digite o CNS" autocomplete="off" maxlength="15">
+                <input type="number" name="cns" id="cns" placeholder="Digite o CNS" autocomplete="off" maxlength="15">
             </fieldset>
             <fieldset>
                 <legend>Endereço</legend>
                 <label for="cep">CEP:</label>
-                <input type="text" id="cep" name="cep">
+                <input type="text" id="cep" name="cep" placeholder="Digite seu CEP">
                 <br><br>
                 <label for="logradouro">Logradouro:</label>
-                <input type="text" id="logradouro" name="logradouro">
+                <input type="text" id="logradouro" name="logradouro" placeholder="Digite o seu Logradouro">
                 <br><br>
                 <label for="numero">Numero:</label>
-                <input type="number" id="numero" name="numero">
+                <input type="number" id="numero" name="numero" placeholder="Digite o seu Numero">
                 <br><br>
                 <label for="complemento">Complemento:</label>
-                <input type="text" id="complemento" name="complemento">
+                <input type="text" id="complemento" name="complemento" placeholder="Digite o seu Complemento (Opcional)">
                 <br><br>
                 <label for="bairro">Bairro:</label>
-                <input type="text" id="bairro" name="bairro">
+                <input type="text" id="bairro" name="bairro" placeholder="Digite o seu Bairro">
                 <br><br>
                 <label for="cidade">Cidade:</label>
-                <input type="text" id="cidade" name="cidade">
+                <input type="text" id="cidade" name="cidade" placeholder="Digite o seu Cidade">
                 <br><br>
                 <label for="estado">Estado:</label>
-                <input type="text" id="estado" name="estado">
+                <input type="text" id="estado" name="estado" placeholder="Digite o seu Estado">
             </fieldset>
             <fieldset>
                 <legend>Contato</legend>
