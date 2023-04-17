@@ -59,21 +59,6 @@ session_start();
             <li>
                 <div class="iocn-link">
                     <a href="#">
-                        <i class="bx bx-donate-heart"></i>
-                        <span class="link_name">Doações</span>
-                    </a>
-                    <i class="bx bxs-chevron-down arrow"></i>
-                </div>
-                <ul class="sub-menu">
-                    <li><a class="link_name" href="#">Doações</a></li>
-                    <li><a href="#">Doação de Sangue</a></li>
-                    <li><a href="#">Doação de Medula</a></li>
-                    <li><a href="#">Doação de Órgãos</a></li>
-                </ul>
-            </li>
-            <li>
-                <div class="iocn-link">
-                    <a href="/hipocrates/views/agendamento.php">
                         <i class="bx bx-calendar"></i>
                         <span class="link_name">Agendamentos</span>
                     </a>

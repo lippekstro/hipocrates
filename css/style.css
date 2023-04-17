@@ -1,17 +1,35 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
 :root {
-  --color-1: #00A6FB;
-  --color-2: #0582CA;
-  --color-3: #006494;
-  --color-4: #003554;
-  --color-5: #00509D;
-  --color-6: #003F88;
-  --color-7: #00296B;
-  --color-8: #051923;
-  --color-9: #FDC500;
-  --color-10: #FFD500;
-
+  --color-01: #FFFFFF;
+  --color-02: #E9F1FD;
+  --color-03: #D3E3FB;
+  --color-04: #BCD5FA;
+  --color-05: #A6C7F8;
+  --color-06: #90B9F6;
+  --color-07: #7AABF4;
+  --color-08: #639DF2;
+  --color-09: #4D8EF1;
+  --color-10: #3780EF;
+  --color-11: #2172ED;
+  --color-12: #1266E3;
+  --color-13: #115CCD;
+  --color-14: #0F52B7;
+  --color-15: #0D47A1;
+  --color-16: #0C4395;
+  --color-17: #0B3E89;
+  --color-18: #0A397E;
+  --color-19: #093373;
+  --color-20: #082E67;
+  --color-21: #07295C;
+  --color-22: #072450;
+  --color-23: #061F45;
+  --color-24: #051A39;
+  --color-25: #04152E;
+  --color-26: #030F22;
+  --color-27: #020A17;
+  --color-28: #01050B;
+  --color-29: #000000;
 }
 
 * {
@@ -128,7 +146,7 @@ h1 {
   left: 0;
   height: 100%;
   width: 300px;
-  background: #051923;
+  background: var(--color-25);
   z-index: 100;
   transition: all 0.5s ease;
 }
@@ -146,7 +164,7 @@ h1 {
 
 .sidebar .logo-details i {
   font-size: 30px;
-  color: #fff;
+  color: var(--color-01);
   height: 50px;
   min-width: 78px;
   text-align: center;
@@ -155,7 +173,7 @@ h1 {
 
 .sidebar .logo-details .logo_name {
   font-size: 22px;
-  color: #fff;
+  color: var(--color-01);
   font-weight: 600;
   transition: 0.3s ease;
   transition-delay: 0.1s;
@@ -188,7 +206,7 @@ h1 {
 }
 
 .sidebar .nav-links li:hover {
-  background: #003554;
+  background: var(--color-15);
 }
 
 .sidebar .nav-links li .iocn-link {
@@ -206,7 +224,7 @@ h1 {
   min-width: 78px;
   text-align: center;
   line-height: 50px;
-  color: #fff;
+  color: var(--color-01);
   font-size: 20px;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -229,7 +247,7 @@ h1 {
 .sidebar .nav-links li a .link_name {
   font-size: 18px;
   font-weight: 400;
-  color: #fff;
+  color: var(--color-01);
   transition: all 0.4s ease;
 }
 
@@ -241,7 +259,7 @@ h1 {
 .sidebar .nav-links li .sub-menu {
   padding: 6px 6px 14px 80px;
   margin-top: -10px;
-  background: #003554;
+  background: var(--color-15);
   display: none;
 }
 
@@ -250,7 +268,7 @@ h1 {
 }
 
 .sidebar .nav-links li .sub-menu a {
-  color: #fff;
+  color: var(--color-01);
   font-size: 15px;
   padding: 5px 0;
   white-space: nowrap;
@@ -312,7 +330,7 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #003554;
+  background: var(--color-15);
   padding: 12px 0;
   transition: all 0.5s ease;
 }
@@ -336,7 +354,7 @@ h1 {
   object-fit: cover;
   border-radius: 16px;
   margin: 0 14px 0 12px;
-  background: #003554;
+  background: var(--color-15);
   transition: all 0.5s ease;
 }
 
@@ -346,7 +364,7 @@ h1 {
 
 .sidebar .profile-details .profile_name,
 .sidebar .profile-details .job {
-  color: #fff;
+  color: var(--color-01);
   font-size: 18px;
   font-weight: 500;
   white-space: nowrap;
@@ -384,7 +402,7 @@ h1 {
 
 .home-section .home-content .bx-menu,
 .home-section .home-content .text {
-  color: #051923;
+  color: var(--color-29);
   font-size: 35px;
 }
 
@@ -396,6 +414,38 @@ h1 {
 .home-section .home-content .text {
   font-size: 26px;
   font-weight: 600;
+}
+
+@media screen and (max-width: 400px) {
+  .sidebar {
+    width: 240px;
+  }
+
+  .sidebar.close {
+    width: 78px;
+  }
+
+  .sidebar .profile-details {
+    width: 240px;
+  }
+
+  .sidebar.close .profile-details {
+    background: none;
+  }
+
+  .sidebar.close .profile-details {
+    width: 78px;
+  }
+
+  .home-section {
+    left: 240px;
+    width: calc(100% - 240px);
+  }
+
+  .sidebar.close~.home-section {
+    left: 78px;
+    width: calc(100% - 78px);
+  }
 }
 
 .container {
@@ -454,7 +504,7 @@ h1 {
   width: 500px;
   text-align: left;
   padding: 0;
-  color: #eee;
+  color: var(--color-01);
   transform: translate(0, -50%);
   display: none;
   font-family: system-ui;
@@ -493,7 +543,7 @@ h1 {
   font-family: sans-serif;
   font-size: 17px;
   background: transparent;
-  color: #ffff;
+  color: var(--color-01);
   border-radius: 4px;
   display: flex;
   align-self: self-start;
@@ -521,7 +571,7 @@ h1 {
 }
 
 .button-page:hover {
-  color: white;
+  color: var(--color-01);
   background: rgba(245, 245, 220, 0.4);
 }
 
@@ -561,53 +611,4 @@ h1 {
 
 .buttons button:hover {
   background-color: #bac383;
-}
-
-.sobre {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 1rem;
-  padding-bottom: 5rem;
-}
-
-footer {
-  position: absolute;
-  width: 100%;
-  text-align: center;
-  background-color: #051923;
-  padding: 1rem;
-  z-index: 1;
-}
-
-@media screen and (max-width: 400px) {
-  .sidebar {
-    width: 240px;
-  }
-
-  .sidebar.close {
-    width: 78px;
-  }
-
-  .sidebar .profile-details {
-    width: 240px;
-  }
-
-  .sidebar.close .profile-details {
-    background: none;
-  }
-
-  .sidebar.close .profile-details {
-    width: 78px;
-  }
-
-  .home-section {
-    left: 240px;
-    width: calc(100% - 240px);
-  }
-
-  .sidebar.close~.home-section {
-    left: 78px;
-    width: calc(100% - 78px);
-  }
 }

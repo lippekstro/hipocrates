@@ -7,14 +7,14 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/templates/cabecalho.php"
     <div id="slide">
       <div class="item" style="background-image: url(imgs/1.jpg);">
         <div class="content">
-          <div class="name">Doações</div>
+          <div class="name">Agendamentos</div>
           <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad in est, ut cumque quae nihil earum temporibus quisquam exercitationem ratione autem quasi illo, corrupti dolor voluptatum ab quam dicta deleniti?</div>
           <a class="button-page" href="#">Mais Informações</a>
         </div>
       </div>
       <div class="item" style="background-image: url(imgs/2.jpg);">
         <div class="content">
-          <div class="name">Agendamentos</div>
+          <div class="name">Serviços</div>
           <div class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas iste assumenda sit officia itaque corporis? Vero fugiat iure ut qui? Iusto consequuntur dolores quaerat accusamus voluptas voluptates maiores, alias iure?</div>
           <a class="button-page" href="#">Mais Informações</a>
         </div>
