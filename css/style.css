@@ -8,16 +8,16 @@
 }
 
 :root {
-  --color-1: #00A6FB;
-  --color-2: #0582CA;
-  --color-3: #006494;
-  --color-4: #003554;
-  --color-5: #00509D;
-  --color-6: #003F88;
-  --color-7: #00296B;
-  --color-8: #051923;
-  --color-9: #FDC500;
-  --color-10: #FFD500;
+  --color-1: #E3F2FD;
+  --color-2: #BBDEFB;
+  --color-3: #90CAF9;
+  --color-4: #64B5F6;
+  --color-5: #42A5F5;
+  --color-6: #2196F3;
+  --color-7: #1E88E5;
+  --color-8: #1976D2;
+  --color-9: #1565C0;
+  --color-10: #0D47A1;
 
 }
 
@@ -274,7 +274,7 @@ body {
   padding: 12px;
 }
 
-.sidebar.close ~ .home-section {
+.sidebar.close~.home-section {
   left: 78px;
   width: calc(100% - 78px);
 }
@@ -327,7 +327,7 @@ body {
     width: calc(100% - 240px);
   }
 
-  .sidebar.close ~ .home-section {
+  .sidebar.close~.home-section {
     left: 78px;
     width: calc(100% - 78px);
   }
