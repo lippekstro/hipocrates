@@ -117,10 +117,14 @@ date_default_timezone_set('America/Sao_Paulo');
             </fieldset>
             <fieldset>
                 <legend>Limitações</legend>
-                <input type="checkbox" name="limitacoes[]" value="Sem Deficiência"> Sem Deficiência<br>
-                <input type="checkbox" name="limitacoes[]" value="Cognitiva">Cognitiva<br>
-                <input type="checkbox" name="limitacoes[]" value="Locomoção">Locomoção<br>
-                <input type="checkbox" name="limitacoes[]" value="Audição">Audição<br>
+                <input type="checkbox" name="limitacoes[]" value="Sem Deficiência">
+                <label>Sem Deficiência</label>
+                <input type="checkbox" name="limitacoes[]" value="Cognitiva">
+                <label>Cognitiva</label>
+                <input type="checkbox" name="limitacoes[]" value="Locomoção">
+                <label>Locomoção</label>
+                <input type="checkbox" name="limitacoes[]" value="Audição">
+                <label>Audição</label>
             </fieldset>
             <fieldset>
                 <legend>Etnia</legend>
