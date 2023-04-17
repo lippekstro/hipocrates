@@ -2,49 +2,79 @@
 require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/templates/cabecalho.php"
 ?>
 
-<section>
-    <form action="/hipocrates/controllers/add_paciente.php" method="post" enctype="multipart/form-data">
+<section id="section-cad-paciente">
+    <form action="/hipocrates/controllers/add_paciente.php" method="post" enctype="multipart/form-data" id="cad-user">
         <fieldset>
-            <label for="nome">Nome</label>
-            <input type="text" name="nome" id="nome" required>
-            <label for="rg">RG</label>
-            <input type="text" name="rg" id="rg" required>
-            <label for="orgao">Orgao Emissor</label>
-            <select name="orgao" id="orgao">
-                <option value="ssp" selected>SSP</option>
-                <option value="PC">PC</option>
-                <option value="PM">PM</option>
-                <option value="outro">Outro</option>
-            </select>
-            <label for="cpf">CPF</label>
-            <input type="text" name="cpf" id="cpf" required>
-            <label for="genero">Genero</label>
-            <select name="genero" id="genero">
-                <option value="M" selected>Masculino</option>
-                <option value="F">Feminino</option>
-            </select>
-            <label for="nascimento">Nascimento</label>
-            <input type="date" name="nascimento" id="nascimento" required>
-            <label for="estado_civ">Estado Civil</label>
-            <select name="estado_civ" id="estado_civ">
-                <option value="solteiro" selected>Solteiro</option>
-                <option value="casado">Casado</option>
-                <option value="viuvo">Viuvo</option>
-                <option value="divorciado">Divorciado</option>
-                <option value="uniao estável">União Estável</option>
-            </select>
-            <label for="etnia">Etnia</label>
-            <select name="etnia" id="etnia">
-                <option value="branco" selected>Branco</option>
-                <option value="preto">Preto</option>
-                <option value="pardo">Pardo</option>
-                <option value="amarelo">Amarelo</option>
-                <option value="indigena">Indigena</option>
-            </select>
-            <label for="foto">Foto</label>
-            <input type="file" name="foto" id="foto">
-            <label for="senha">Senha</label>
-            <input type="password" name="senha" id="senha" required>
+            <div class="form-item">
+                <label for="nome">Nome</label>
+                <input type="text" name="nome" id="nome" required>
+            </div>
+
+            <div class="form-item">
+                <label for="rg">RG</label>
+                <input type="text" name="rg" id="rg" required>
+            </div>
+
+            <div class="form-item">
+                <label for="orgao">Orgao Emissor</label>
+                <select name="orgao" id="orgao">
+                    <option value="ssp" selected>SSP</option>
+                    <option value="PC">PC</option>
+                    <option value="PM">PM</option>
+                    <option value="outro">Outro</option>
+                </select>
+            </div>
+
+            <div class="form-item">
+                <label for="cpf">CPF</label>
+                <input type="text" name="cpf" id="cpf" required>
+            </div>
+
+            <div class="form-item">
+                <label for="genero">Genero</label>
+                <select name="genero" id="genero">
+                    <option value="M" selected>Masculino</option>
+                    <option value="F">Feminino</option>
+                </select>
+            </div>
+
+            <div class="form-item">
+                <label for="nascimento">Nascimento</label>
+                <input type="date" name="nascimento" id="nascimento" required>
+            </div>
+
+            <div class="form-item">
+                <label for="estado_civ">Estado Civil</label>
+                <select name="estado_civ" id="estado_civ">
+                    <option value="solteiro" selected>Solteiro</option>
+                    <option value="casado">Casado</option>
+                    <option value="viuvo">Viuvo</option>
+                    <option value="divorciado">Divorciado</option>
+                    <option value="uniao estável">União Estável</option>
+                </select>
+            </div>
+
+            <div class="form-item">
+                <label for="etnia">Etnia</label>
+                <select name="etnia" id="etnia">
+                    <option value="branco" selected>Branco</option>
+                    <option value="preto">Preto</option>
+                    <option value="pardo">Pardo</option>
+                    <option value="amarelo">Amarelo</option>
+                    <option value="indigena">Indigena</option>
+                </select>
+            </div>
+
+            <div class="form-item">
+                <label for="foto">Foto</label>
+                <input type="file" name="foto" id="foto">
+            </div>
+
+            <div class="form-item">
+                <label for="senha">Senha</label>
+                <input type="password" name="senha" id="senha" required>
+            </div>
+
         </fieldset>
 
         <fieldset>
