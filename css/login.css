@@ -1,21 +1,14 @@
 a {
     color: rgb(255, 255, 255);
-    font-size: 20px;
-    margin: 15px;
-    font-family: system-ui;
-    transition: 0.4s;
 }
 
 h3 {
     text-align: center;
     color: white;
-    font-family: system-ui;
 }
 
 h4 {
     color: white;
-    font-size: 20px;
-    font-family: system-ui;
 }
 
 p {
@@ -37,34 +30,18 @@ p {
 .login form {
     display: flex;
     flex-direction: column;
+    text-align: center;
 }
 
 .login {
     background-color: #375F90;
-    margin-left: 25%;
-    margin-right: 25%;
-    padding: 10vh;
     border-radius: 30px;
-}
-
-button {
-    border-radius: 30px;
-    width: 180px;
-    height: 50px;
-    cursor: pointer;
-    font-size: 20px;
-    font: bold;
-    transition-duration: 0.4s;
-}
-
-img {
-    float: left;
-    margin-top: 2%;
-    margin-left: 4%;
-    margin-right: 2%;
-    border-radius: 50%;
-    height: 100px;
-
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    padding: 1rem;
 }
 
 input::-webkit-outer-spin-button,
@@ -72,12 +49,9 @@ input::-webkit-inner-spin-button {
     -webkit-appearance: none;
 }
 
-button:hover {
-    background-color: #4b87d0;
-    color: rgb(255, 255, 255);
-}
-
-a:hover {
-
-    color: #4b87d0;
+.num {
+    width: 3rem;
+    height: 3rem;
+    padding: 1rem;
+    border-radius: 50%;
 }

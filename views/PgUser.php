@@ -8,8 +8,12 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/templates/cabecalho.php"
         <form action="/hipocrates/controllers/login_controller.php" method="post">
             <input type="text" name="cpf" placeholder="Digite seu CPF" maxlength="14" autocomplete="off" autofocus required>
             <input type="password" name="senha" placeholder="Digite sua senha" required>
-            <h4>Esqueceu sua senha ?<a href="/hipocrates/views/senha.php">Redefinir</a> </h4>
-            <button>Avançar</button>
+
+            <span>Esqueceu sua senha? <a href="/hipocrates/views/senha.php">Redefinir</a></span>
+
+            <button type="submit">
+                Avançar
+            </button>
         </form>
     </div>
 </section>

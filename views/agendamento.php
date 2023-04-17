@@ -2,7 +2,6 @@
 require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/templates/cabecalho.php";
 ?>
 
-<!-- conteudo principal aqui -->
 <div class="conteiner">
     <div id="hora-teste">
         <button class="accordion">
