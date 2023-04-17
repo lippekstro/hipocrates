@@ -1,5 +1,13 @@
 <?php
-require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/templates/cabecalho.php"
+// verificar se ja esta logado, caso sim redireciona para o index
+session_start();
+if (isset($_SESSION['usuario']['cpf'])) {
+    header('Location: /hipocrates/index.php');
+}
+
+require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/templates/cabecalho.php";
+
+
 ?>
 
 <section class="area_login">
@@ -10,6 +18,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/templates/cabecalho.php"
             <input type="password" name="senha" placeholder="Digite sua senha" required>
 
             <span>Esqueceu sua senha? <a href="/hipocrates/views/senha.php">Redefinir</a></span>
+            <span><a href="/hipocrates/views/paciente_cad.php">Cadastre-se</a></span>
 
             <button type="submit">
                 Avançar

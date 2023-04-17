@@ -1,8 +1,8 @@
 <?php
 require_once $_SERVER["DOCUMENT_ROOT"] . '/hipocrates/db/conexao.php';
 session_start();
-$cpf = $_REQUEST['cpf'];
-$senha = $_REQUEST['senha'];
+$cpf = htmlspecialchars($_POST['cpf']);
+$senha = $_POST['senha'];
 
 try {
     $query = "select * from paciente where cpf = :cpf LIMIT 1";
@@ -12,16 +12,14 @@ try {
     $stmt->execute();
     $registro = $stmt->fetch(PDO::FETCH_ASSOC);
 
-    if ($stmt->rowCount() > 0) {
-        if (password_verify($senha, $registro['senha'])) {
-            $_SESSION['usuario']['nome'] = $registro['nome'];
-            $_SESSION['usuario']['cpf'] = $registro['cpf'];
-            $_SESSION['usuario']['foto'] = $registro['foto'];
-            
-            
+    if ($stmt->rowCount() > 0 && password_verify($senha, $registro['senha'])) {
+        $_SESSION['usuario']['nome'] = $registro['nome'];
+        $_SESSION['usuario']['cpf'] = $registro['cpf'];
+        $_SESSION['usuario']['foto'] = $registro['foto'];
+        $_SESSION['usuario']['inicio'] = time();
+        $_SESSION['usuario']['expira'] = 900;
 
-            header("Location: /hipocrates/index.php");
-        }
+        header("Location: /hipocrates/index.php");
     }
 } catch (Exception $e) {
     echo $e->getMessage();

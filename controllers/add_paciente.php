@@ -41,7 +41,7 @@ try {
         $senha = $_POST['senha'];
         $senha = password_hash($senha, PASSWORD_DEFAULT);
         $limitacoes = $_POST['limitacoes'];
-        $limitacoes = implode(', ', $limitacoes);
+        $limitacoes = implode(',', $limitacoes);
     
         $paciente = new Paciente();
         $paciente->nome = $nome;

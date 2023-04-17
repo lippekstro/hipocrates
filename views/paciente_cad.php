@@ -8,26 +8,26 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/templates/cabecalho.php"
             <label for="nome">Nome</label>
             <input type="text" name="nome" id="nome" required>
             <label for="rg">RG</label>
-            <input type="text" name="rg" id="rg">
+            <input type="text" name="rg" id="rg" required>
             <label for="orgao">Orgao Emissor</label>
             <select name="orgao" id="orgao">
-                <option value="ssp">SSP</option>
+                <option value="ssp" selected>SSP</option>
                 <option value="PC">PC</option>
                 <option value="PM">PM</option>
                 <option value="outro">Outro</option>
             </select>
             <label for="cpf">CPF</label>
-            <input type="text" name="cpf" id="cpf">
+            <input type="text" name="cpf" id="cpf" required>
             <label for="genero">Genero</label>
             <select name="genero" id="genero">
-                <option value="M">Masculino</option>
+                <option value="M" selected>Masculino</option>
                 <option value="F">Feminino</option>
             </select>
             <label for="nascimento">Nascimento</label>
-            <input type="date" name="nascimento" id="nascimento">
+            <input type="date" name="nascimento" id="nascimento" required>
             <label for="estado_civ">Estado Civil</label>
             <select name="estado_civ" id="estado_civ">
-                <option value="solteiro">Solteiro</option>
+                <option value="solteiro" selected>Solteiro</option>
                 <option value="casado">Casado</option>
                 <option value="viuvo">Viuvo</option>
                 <option value="divorciado">Divorciado</option>
@@ -35,7 +35,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/templates/cabecalho.php"
             </select>
             <label for="etnia">Etnia</label>
             <select name="etnia" id="etnia">
-                <option value="branco">Branco</option>
+                <option value="branco" selected>Branco</option>
                 <option value="preto">Preto</option>
                 <option value="pardo">Pardo</option>
                 <option value="amarelo">Amarelo</option>
@@ -44,16 +44,16 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/templates/cabecalho.php"
             <label for="foto">Foto</label>
             <input type="file" name="foto" id="foto">
             <label for="senha">Senha</label>
-            <input type="password" name="senha" id="senha">
+            <input type="password" name="senha" id="senha" required>
         </fieldset>
 
         <fieldset>
             <label for="cns">CNS</label>
-            <input type="text" name="cns" id="cns">
+            <input type="text" name="cns" id="cns" required>
             <label for="telefone">Telefone</label>
-            <input type="text" name="telefone" id="telefone">
+            <input type="text" name="telefone" id="telefone" required>
             <label for="email">Email</label>
-            <input type="email" name="email" id="email">
+            <input type="email" name="email" id="email" required>
         </fieldset>
 
 
@@ -78,25 +78,25 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/templates/cabecalho.php"
                 <option value="AB-">AB-</option>
                 <option value="O+">O+</option>
                 <option value="O-">O-</option>
-                <option value="nulo">Fator Nulo</option>
+                <option value="nulo" selected>Fator Nulo</option>
             </select>
         </fieldset>
 
         <fieldset>
             <label for="cep">CEP</label>
-            <input type="text" name="cep" id="cep">
+            <input type="text" name="cep" id="cep" required>
             <label for="logradouro">Logradouro</label>
-            <input type="text" name="logradouro" id="logradouro">
+            <input type="text" name="logradouro" id="logradouro" required>
             <label for="numero">Numero</label>
-            <input type="text" name="numero" id="numero">
+            <input type="text" name="numero" id="numero" required>
             <label for="complemento">Complemento</label>
             <input type="text" name="complemento" id="complemento">
             <label for="bairro">Bairro</label>
-            <input type="text" name="bairro" id="bairro">
+            <input type="text" name="bairro" id="bairro" required>
             <label for="cidade">Cidade</label>
-            <input type="text" name="cidade" id="cidade">
+            <input type="text" name="cidade" id="cidade" required>
             <label for="estado">Estado</label>
-            <input type="text" name="estado" id="estado">
+            <input type="text" maxlength="2" name="estado" id="estado" required>
         </fieldset>
 
 
