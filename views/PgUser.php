@@ -18,7 +18,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/templates/cabecalho.php"
     </div>
 </section>
 
-<script src="/hipocrates/js/login.js"></script>
+<!-- <script src="/hipocrates/js/login.js"></script> -->
 <?php
 require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/templates/rodape.php"
 ?>

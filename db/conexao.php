@@ -1,5 +1,5 @@
 <?php
-require_once $_SERVER["DOCUMENT_ROOT"] . '/hipocrates/configs/config.php';
+require_once $_SERVER["DOCUMENT_ROOT"] . '/hipocrates/config/configs.php';
 
 class Conexao
 {

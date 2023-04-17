@@ -47,7 +47,7 @@ session_start();
             <button class="dropdown-btn">
                 <?= $_SESSION['usuario']['nome'] ?>
                 <figure>
-                    <img src="<?= $_SESSION['usuario']['foto'] ?>" alt="" width="30rem" height="30rem" style="border-radius: 50%;">
+                    <img src="data:image/jpg;charset=utf8;base64,<?= base64_encode($_SESSION['usuario']['foto']); ?>" alt="" width="30rem" height="30rem" style="border-radius: 50%;">
                 </figure>
             </button>
             <div class="dropdown-container">
