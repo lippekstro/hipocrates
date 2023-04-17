@@ -48,21 +48,6 @@
             <li>
                 <div class="iocn-link">
                     <a href="#">
-                        <i class="bx bx-donate-heart"></i>
-                        <span class="link_name">Doações</span>
-                    </a>
-                    <i class="bx bxs-chevron-down arrow"></i>
-                </div>
-                <ul class="sub-menu">
-                    <li><a class="link_name" href="#">Doações</a></li>
-                    <li><a href="#">Doação de Sangue</a></li>
-                    <li><a href="#">Doação de Medula</a></li>
-                    <li><a href="#">Doação de Órgãos</a></li>
-                </ul>
-            </li>
-            <li>
-                <div class="iocn-link">
-                    <a href="#">
                         <i class="bx bx-calendar"></i>
                         <span class="link_name">Agendamentos</span>
                     </a>
@@ -73,15 +58,6 @@
                     <li><a href="#">Clinico Geral</a></li>
                     <li><a href="#">Psicologia</a></li>
                     <li><a href="#">Odontologia</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="#">
-                    <i class="bx bx-detail"></i>
-                    <span class="link_name">Noticias</span>
-                </a>
-                <ul class="sub-menu blank">
-                    <li><a class="link_name" href="#">Noticias</a></li>
                 </ul>
             </li>
             <li>
@@ -109,15 +85,6 @@
                 </a>
                 <ul class="sub-menu blank">
                     <li><a class="link_name" href="#">Consultório</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="#">
-                    <i class="bx bx-cog"></i>
-                    <span class="link_name">Configurações</span>
-                </a>
-                <ul class="sub-menu blank">
-                    <li><a class="link_name" href="#">Configurações</a></li>
                 </ul>
             </li>
             <li>
