@@ -62,4 +62,37 @@ class Medico{
         $lista = $stmt->fetchAll();
         return $lista;
     }
+
+    public function editar()
+    {
+        $query = "UPDATE medico SET nome = :nome, cpf = :cpf, crm = :crm, especialidade = :especialidade, foto = :foto WHERE id_medico = :id_medico";
+        $conexao = Conexao::conectar();
+        $stmt = $conexao->prepare($query);
+        $stmt->bindValue(":nome", $this->nome);
+        $stmt->bindValue(":cpf", $this->cpf);
+        $stmt->bindValue(":crm", $this->crm);
+        $stmt->bindValue(":especialidade", $this->especialidade);
+        $stmt->bindValue(":foto", $this->foto);
+        $stmt->bindValue(":id_medico", $this->id_medico);
+        $stmt->execute();
+    }
+
+    public function editarSenha()
+    {
+        $query = "UPDATE medico SET senha = :senha WHERE id_medico = :id_medico";
+        $conexao = Conexao::conectar();
+        $stmt = $conexao->prepare($query);
+        $stmt->bindValue(":senha", $this->senha);
+        $stmt->bindValue(":id_medico", $this->id_medico);
+        $stmt->execute();
+    }
+
+    public function deletar()
+    {
+        $query = "DELETE FROM medico WHERE id_medico = :id_medico";
+        $conexao = Conexao::conectar();
+        $stmt = $conexao->prepare($query);
+        $stmt->bindValue(':id_medico', $this->id_medico);
+        $stmt->execute();
+    }
 }

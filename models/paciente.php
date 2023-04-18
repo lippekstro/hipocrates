@@ -92,4 +92,47 @@ class Paciente {
         $lista = $stmt->fetchAll();
         return $lista;
     }
+
+    public function editar()
+    {
+        $query = "UPDATE medico SET nome = :nome, cpf = :cpf, foto = :foto, rg = :rg, cns = :cns, telefone = :telefone, email = :email, genero = :genero, nascimento = :nascimento, orgao_emissor = :orgao_emissor, estado_civil = :estado_civil, limitacoes = :limitacoes, etnias = :etnias, tipo_sanguineo = :tipo_sanguineo, id_endereco = :id_endereco WHERE id_paciente = :id_paciente";
+        $conexao = Conexao::conectar();
+        $stmt = $conexao->prepare($query);
+        $stmt->bindValue(':nome', $this->nome);
+        $stmt->bindValue(':cpf', $this->cpf);
+        $stmt->bindValue(':rg', $this->rg);
+        $stmt->bindValue(':cns', $this->cns);
+        $stmt->bindValue(':telefone', $this->telefone);
+        $stmt->bindValue(':email', $this->email);
+        $stmt->bindValue(':genero', $this->genero);
+        $stmt->bindValue(':nascimento', $this->nascimento);
+        $stmt->bindValue(':orgao_emissor', $this->orgao_emissor);
+        $stmt->bindValue(':estado_civil', $this->estado_civil);
+        $stmt->bindValue(':limitacoes', $this->limitacoes);
+        $stmt->bindValue(':etnias', $this->etnias);
+        $stmt->bindValue(':tipo_sanguineo', $this->tipo_sanguineo);
+        $stmt->bindValue(':foto', $this->foto);
+        $stmt->bindValue(':id_endereco', $this->id_endereco);
+        $stmt->bindValue(":id_paciente", $this->id_paciente);
+        $stmt->execute();
+    }
+
+    public function editarSenha()
+    {
+        $query = "UPDATE paciente SET senha = :senha WHERE id_paciente = :id_paciente";
+        $conexao = Conexao::conectar();
+        $stmt = $conexao->prepare($query);
+        $stmt->bindValue(":senha", $this->senha);
+        $stmt->bindValue(":id_paciente", $this->id_paciente);
+        $stmt->execute();
+    }
+
+    public function deletar()
+    {
+        $query = "DELETE FROM paciente WHERE id_paciente = :id_paciente";
+        $conexao = Conexao::conectar();
+        $stmt = $conexao->prepare($query);
+        $stmt->bindValue(':id_paciente', $this->id_paciente);
+        $stmt->execute();
+    }
 }

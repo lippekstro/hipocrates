@@ -169,10 +169,6 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/templates/cabecalho.php"
             </div>
         </fieldset>
 
-
-
-
-
         <button type="submit">
             Cadastrar
         </button>

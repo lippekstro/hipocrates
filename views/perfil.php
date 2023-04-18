@@ -126,6 +126,12 @@ $endereco = new Endereco($paciente->id_endereco);
             </div>
         </div>
     </fieldset>
+    
+    <a href="/hipocrates/views/acompanhante_cad.php">
+        <button type="submit">
+            Adicionar Acompanhante
+        </button>
+    </a>
 </section>
 
 <?php

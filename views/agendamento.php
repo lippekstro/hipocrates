@@ -80,7 +80,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             <form action="/hipocrates/views/agendamento.php" method="POST">
                                 <input type="hidden" name="id_medico" value="<?= $medico['id_medico'] ?>">
                                 <input type="hidden" name="data_hora_inicio" value="<?= $horario['data_hora_inicio'] ?>">
-                                <button type="submit"><?= date('H:i', strtotime($horario['data_hora_inicio'])) ?> - <?= date('H:i', strtotime($horario['data_hora_fim'])) ?></button>
+                                <button type="submit" style="background-color: #00A6FB;"><?= date('H:i', strtotime($horario['data_hora_inicio'])) ?> - <?= date('H:i', strtotime($horario['data_hora_fim'])) ?></button>
                             </form>
                         </li>
                     <?php endforeach; ?>

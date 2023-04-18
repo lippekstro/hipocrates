@@ -78,7 +78,7 @@ class Endereco {
         $stmt->bindValue(":bairro", $this->bairro);
         $stmt->bindValue(":cidade", $this->cidade);
         $stmt->bindValue(":estado", $this->estado);
-        $stmt->bindValue(":id_entrada", $this->id_endereco);
+        $stmt->bindValue(":id_endereco", $this->id_endereco);
         $stmt->execute();
     }
 
