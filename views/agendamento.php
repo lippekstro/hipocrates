@@ -1,288 +1,97 @@
 <?php
 session_start();
-if(!isset($_SESSION['usuario']['cpf'])){
+if (!isset($_SESSION['usuario']['cpf'])) {
     header('Location: /hipocrates/views/PgUser.php');
 }
 require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/templates/cabecalho.php";
+require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/db/conexao.php";
 
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $data = $_POST['data_consulta'];
+    $esp = $_POST['especialidade'];
+
+    try {
+        $query = "SELECT * FROM medico WHERE especialidade = :esp AND id_medico NOT IN 
+                  (SELECT id_medico FROM horario_medico WHERE data_hora_inicio = :data)";
+        $conexao = Conexao::conectar();
+        $stmt = $conexao->prepare($query);
+        $stmt->bindValue(":esp", $esp);
+        $stmt->bindValue(":data", $data);
+        $stmt->execute();
+        $medicos = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    } catch (Exception $e) {
+        echo $e->getMessage();
+    }
+}
 
 ?>
 
-<div class="conteiner">
-    <div id="hora-teste">
-        <button class="accordion">
-            <span class="material-symbols-outlined" type="button">
-                add_circle
-            </span>
-            08:00</button>
-        <div class="panel">
-            <?php
-            require $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/php/form.php";
-            ?>
-        </div>
-    </div>
+<section style="margin: 1rem;">
+    <form action="/hipocrates/views/agendamento.php" method="POST">
+        <fieldset>
+            <div class="form-item">
+                <label for="data_consulta">Data da Consulta:</label>
+                <input type="date" name="data_consulta" id="data_consulta">
+            </div>
 
-    <div id="hora-teste">
-        <button class="accordion">
-            <span class="material-symbols-outlined" type="button">
-                add_circle
-            </span>
-            08:30</button>
-        <div class="panel">
-            <?php
-            require $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/php/form.php";
-            ?>
-        </div>
-    </div>
-    <div id="hora-teste">
-        <button class="accordion">
-            <span class="material-symbols-outlined" type="button">
-                add_circle
-            </span>
-            09:00</button>
-        <div class="panel">
-            <?php
-            require $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/php/form.php";
-            ?>
-        </div>
-    </div>
-    <div id="hora-teste">
-        <button class="accordion">
-            <span class="material-symbols-outlined" type="button">
-                add_circle
-            </span>
-            09:30</button>
-        <div class="panel">
-            <?php
-            require $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/php/form.php";
-            ?>
-        </div>
-    </div>
-    <div id="hora-teste">
-        <button class="accordion">
-            <span class="material-symbols-outlined" type="button">
-                add_circle
-            </span>
-            10:00</button>
-        <div class="panel">
-            <?php
-            require $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/php/form.php";
-            ?>
-        </div>
-    </div>
-    <div id="hora-teste">
-        <button class="accordion">
-            <span class="material-symbols-outlined" type="button">
-                add_circle
-            </span>
-            10:30</button>
-        <div class="panel">
-            <?php
-            require $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/php/form.php";
-            ?>
-        </div>
-    </div>
-    <div id="hora-teste">
-        <button class="accordion">
-            <span class="material-symbols-outlined" type="button">
-                add_circle
-            </span>
-            11:00</button>
-        <div class="panel">
-            <?php
-            require $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/php/form.php";
-            ?>
-        </div>
-    </div>
+            <div class="form-item">
+                <label for="especialidade">Especialidade:</label>
+                <select name="especialidade" id="especialidade">
+                    <option value="clinico geral">Clinico Geral</option>
+                    <option value="odontologia">Odontologia</option>
+                    <option value="psicologia">Psicologia</option>
+                </select>
+            </div>
 
-    <div id="hora-teste">
-        <button class="accordion">
-            <span class="material-symbols-outlined" type="button">
-                add_circle
-            </span>
-            11:30</button>
-        <div class="panel">
-            <?php
-            require $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/php/form.php";
-            ?>
-        </div>
-    </div>
+            <!-- <div class="form-item">
+                <label for="medico">Medico:</label>
+                <select name="medico" id="medico">
+                    <option value="fulano">Fulano</option>
+                    <option value="ciclano">Ciclano</option>
+                </select>
+            </div> -->
 
-    <div id="hora-teste">
-        <button class="accordion">
-            <span class="material-symbols-outlined" type="button">
-                add_circle
-            </span>
-            12:00</button>
-        <div class="panel">
-            <?php
-            require $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/php/form.php";
-            ?>
-        </div>
-    </div>
+            <div class="form-item">
+                <button type="submit">
+                    Buscar
+                </button>
+            </div>
+        </fieldset>
+    </form>
+</section>
 
-    <div id="hora-teste">
-        <button class="accordion">
-            <span class="material-symbols-outlined" type="button">
-                add_circle
-            </span>
-            12:30</button>
-        <div class="panel">
+<?php if ($_SERVER['REQUEST_METHOD'] === 'POST') : ?>
+    <?php foreach ($medicos as $medico) : ?>
+        <section style="margin: 1rem; color: white;">
+            <h2><?= $medico['nome'] ?></h2>
             <?php
-            require $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/php/form.php";
+            $query = "SELECT * FROM horario_medico WHERE disponivel = true AND id_medico = :id_medico AND 
+                  DATE_FORMAT(data_hora_inicio, '%Y-%m-%d') = :data ORDER BY data_hora_inicio ASC";
+            $stmt = $conexao->prepare($query);
+            $stmt->bindValue(":id_medico", $medico['id_medico']);
+            $stmt->bindValue(":data", $data);
+            $stmt->execute();
+            $horarios = $stmt->fetchAll(PDO::FETCH_ASSOC);
             ?>
-        </div>
-    </div>
-    <div id="hora-teste">
-        <button class="accordion">
-            <span class="material-symbols-outlined" type="button">
-                add_circle
-            </span>
-            13:00</button>
-        <div class="panel">
-            <?php
-            require $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/php/form.php";
-            ?>
-        </div>
-    </div>
+            <?php if (count($horarios) > 0) : ?>
+                <ul style="list-style-type: none; display: flex; flex-wrap: wrap;">
+                    <?php foreach ($horarios as $horario) : ?>
+                        <li>
+                            <form action="/hipocrates/views/agendamento.php" method="POST">
+                                <input type="hidden" name="id_medico" value="<?= $medico['id_medico'] ?>">
+                                <input type="hidden" name="data_hora_inicio" value="<?= $horario['data_hora_inicio'] ?>">
+                                <button type="submit"><?= date('H:i', strtotime($horario['data_hora_inicio'])) ?> - <?= date('H:i', strtotime($horario['data_hora_fim'])) ?></button>
+                            </form>
+                        </li>
+                    <?php endforeach; ?>
+                </ul>
+            <?php else : ?>
+                <p>Nenhum horário disponível para esta data.</p>
+            <?php endif; ?>
+        </section>
+    <?php endforeach; ?>
+<?php endif; ?>
 
-    <div id="hora-teste">
-        <button class="accordion">
-            <span class="material-symbols-outlined" type="button">
-                add_circle
-            </span>
-            13:30</button>
-        <div class="panel">
-            <?php
-            require $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/php/form.php";
-            ?>
-        </div>
-    </div>
-
-    <div id="hora-teste">
-        <button class="accordion">
-            <span class="material-symbols-outlined" type="button">
-                add_circle
-            </span>
-            14:00</button>
-        <div class="panel">
-            <?php
-            require $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/php/form.php";
-            ?>
-        </div>
-    </div>
-
-    <div id="hora-teste">
-        <button class="accordion">
-            <span class="material-symbols-outlined" type="button">
-                add_circle
-            </span>
-            14:30</button>
-        <div class="panel">
-            <?php
-            require $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/php/form.php";
-            ?>
-        </div>
-    </div>
-    <div id="hora-teste">
-        <button class="accordion">
-            <span class="material-symbols-outlined" type="button">
-                add_circle
-            </span>
-            15:00</button>
-        <div class="panel">
-            <?php
-            require $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/php/form.php";
-            ?>
-        </div>
-    </div>
-
-    <div id="hora-teste">
-        <button class="accordion">
-            <span class="material-symbols-outlined" type="button">
-                add_circle
-            </span>
-            15:30</button>
-        <div class="panel">
-            <?php
-            require $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/php/form.php";
-            ?>
-        </div>
-    </div>
-
-    <div id="hora-teste">
-        <button class="accordion">
-            <span class="material-symbols-outlined" type="button">
-                add_circle
-            </span>
-            16:00</button>
-        <div class="panel">
-            <?php
-            require $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/php/form.php";
-            ?>
-        </div>
-    </div>
-
-    <div id="hora-teste">
-        <button class="accordion">
-            <span class="material-symbols-outlined" type="button">
-                add_circle
-            </span>
-            16:30</button>
-        <div class="panel">
-            <?php
-            require $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/php/form.php";
-            ?>
-        </div>
-    </div>
-
-    <div id="hora-teste">
-        <button class="accordion">
-            <span class="material-symbols-outlined" type="button">
-                add_circle
-            </span>
-            17:00</button>
-        <div class="panel">
-            <?php
-            require $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/php/form.php";
-            ?>
-        </div>
-    </div>
-
-    <div id="hora-teste">
-        <button class="accordion">
-            <span class="material-symbols-outlined" type="button">
-                add_circle
-            </span>
-            17:30</button>
-        <div class="panel">
-            <?php
-            require $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/php/form.php";
-            ?>
-        </div>
-    </div>
-
-    <div id="hora-teste">
-        <button class="accordion">
-            <span class="material-symbols-outlined" type="button">
-                add_circle
-            </span>
-            18:00</button>
-        <div class="panel">
-            <?php
-            require $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/php/form.php";
-            ?>
-        </div>
-    </div>
-</div>
-
-<!--Calendario-->
-<?php
-require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/php/calendario.php";
-?>
-
-<!-- chamar os js aqui embaixo -->
-<script src="/hipocrates/js/sapatenis.js"></script>
 
 <?php
 require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/templates/rodape.php";
