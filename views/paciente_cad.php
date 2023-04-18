@@ -97,7 +97,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/templates/cabecalho.php"
 
 
         <fieldset>
-            <legend>Saúde</legend>
+            <legend>Limitações</legend>
             <div class="form-item">
                 <label for="cognitivas">cognitivas</label>
                 <input type="checkbox" name="limitacoes[]" id="cognitivas" value="cognitivas">
@@ -118,6 +118,9 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/templates/cabecalho.php"
                 <label for="outros">outros</label>
                 <input type="checkbox" name="limitacoes[]" id="outros" value="outros">
             </div>
+        </fieldset>
+
+        <fieldset>
             <div class="form-item">
                 <label for="tipo_sangue">Tipo Sanguineo</label>
                 <select name="tipo_sangue" id="tipo_sangue">

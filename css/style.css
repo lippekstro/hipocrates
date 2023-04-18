@@ -284,11 +284,12 @@ button:hover {
     width: 90%;
   }
 
-  input, select {
+  input,
+  select {
     font-size: small;
   }
 
-  #cad-user{
+  #cad-user {
     width: 95%;
   }
 
@@ -296,8 +297,19 @@ button:hover {
     display: block;
   }
 
-  #cad-user input, #cad-user select {
+  #cad-user input,
+  #cad-user select,
+  #perfil input,
+  #perfil select {
     width: 100%;
+  }
+
+  .metade {
+    width: 100%;
+  }
+
+  .img-pessoais {
+    display: block;
   }
 }
 
@@ -315,6 +327,14 @@ button:hover {
   .login {
     width: 90%;
   }
+
+  .metade {
+    width: 100%;
+  }
+
+  .img-pessoais {
+    display: block;
+  }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -326,6 +346,10 @@ button:hover {
 
   .login {
     width: 60%;
+  }
+
+  .img-pessoais {
+    display: flex;
   }
 }
 

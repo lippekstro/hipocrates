@@ -5,7 +5,10 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/templates/cabecalho.php"
 <div class="container">
   <div class="mySlides">
     <div class="txt-img">
-      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis libero vel est explicabo officia consequatur soluta blanditiis, eos odit ab pariatur, quae quibusdam inventore in dicta? Fuga vel rerum dolor.</p>
+      <p>A funcionalidade de agendamento de consultas do sistema Hipocrates permite que pacientes e médicos marquem consultas facilmente em um ambiente seguro e fácil de usar.</p>
+      <button>
+        <a href="/hipocrates/views/agendamento.php">Agende uma consulta!</a>
+      </button>
     </div>
     <picture>
       <!-- Source para telas de notebook -->

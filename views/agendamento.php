@@ -1,5 +1,11 @@
 <?php
+session_start();
+if(!isset($_SESSION['usuario']['cpf'])){
+    header('Location: /hipocrates/views/PgUser.php');
+}
 require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/templates/cabecalho.php";
+
+
 ?>
 
 <div class="conteiner">

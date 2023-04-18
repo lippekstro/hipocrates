@@ -11,13 +11,14 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/config/sessions.php";
 
     <title>Hipócrates</title>
     <link rel="shortcut icon" href="/hipocrates/imgs/logo.png" type="image/x-icon">
-    
+
     <link rel="stylesheet" href="/hipocrates/css/agendamento.css" />
     <link rel="stylesheet" href="/hipocrates/css/formulario.css" />
     <link rel="stylesheet" href="/hipocrates/css/form.css" />
     <link rel="stylesheet" href="/hipocrates/css/login.css">
+    <link rel="stylesheet" href="/hipocrates/css/perfil.css">
     <link rel="stylesheet" href="/hipocrates/css/style.css" />
-    
+
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 
@@ -28,18 +29,16 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/config/sessions.php";
         </figure>
 
         <a href="/hipocrates/index.php">Incio <span class="material-symbols-outlined">home</span></a>
-        <a href="/hipocrates/views/agendamento.php">Agendamento <span class="material-symbols-outlined">edit_calendar</span></a>
-        <a href="/hipocrates/views/sobre.php">Sobre <span class="material-symbols-outlined">info</span></a>
-
+        
         <button class="dropdown-btn">
             Serviços
             <span class="material-symbols-outlined">medical_services</span>
         </button>
         <div class="dropdown-container">
-            <a href="#">Link 1</a>
-            <a href="#">Link 2</a>
-            <a href="#">Link 3</a>
+            <a href="/hipocrates/views/agendamento.php">Agendamento <span class="material-symbols-outlined">edit_calendar</span></a>
         </div>
+
+        <a href="/hipocrates/views/sobre.php">Sobre <span class="material-symbols-outlined">info</span></a>
 
         <?php if (!isset($_SESSION['usuario']['cpf'])) : ?>
             <a href="/hipocrates/views/PgUser.php">Login <span class="material-symbols-outlined">login</span></a>
@@ -51,7 +50,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/config/sessions.php";
                 </figure>
             </button>
             <div class="dropdown-container">
-                <a href="#">Perfil <span class="material-symbols-outlined">account_circle</span></a>
+                <a href="/hipocrates/views/perfil.php">Perfil <span class="material-symbols-outlined">account_circle</span></a>
                 <a href="/hipocrates/controllers/logout_controller.php">Logout <span class="material-symbols-outlined">logout</span></a>
             </div>
         <?php endif; ?>

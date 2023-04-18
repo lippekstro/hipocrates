@@ -16,6 +16,7 @@ try {
         $_SESSION['usuario']['nome'] = $registro['nome'];
         $_SESSION['usuario']['cpf'] = $registro['cpf'];
         $_SESSION['usuario']['foto'] = $registro['foto'];
+        $_SESSION['usuario']['id_usuario'] = $registro['id_paciente'];
         $_SESSION['usuario']['inicio'] = time();
         $_SESSION['usuario']['expira'] = 900;
 

@@ -57,3 +57,12 @@ create table consulta (
     foreign key (id_medico) references medico(id_medico),
     foreign key (id_paciente) references paciente(id_paciente)
 );
+
+create table horario_medico (
+    id_horario int primary key auto_increment,
+    data_hora_inicio datetime,
+    data_hora_fim datetime,
+    disponivel boolean,
+    id_medico int,
+    foreign key (id_medico) references medico(id_medico)
+)

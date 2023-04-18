@@ -82,4 +82,14 @@ class Paciente {
         return $id_paciente;
         
     }
+
+    public static function listar()
+    {
+        $query = "select * from paciente";
+        $conexao = Conexao::conectar();
+        $stmt = $conexao->prepare($query);
+        $stmt->execute();
+        $lista = $stmt->fetchAll();
+        return $lista;
+    }
 }
