@@ -6,9 +6,11 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/templates/cabecalho.php"
   <div class="mySlides">
     <div class="txt-img">
       <p>A funcionalidade de agendamento de consultas do sistema Hipocrates permite que pacientes e médicos marquem consultas facilmente em um ambiente seguro e fácil de usar.</p>
-      <button>
-        <a href="/hipocrates/views/agendamento.php">Agende uma consulta!</a>
-      </button>
+      <a href="/hipocrates/views/agendamento.php">
+        <button>
+          Agende uma consulta!
+        </button>
+      </a>
     </div>
     <picture>
       <!-- Source para telas de notebook -->
