@@ -10,7 +10,7 @@ try {
     $bairro = htmlspecialchars($_POST['bairro']);
     $cidade = htmlspecialchars($_POST['cidade']);
     $estado = htmlspecialchars($_POST['estado']);
-    
+
     $endereco = new Endereco();
     $endereco->cep = $cep;
     $endereco->logradouro = $logradouro;
@@ -35,14 +35,18 @@ try {
         $telefone = htmlspecialchars($_POST['telefone']);
         $email = htmlspecialchars($_POST['email']);
         $tipo_san = htmlspecialchars($_POST['tipo_sangue']);
-        if (!empty($_FILES['foto']['tmp_name'])){
+        if (!empty($_FILES['foto']['tmp_name'])) {
             $imagem = file_get_contents($_FILES['foto']['tmp_name']);
         }
         $senha = $_POST['senha'];
         $senha = password_hash($senha, PASSWORD_DEFAULT);
-        $limitacoes = $_POST['limitacoes'];
-        $limitacoes = implode(',', $limitacoes);
-    
+        if (!is_null($_POST['limitacoes'])) {
+            $limitacoes = $_POST['limitacoes'];
+            $limitacoes = implode(',', $limitacoes);
+        } else {
+            $limitacoes = null;
+        }
+
         $paciente = new Paciente();
         $paciente->nome = $nome;
         $paciente->rg = $rg;
@@ -61,7 +65,7 @@ try {
         $paciente->id_endereco = $id_endereco;
         $paciente->limitacoes = $limitacoes;
         $paciente->criar();
-    
+
         header("Location: /hipocrates/index.php");
     } catch (PDOException $e) {
         echo $e->getMessage();
@@ -69,4 +73,3 @@ try {
 } catch (PDOException $e) {
     echo $e->getMessage();
 }
-

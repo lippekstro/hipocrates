@@ -46,6 +46,7 @@ create table medico (
     cpf varchar(11) not null,
     crm varchar(6) not null,
     foto longblob,
+    senha varchar(200) not null,
     especialidade enum('odontologia', 'psicologia', 'clinico geral') not null
 );
 

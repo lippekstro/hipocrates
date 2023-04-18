@@ -5,7 +5,16 @@ $cpf = htmlspecialchars($_POST['cpf']);
 $senha = $_POST['senha'];
 
 try {
-    $query = "select * from paciente where cpf = :cpf LIMIT 1";
+    $query = "SELECT * FROM (
+                SELECT 'paciente' AS tabela, id_paciente, nome, cpf, senha, foto, NULL AS crm 
+                FROM paciente 
+                WHERE cpf = :cpf 
+                UNION 
+                SELECT 'medico' AS tabela, id_medico, nome, cpf, senha, foto, crm 
+                FROM medico 
+                WHERE cpf = :cpf
+             ) AS usuario 
+             LIMIT 1";
     $conexao = Conexao::conectar();
     $stmt = $conexao->prepare($query);
     $stmt->bindValue(":cpf", $cpf);
@@ -17,6 +26,10 @@ try {
         $_SESSION['usuario']['cpf'] = $registro['cpf'];
         $_SESSION['usuario']['foto'] = $registro['foto'];
         $_SESSION['usuario']['id_usuario'] = $registro['id_paciente'];
+        if (isset($registro['crm'])) {
+            $_SESSION['usuario']['crm'] = $registro['crm'];
+        } 
+
         $_SESSION['usuario']['inicio'] = time();
         $_SESSION['usuario']['expira'] = 900;
 

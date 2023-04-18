@@ -29,7 +29,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/config/sessions.php";
         </figure>
 
         <a href="/hipocrates/index.php">Incio <span class="material-symbols-outlined">home</span></a>
-        
+
         <button class="dropdown-btn">
             Serviços
             <span class="material-symbols-outlined">medical_services</span>
@@ -50,7 +50,11 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/config/sessions.php";
                 </figure>
             </button>
             <div class="dropdown-container">
-                <a href="/hipocrates/views/perfil.php">Perfil <span class="material-symbols-outlined">account_circle</span></a>
+                <?php if (!isset($_SESSION['usuario']['crm'])) : ?>
+                    <a href="/hipocrates/views/perfil.php">Perfil <span class="material-symbols-outlined">account_circle</span></a>
+                <?php else : ?>
+                    <a href="/hipocrates/views/perfil_medico.php">Perfil <span class="material-symbols-outlined">account_circle</span></a>
+                <?php endif; ?>
                 <a href="/hipocrates/controllers/logout_controller.php">Logout <span class="material-symbols-outlined">logout</span></a>
             </div>
         <?php endif; ?>
