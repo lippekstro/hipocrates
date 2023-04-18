@@ -283,8 +283,21 @@ button:hover {
   .login {
     width: 90%;
   }
+
   input, select {
     font-size: small;
+  }
+
+  #cad-user{
+    width: 95%;
+  }
+
+  .form-item {
+    display: block;
+  }
+
+  #cad-user input, #cad-user select {
+    width: 100%;
   }
 }
 
