@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<!--=== Coding by CodingLab | www.codinglabweb.com === -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header>Registration</header>
+
+      <form action="#">
+        <div class="form first">
+          <div class="details personal">
+            <span class="title">Dados Pessoais</span>
+
+            <div class="fields">
+              <div class="input-field">
+                <label for="nome">Nome Completo</label>
+                <input
+                  type="text"
+                  name="nome"
+                  id="nome"
+                  value=""
+                  placeholder="Digite seu nome completo"
+                  required
+                />
+              </div>
+
+              <div class="input-field">
+                <label for="data_nascimento">Data de Nascimento</label>
+                <input
+                  type="date"
+                  name="data_nascimento"
+                  id="data_nascimento"
+                  value=""
+                  placeholder="Data nascimento"
+                  required
+                />
+              </div>
+
+              <div class="input-field">
+                <label for="genero">Gênero</label>
+                <select required name="genero" id="genero">
+                  <option disabled selected>Selecione Gênero</option>
+                  <option value="Masculino">Masculino</option>
+                  <option value="Feminino">Feminino</option>
+                </select>
+              </div>
+
+              <div class="input-field">
+                <label for="genero">Estado Civil</label>
+                <select required name="estado_civil" id="estado_civil">
+                  <option disabled selected>Selecione seu Estado Civil</option>
+                  <option value="Solteiro">Solteiro</option>
+                  <option value="Casado">Casado</option>
+                  <option value="Viúvo">Viúvo</option>
+                  <option value="Divorciado">Divorciado</option>
+                  <option value="União Estável">União Estável</option>
+                </select>
+              </div>
+
+              <div class="input-field">
+                <label>Mobile Number</label>
+                <input
+                  type="number"
+                  placeholder="Enter mobile number"
+                  required
+                />
+              </div>
+
+              <div class="input-field">
+                <label>Occupation</label>
+                <input
+                  type="text"
+                  placeholder="Enter your ccupation"
+                  required
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="details ID">
+            <span class="title">Identity Details</span>
+
+            <div class="fields">
+              <div class="input-field">
+                <label for="cpf">Seu CPF</label>
+                <input
+                  type="text"
+                  name="cpf"
+                  id="cpf"
+                  placeholder="Digite seu CPF"
+                  required
+                />
+              </div>
+
+              <div class="input-field">
+                <label for="rg">Seu RG</label>
+                <input
+                  type="text"
+                  name="rg"
+                  id="rg"
+                  placeholder="Digite seu RG"
+                  required
+                />
+              </div>
+
+              <div class="input-field">
+                <label for="orgao_emissor">Órgão Emissor</label>
+                <select required name="orgao_emissor" id="orgao_emissor">
+                  <option disabled selected>Selecione o Órgão Emissor</option>
+                  <option value="SSP">
+                    SSP - Secretaria de Segurança Pública
+                  </option>
+                  <option value="PC">PC - Polícia Civil</option>
+                  <option value="PM">PM - Polícia Militar</option>
+                  <option value="DETRAN">
+                    DETRAN - Departamento Estadual de Trânsito
+                  </option>
+                  <option value="DPF">
+                    DPF - Departamento de Polícia Federal
+                  </option>
+                  <option value="CREA">
+                    CREA - Conselho Regional de Engenharia e Agronomia
+                  </option>
+                  <option value="OAB">
+                    OAB - Ordem dos Advogados do Brasil
+                  </option>
+                  <option value="CRM">
+                    CRM - Conselho Regional de Medicina
+                  </option>
+                  <option value="COREN">
+                    COREN - Conselho Regional de Enfermagem
+                  </option>
+                  <option value="CRO">
+                    CRO - Conselho Regional de Odontologia
+                  </option>
+                </select>
+              </div>
+
+              <div class="input-field">
+                <label for="estado_emissor">Estado Emissor</label>
+                <select required name="estado_emissor" id="estado_emissor">
+                  <option disabled selected>Selecione Estado de Emissão</option>
+                  <option value="AC">AC - Acre</option>
+                  <option value="AL">AL - Alagoas</option>
+                  <option value="AP">AP - Amapá</option>
+                  <option value="AM">AM - Amazonas</option>
+                  <option value="BA">BA - Bahia</option>
+                  <option value="CE">CE - Ceará</option>
+                  <option value="DF">DF - Distrito Federal</option>
+                  <option value="ES">ES - Espírito Santo</option>
+                  <option value="GO">GO - Goiás</option>
+                  <option value="MA">MA - Maranhão</option>
+                  <option value="MT">MT - Mato Grosso</option>
+                  <option value="MS">MS - Mato Grosso do Sul</option>
+                  <option value="MG">MG - Minas Gerais</option>
+                  <option value="PA">PA - Pará</option>
+                  <option value="PB">PB - Paraíba</option>
+                  <option value="PR">PR - Paraná</option>
+                  <option value="PE">PE - Pernambuco</option>
+                  <option value="PI">PI - Piauí</option>
+                  <option value="RJ">RJ - Rio de Janeiro</option>
+                  <option value="RN">RN - Rio Grande do Norte</option>
+                  <option value="RS">RS - Rio Grande do Sul</option>
+                  <option value="RO">RO - Rondônia</option>
+                  <option value="RR">RR - Roraima</option>
+                  <option value="SC">SC - Santa Catarina</option>
+                  <option value="SP">SP - São Paulo</option>
+                  <option value="SE">SE - Sergipe</option>
+                </select>
+              </div>
+
+              <div class="input-field">
+                <label>Data de Emissão</label>
+                <input type="date" placeholder="Data de Emissão" required />
+              </div>
+
+              <div class="input-field">
+                <label>Expiry Date</label>
+                <input type="date" placeholder="Enter expiry date" required />
+              </div>
+            </div>
+
+            <button class="nextBtn">
+              <span class="btnText">Next</span>
+              <i class="uil uil-navigator"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="form second">
+          <div class="details address">
+            <span class="title">Endereço</span>
+
+            <div class="fields">
+              <div class="input-field">
+                <label>Address Type</label>
+                <input
+                  type="text"
+                  placeholder="Permanent or Temporary"
+                  required
+                />
+              </div>
+
+              <div class="input-field">
+                <label>Nationality</label>
+                <input type="text" placeholder="Enter nationality" required />
+              </div>
+
+              <div class="input-field">
+                <label>State</label>
+                <input type="text" placeholder="Enter your state" required />
+              </div>
+
+              <div class="input-field">
+                <label>District</label>
+                <input type="text" placeholder="Enter your district" required />
+              </div>
+
+              <div class="input-field">
+                <label>Block Number</label>
+                <input
+                  type="number"
+                  placeholder="Enter block number"
+                  required
+                />
+              </div>
+
+              <div class="input-field">
+                <label>Ward Number</label>
+                <input type="number" placeholder="Enter ward number" required />
+              </div>
+            </div>
+          </div>
+
+          <div class="details family">
+            <span class="title">Family Details</span>
+
+            <div class="fields">
+              <div class="input-field">
+                <label>Father Name</label>
+                <input type="text" placeholder="Enter father name" required />
+              </div>
+
+              <div class="input-field">
+                <label>Mother Name</label>
+                <input type="text" placeholder="Enter mother name" required />
+              </div>
+
+              <div class="input-field">
+                <label>Grandfather</label>
+                <input
+                  type="text"
+                  placeholder="Enter grandfther name"
+                  required
+                />
+              </div>
+
+              <div class="input-field">
+                <label>Spouse Name</label>
+                <input type="text" placeholder="Enter spouse name" required />
+              </div>
+
+              <div class="input-field">
+                <label>Father in Law</label>
+                <input type="text" placeholder="Father in law name" required />
+              </div>
+
+              <div class="input-field">
+                <label>Mother in Law</label>
+                <input type="text" placeholder="Mother in law name" required />
+              </div>
+            </div>
+
+            <div class="buttons">
+              <div class="backBtn">
+                <i class="uil uil-navigator"></i>
+                <span class="btnText">Back</span>
+              </div>
+
+              <button class="sumbit">
+                <span class="btnText">Submit</span>
+                <i class="uil uil-navigator"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <!--<script src="script.js"></script>-->
+  </body>
+</html>
