@@ -135,4 +135,18 @@ class Paciente {
         $stmt->bindValue(':id_paciente', $this->id_paciente);
         $stmt->execute();
     }
+
+    /* public function adicionarAcompanhante($nome, $cpf, $telefone, $tipo) {
+        $query = "INSERT INTO acompanhante (nome, cpf, telefone, tipo, id_paciente) 
+                  VALUES (:nome, :cpf, :telefone, :tipo, :id_paciente)";
+        $conexao = Conexao::conectar();
+        $stmt = $conexao->prepare($query);
+        $stmt->bindValue(':nome', $nome);
+        $stmt->bindValue(':cpf', $cpf);
+        $stmt->bindValue(':telefone', $telefone);
+        $stmt->bindValue(':tipo', $tipo);
+        $stmt->bindValue(':id_paciente', $this->id_paciente);
+        $stmt->execute();
+    } */
+    
 }

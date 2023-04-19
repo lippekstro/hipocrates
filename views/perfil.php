@@ -2,12 +2,15 @@
 require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/templates/cabecalho.php";
 require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/models/paciente.php";
 require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/models/endereco.php";
+require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/models/acompanhante.php";
 
 $paciente = new Paciente($_SESSION['usuario']['id_usuario']);
 $endereco = new Endereco($paciente->id_endereco);
+
+$lista = Acompanhante::listar($_SESSION['usuario']['id_usuario']);
 ?>
 
-<section id="perfil">
+<section class="perfil">
     <h1><?= $paciente->nome ?></h1>
 
     <div class="img-pessoais">
@@ -126,13 +129,43 @@ $endereco = new Endereco($paciente->id_endereco);
             </div>
         </div>
     </fieldset>
-    
+
     <a href="/hipocrates/views/acompanhante_cad.php">
         <button type="submit">
             Adicionar Acompanhante
         </button>
     </a>
 </section>
+
+<h1>Acompanhantes</h1>
+<?php foreach ($lista as $acompanhante) : ?>
+    <section class="perfil">
+        <fieldset>
+            <div class="img-pessoais">
+                <div class="form-item">
+                    <label for="nome_acompanhante">Nome:</label>
+                    <input type="text" name="nome_acompanhante" id="nome_acompanhante" value="<?= $acompanhante['nome'] ?>" disabled>
+                </div>
+
+                <div class="form-item">
+                    <label for="cpf_acompanhante">CPF:</label>
+                    <input type="text" name="cpf_acompanhante" id="cpf_acompanhante" value="<?= $acompanhante['cpf'] ?>" disabled>
+                </div>
+
+                <div class="form-item">
+                    <label for="telefone_acompanhante">Telefone:</label>
+                    <input type="text" name="telefone_acompanhante" id="telefone_acompanhante" value="<?= $acompanhante['telefone'] ?>" disabled>
+                </div>
+
+                <div class="form-item">
+                    <label for="tipo_acompanhante">Relação:</label>
+                    <input type="text" name="tipo_acompanhante" id="tipo_acompanhante" value="<?= $acompanhante['tipo'] ?>" disabled>
+                </div>
+            </div>
+
+        </fieldset>
+    </section>
+<?php endforeach; ?>
 
 <?php
 require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/templates/rodape.php";

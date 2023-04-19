@@ -1,4 +1,4 @@
-#perfil {
+.perfil {
     margin: 1rem;
     display: flex;
     flex-direction: column;
@@ -14,7 +14,7 @@
     height: 100%;
 }
 
-#perfil input, #perfil select {
+.perfil input, .perfil select {
     font-size: initial;
     width: 60%;
 }
@@ -23,7 +23,7 @@
     flex-grow: 1;
 }
 
-#perfil fieldset {
+.perfil fieldset {
     width: 100%;
 }
 
