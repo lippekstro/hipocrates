@@ -40,7 +40,7 @@ try {
                 </select>
             </div>
         </fieldset>
-        <button type="submit">
+        <button type="submit" class="btn-sucesso">
             Atualizar
         </button>
     </form>

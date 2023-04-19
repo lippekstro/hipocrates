@@ -7,7 +7,7 @@ $medico = new Medico($_SESSION['usuario']['id_usuario']);
 $consultas = Consulta::listar($_SESSION['usuario']['id_usuario']);
 ?>
 
-<section id="perfil">
+<section class="perfil">
     <h1><?= $medico->nome ?></h1>
 
     <div class="img-pessoais">
@@ -40,7 +40,7 @@ $consultas = Consulta::listar($_SESSION['usuario']['id_usuario']);
 </section>
 
 <a href="/hipocrates/views/horarios_medico_cad.php">
-    <button>
+    <button class="btn-sucesso">
         Adicionar Horario
     </button>
 </a>
@@ -58,7 +58,7 @@ $consultas = Consulta::listar($_SESSION['usuario']['id_usuario']);
 
                     <div class="form-item">
                         <label for="cpf_acompanhante">Data:</label>
-                        <input type="text" name="cpf_acompanhante" id="cpf_acompanhante" value="<?= $consulta['data_consulta'] ?>" disabled>
+                        <input type="text" name="cpf_acompanhante" id="cpf_acompanhante" value="<?= date("d/m/Y h:i", strtotime($consulta['data_consulta'])) ?>" disabled>
                     </div>
                 </div>
 

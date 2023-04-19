@@ -33,7 +33,7 @@ $amanha_formatado = $amanha->format('Y-m-d');
             </div>
         </fieldset>
 
-        <button type="submit">
+        <button type="submit" class="btn-sucesso">
             Cadastrar
         </button>
     </form>

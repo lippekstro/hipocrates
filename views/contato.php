@@ -21,27 +21,35 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/templates/cabecalho.php";
                 <textarea name="texto" id="texto" cols="50" rows="5"></textarea>
             </div>
 
+            <div class="form-item">
+                <button type="submit" class="btn-sucesso">
+                    Enviar
+                </button>
+            </div>
         </fieldset>
-
-        <div class="form-item">
-            <button type="submit">
-                Enviar
-            </button>
-        </div>
     </form>
 </section>
 
 <section class="contato-icons">
-    <div>
-        <h1>Nossos Contatos</h1>
-    </div>
+    <h1>Nossas Redes Sociais</h1>
 
     <div>
         <a href="tel:(98) 9 1111-1111"><img src="/hipocrates/imgs/icones/whatsapp.svg" alt="" class="icons-svg" width="50rem"></a>
-        <a href="https://instagram.com/projeto_hipocrates"><img src="/hipocrates/imgs/icones/instagram.svg" alt="" class="icons-svg" width="50rem"></a>
-        <a href="https://facebook.com/projeto_hipocrates"><img src="/hipocrates/imgs/icones/facebook.svg" alt="" class="icons-svg" width="50rem"></a>
+        <a href="https://instagram.com/hipocrates_saude" target="_blank"><img src="/hipocrates/imgs/icones/instagram.svg" alt="" class="icons-svg" width="50rem"></a>
+        <a href="https://facebook.com/hipocrates_saude" target="_blank"><img src="/hipocrates/imgs/icones/facebook.svg" alt="" class="icons-svg" width="50rem"></a>
+        <a href="https://twitter.com/hipocrates_saude" target="_blank"><img src="/hipocrates/imgs/icones/twitter.svg" alt="" class="icons-svg" width="50rem"></a>
     </div>
 
+    <h1>Endereço</h1>
+
+    <address>
+        <p>Rua Exemplo, Nº 1000</p>
+        <p>Centro</p>
+        <p>São Luis</p>
+        <p>Maranhao</p>
+        <p>Brasil</p>
+        <p>CNPJ: 11.111.111/1111-11</p>
+    </address>
 </section>
 
 <?php

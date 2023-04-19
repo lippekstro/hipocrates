@@ -135,7 +135,7 @@ $lista_consulta = Consulta::listar($_SESSION['usuario']['id_usuario']);
     </fieldset>
 
     <a href="/hipocrates/views/acompanhante_cad.php">
-        <button type="submit">
+        <button type="submit" class="btn-sucesso">
             Adicionar Acompanhante
         </button>
     </a>
@@ -169,13 +169,13 @@ $lista_consulta = Consulta::listar($_SESSION['usuario']['id_usuario']);
                 </div>
 
                 <a href="/hipocrates/controllers/del_acompanhante.php?id_acompanhante=<?= $acompanhante['id_acompanhante'] ?>">
-                    <button>
+                    <button class="btn-perigo">
                         Deletar
                     </button>
                 </a>
 
                 <a href="/hipocrates/views/editar_acompanhante.php?id_acompanhante=<?= $acompanhante['id_acompanhante'] ?>">
-                    <button>
+                    <button class="btn-alerta">
                         Editar
                     </button>
                 </a>
@@ -203,7 +203,7 @@ $lista_consulta = Consulta::listar($_SESSION['usuario']['id_usuario']);
 
                     <div class="form-item">
                         <label for="data_consulta">Data:</label>
-                        <input type="text" name="data_consulta" id="data_consulta" value="<?= $consulta['data_consulta'] ?>" disabled>
+                        <input type="text" name="data_consulta" id="data_consulta" value="<?= date("d/m/Y h:i", strtotime($consulta['data_consulta'])) ?>" disabled>
                     </div>
 
                 </div>

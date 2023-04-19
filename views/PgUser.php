@@ -20,7 +20,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/templates/cabecalho.php";
             <span>Esqueceu sua senha? <a href="/hipocrates/views/senha.php">Redefinir</a></span>
             <span><a href="/hipocrates/views/paciente_cad.php">Cadastre-se</a></span>
 
-            <button type="submit">
+            <button type="submit" class="btn-sucesso">
                 Avançar
             </button>
         </form>

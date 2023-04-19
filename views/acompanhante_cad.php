@@ -33,7 +33,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/templates/cabecalho.php"
                 </select>
             </div>
         </fieldset>
-        <button type="submit">
+        <button type="submit" class="btn-sucesso">
             Cadastrar
         </button>
     </form>

@@ -24,6 +24,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 
+// Obter a data atual
+$hoje = new DateTime();
+
+// Formatar a data como uma string no formato "Y-m-d"
+$hoje_formatado = $hoje->format('Y-m-d');
+
 ?>
 
 <section style="margin: 1rem;">
@@ -31,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <fieldset>
             <div class="form-item">
                 <label for="data_consulta">Data da Consulta:</label>
-                <input type="date" name="data_consulta" id="data_consulta">
+                <input type="date" name="data_consulta" id="data_consulta" min="<?= $hoje_formatado; ?>">
             </div>
 
             <div class="form-item">
@@ -74,20 +80,26 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $horarios = $stmt->fetchAll(PDO::FETCH_ASSOC);
             ?>
             <?php if (count($horarios) > 0) : ?>
-                <ul style="list-style-type: none; display: flex; flex-wrap: wrap;">
-                    <?php foreach ($horarios as $horario) : ?>
-                        <li>
-                            <form action="/hipocrates/controllers/add_agendamento.php" method="POST">
-                                <input type="hidden" name="id_medico" value="<?= $medico['id_medico'] ?>">
-                                <input type="hidden" name="data_hora_inicio" value="<?= $horario['data_hora_inicio'] ?>">
-                                <input type="hidden" name="id_horario" value="<?= $horario['id_horario'] ?>">
-                                <button type="submit" style="background-color: #00A6FB;"><?= date('H:i', strtotime($horario['data_hora_inicio'])) ?> - <?= date('H:i', strtotime($horario['data_hora_fim'])) ?></button>
-                            </form>
-                        </li>
-                    <?php endforeach; ?>
-                </ul>
+                <fieldset>
+                    <ul style="list-style-type: none; display: flex; flex-wrap: wrap;">
+                        <?php foreach ($horarios as $horario) : ?>
+                            <li>
+                                <form action="/hipocrates/controllers/add_agendamento.php" method="POST">
+                                    <input type="hidden" name="id_medico" value="<?= $medico['id_medico'] ?>">
+                                    <input type="hidden" name="data_hora_inicio" value="<?= $horario['data_hora_inicio'] ?>">
+                                    <input type="hidden" name="id_horario" value="<?= $horario['id_horario'] ?>">
+                                    <button type="submit" style="background-color: #00A6FB;"><?= date('H:i', strtotime($horario['data_hora_inicio'])) ?> - <?= date('H:i', strtotime($horario['data_hora_fim'])) ?></button>
+                                </form>
+                            </li>
+                        <?php endforeach; ?>
+                    </ul>
+                </fieldset>
+
             <?php else : ?>
-                <p>Nenhum horário disponível para esta data.</p>
+                <fieldset>
+                    <p>Nenhum horário disponível para esta data.</p>
+                </fieldset>
+
             <?php endif; ?>
         </section>
     <?php endforeach; ?>
