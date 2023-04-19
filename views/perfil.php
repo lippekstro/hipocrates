@@ -3,11 +3,13 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/templates/cabecalho.php";
 require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/models/paciente.php";
 require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/models/endereco.php";
 require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/models/acompanhante.php";
+require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/models/consulta.php";
 
 $paciente = new Paciente($_SESSION['usuario']['id_usuario']);
 $endereco = new Endereco($paciente->id_endereco);
 
-$lista = Acompanhante::listar($_SESSION['usuario']['id_usuario']);
+$lista_acompanhantes = Acompanhante::listar($_SESSION['usuario']['id_usuario']);
+$lista_consulta = Consulta::listar($_SESSION['usuario']['id_usuario']);
 ?>
 
 <section class="perfil">
@@ -137,35 +139,53 @@ $lista = Acompanhante::listar($_SESSION['usuario']['id_usuario']);
     </a>
 </section>
 
-<h1>Acompanhantes</h1>
-<?php foreach ($lista as $acompanhante) : ?>
-    <section class="perfil">
-        <fieldset>
-            <div class="img-pessoais">
-                <div class="form-item">
-                    <label for="nome_acompanhante">Nome:</label>
-                    <input type="text" name="nome_acompanhante" id="nome_acompanhante" value="<?= $acompanhante['nome'] ?>" disabled>
+<?php if (count($lista_acompanhantes) > 0) : ?>
+    <h1>Acompanhantes</h1>
+    <?php foreach ($lista_acompanhantes as $acompanhante) : ?>
+        <section class="perfil">
+            <fieldset>
+                <div class="img-pessoais">
+                    <div class="form-item">
+                        <label for="nome_acompanhante">Nome:</label>
+                        <input type="text" name="nome_acompanhante" id="nome_acompanhante" value="<?= $acompanhante['nome'] ?>" disabled>
+                    </div>
+
+                    <div class="form-item">
+                        <label for="cpf_acompanhante">CPF:</label>
+                        <input type="text" name="cpf_acompanhante" id="cpf_acompanhante" value="<?= $acompanhante['cpf'] ?>" disabled>
+                    </div>
+
+                    <div class="form-item">
+                        <label for="telefone_acompanhante">Telefone:</label>
+                        <input type="text" name="telefone_acompanhante" id="telefone_acompanhante" value="<?= $acompanhante['telefone'] ?>" disabled>
+                    </div>
+
+                    <div class="form-item">
+                        <label for="tipo_acompanhante">Relação:</label>
+                        <input type="text" name="tipo_acompanhante" id="tipo_acompanhante" value="<?= $acompanhante['tipo'] ?>" disabled>
+                    </div>
                 </div>
 
-                <div class="form-item">
-                    <label for="cpf_acompanhante">CPF:</label>
-                    <input type="text" name="cpf_acompanhante" id="cpf_acompanhante" value="<?= $acompanhante['cpf'] ?>" disabled>
-                </div>
+            </fieldset>
+        </section>
+    <?php endforeach; ?>
+<?php endif; ?>
 
-                <div class="form-item">
-                    <label for="telefone_acompanhante">Telefone:</label>
-                    <input type="text" name="telefone_acompanhante" id="telefone_acompanhante" value="<?= $acompanhante['telefone'] ?>" disabled>
+<?php if (count($lista_consulta) > 0) : ?>
+    <h1>Consultas</h1>
+    <?php foreach ($lista_consulta as $consulta) : ?>
+        <section class="perfil">
+            <fieldset>
+                <div class="img-pessoais">
+                    <div class="form-item">
+                        <label for="data_consulta">Data:</label>
+                        <input type="text" name="data_consulta" id="data_consulta" value="<?= $consulta['data_consulta'] ?>" disabled>
+                    </div>
                 </div>
-
-                <div class="form-item">
-                    <label for="tipo_acompanhante">Relação:</label>
-                    <input type="text" name="tipo_acompanhante" id="tipo_acompanhante" value="<?= $acompanhante['tipo'] ?>" disabled>
-                </div>
-            </div>
-
-        </fieldset>
-    </section>
-<?php endforeach; ?>
+            </fieldset>
+        </section>
+    <?php endforeach; ?>
+<?php endif; ?>
 
 <?php
 require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/templates/rodape.php";

@@ -43,11 +43,12 @@ class Consulta
         return $id_consulta;
     }
 
-    public static function listar()
+    public static function listar($id_paciente)
     {
-        $query = "SELECT * FROM consulta";
+        $query = "SELECT * FROM consulta WHERE id_paciente = :id_paciente";
         $conexao = Conexao::conectar();
         $stmt = $conexao->prepare($query);
+        $stmt->bindValue(':id_paciente', $id_paciente);
         $stmt->execute();
         $lista = $stmt->fetchAll();
         return $lista;
