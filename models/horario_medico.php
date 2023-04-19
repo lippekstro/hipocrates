@@ -79,4 +79,16 @@ class Horario_medico{
         $stmt->bindValue(':id_horario', $this->id_horario);
         $stmt->execute();
     }
+
+    public function removeHorario()
+    {
+        $query = "UPDATE horario_medico SET disponivel = :disponivel WHERE id_horario = :id_horario";
+        $conexao = Conexao::conectar();
+        $stmt = $conexao->prepare($query);
+        $stmt->bindValue(":disponivel", $this->disponivel);
+        $stmt->bindValue(":id_horario", $this->id_horario);
+        $stmt->execute();
+    }
+
+
 }

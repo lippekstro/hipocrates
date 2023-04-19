@@ -77,9 +77,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <ul style="list-style-type: none; display: flex; flex-wrap: wrap;">
                     <?php foreach ($horarios as $horario) : ?>
                         <li>
-                            <form action="/hipocrates/views/agendamento.php" method="POST">
+                            <form action="/hipocrates/controllers/add_agendamento.php" method="POST">
                                 <input type="hidden" name="id_medico" value="<?= $medico['id_medico'] ?>">
                                 <input type="hidden" name="data_hora_inicio" value="<?= $horario['data_hora_inicio'] ?>">
+                                <input type="hidden" name="id_horario" value="<?= $horario['id_horario'] ?>">
                                 <button type="submit" style="background-color: #00A6FB;"><?= date('H:i', strtotime($horario['data_hora_inicio'])) ?> - <?= date('H:i', strtotime($horario['data_hora_fim'])) ?></button>
                             </form>
                         </li>
