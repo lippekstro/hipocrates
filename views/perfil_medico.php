@@ -1,8 +1,10 @@
 <?php
 require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/templates/cabecalho.php";
 require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/models/medico.php";
+require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/models/consulta.php";
 
 $medico = new Medico($_SESSION['usuario']['id_usuario']);
+$consultas = Consulta::listar($_SESSION['usuario']['id_usuario']);
 ?>
 
 <section id="perfil">
@@ -12,7 +14,7 @@ $medico = new Medico($_SESSION['usuario']['id_usuario']);
         <div class="metade">
             <figure">
                 <img src="data:image/jpg;charset=utf8;base64,<?= base64_encode($medico->foto); ?>" alt="" width="100%">
-            </figure>
+                </figure>
         </div>
 
         <div class="metade">
@@ -36,6 +38,46 @@ $medico = new Medico($_SESSION['usuario']['id_usuario']);
         </div>
     </div>
 </section>
+
+<a href="/hipocrates/views/horarios_medico_cad.php">
+    <button>
+        Adicionar Horario
+    </button>
+</a>
+
+<?php if (count($consultas) > 0) : ?>
+    <h1>Consultas Agendadas</h1>
+    <?php foreach ($consultas as $consulta) : ?>
+        <section class="perfil">
+            <fieldset>
+                <div class="img-pessoais">
+                    <div class="form-item">
+                        <label for="nome_acompanhante">Nome do Paciente:</label>
+                        <input type="text" name="nome_acompanhante" id="nome_acompanhante" value="<?= Consulta::buscarNomePaciente($consulta['id_paciente']) ?>" disabled>
+                    </div>
+
+                    <div class="form-item">
+                        <label for="cpf_acompanhante">Data:</label>
+                        <input type="text" name="cpf_acompanhante" id="cpf_acompanhante" value="<?= $consulta['data_consulta'] ?>" disabled>
+                    </div>
+                </div>
+
+                <!-- <a href="/hipocrates/controllers/del_acompanhante.php?id_acompanhante=<?= $acompanhante['id_acompanhante'] ?>">
+                    <button>
+                        Deletar
+                    </button>
+                </a>
+
+                <a href="/hipocrates/views/editar_acompanhante.php?id_acompanhante=<?= $acompanhante['id_acompanhante'] ?>">
+                    <button>
+                        Editar
+                    </button>
+                </a> -->
+
+            </fieldset>
+        </section>
+    <?php endforeach; ?>
+<?php endif; ?>
 
 <?php
 require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/templates/rodape.php";

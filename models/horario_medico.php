@@ -34,13 +34,12 @@ class Horario_medico{
 
     public function criar()
     {
-        $query = "INSERT INTO  horario_medico (data_hora_inicio, data_hora_fim, disponivel, id_medico) 
-        VALUES (:data_hora_inicio, :data_hora_fim, :disponivel, :id_medico)";
+        $query = "INSERT INTO  horario_medico (data_hora_inicio, data_hora_fim, id_medico) 
+        VALUES (:data_hora_inicio, :data_hora_fim, :id_medico)";
         $conexao = Conexao::conectar();
         $stmt = $conexao->prepare($query);
         $stmt->bindValue(':data_hora_inicio', $this->data_hora_inicio);
         $stmt->bindValue(':data_hora_fim', $this->data_hora_fim);
-        $stmt->bindValue(':disponivel', $this->disponivel);
         $stmt->bindValue(':id_medico', $this->id_medico);
         $stmt->execute();
         $id_horario = $conexao->lastInsertId();

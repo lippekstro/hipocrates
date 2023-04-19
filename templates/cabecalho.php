@@ -38,6 +38,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/config/sessions.php";
             <a href="/hipocrates/views/agendamento.php">Agendamento <span class="material-symbols-outlined">edit_calendar</span></a>
         </div>
 
+        <a href="/hipocrates/views/contato.php">Contato <span class="material-symbols-outlined">call</span></a>
         <a href="/hipocrates/views/sobre.php">Sobre <span class="material-symbols-outlined">info</span></a>
 
         <?php if (!isset($_SESSION['usuario']['cpf'])) : ?>

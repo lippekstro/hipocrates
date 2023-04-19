@@ -1,14 +1,13 @@
 <?php
-require_once $_SERVER["DOCUMENT_ROOT"]. "/hipocrates/templates/cabecalho.php";
+require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/templates/cabecalho.php";
 ?>
 
 <div class="App">
-    <form class="input">
-      <fieldset>
-        <div class="espacamento">
+  <form class="input">
+    <fieldset>
+      <div class="espacamento">
         <div class="cpfid">
-          <input class="esticar90" id="cpfid" placeholder="CPF" required="required" name="cpf" maxlength="11"
-            type="text" />
+          <input class="esticar90" id="cpfid" placeholder="CPF" required="required" name="cpf" maxlength="11" type="text" />
         </div>
 
         <div class="ns">
@@ -22,15 +21,14 @@ require_once $_SERVER["DOCUMENT_ROOT"]. "/hipocrates/templates/cabecalho.php";
           <input class="esticar40" type="tel" id="telid" placeholder="NUMERO DE CONTATO" name="tel" />
         </div>
         <div class="esticar40">
-          <input style="background-color: (#fffce3); font-size: 15px;" type="submit" class="esticar90"
-            onclick="enviar();" value="AVANÇAR" />
+          <input style="background-color: (#fffce3); font-size: 15px;" type="submit" class="esticar90" onclick="enviar();" value="AVANÇAR" />
         </div>
-        </div><!-- espacamento -->
-      </fieldset>
-    </form>
-  </div>
+      </div><!-- espacamento -->
+    </fieldset>
+  </form>
+</div>
 
-  
-  <?php
-require_once $_SERVER["DOCUMENT_ROOT"]. "/hipocrates/templates/rodape.php";
+
+<?php
+require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/templates/rodape.php";
 ?>

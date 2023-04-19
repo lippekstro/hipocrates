@@ -63,7 +63,7 @@ create table horario_medico (
     id_horario int primary key auto_increment,
     data_hora_inicio datetime,
     data_hora_fim datetime,
-    disponivel boolean,
+    disponivel boolean DEFAULT 1,
     id_medico int,
     foreign key (id_medico) references medico(id_medico)
 )

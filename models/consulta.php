@@ -54,6 +54,17 @@ class Consulta
         return $lista;
     }
 
+    public static function listarConsultasMed($id_medico)
+    {
+        $query = "SELECT * FROM consulta WHERE id_medico = :id_medico";
+        $conexao = Conexao::conectar();
+        $stmt = $conexao->prepare($query);
+        $stmt->bindValue(':id_medico', $id_medico);
+        $stmt->execute();
+        $lista = $stmt->fetchAll();
+        return $lista;
+    }
+
     public function editar()
     {
         $query = "UPDATE consulta SET id_medico = :id_medico, id_paciente = :id_paciente, data_consulta = :data_consulta WHERE id_consulta = :id_consulta";
@@ -92,6 +103,17 @@ class Consulta
         $conexao = Conexao::conectar();
         $stmt = $conexao->prepare($query);
         $stmt->bindValue(':id_medico', $id_medico);
+        $stmt->execute();
+        $resultado = $stmt->fetchColumn();
+        return $resultado;
+    }
+
+    public static function buscarNomePaciente($id_paciente)
+    {
+        $query = "SELECT nome FROM consulta INNER JOIN paciente ON consulta.id_paciente = " . ":id_paciente";
+        $conexao = Conexao::conectar();
+        $stmt = $conexao->prepare($query);
+        $stmt->bindValue(':id_paciente', $id_paciente);
         $stmt->execute();
         $resultado = $stmt->fetchColumn();
         return $resultado;
