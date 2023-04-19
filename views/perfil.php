@@ -10,6 +10,8 @@ $endereco = new Endereco($paciente->id_endereco);
 
 $lista_acompanhantes = Acompanhante::listar($_SESSION['usuario']['id_usuario']);
 $lista_consulta = Consulta::listar($_SESSION['usuario']['id_usuario']);
+
+
 ?>
 
 <section class="perfil">
@@ -166,6 +168,18 @@ $lista_consulta = Consulta::listar($_SESSION['usuario']['id_usuario']);
                     </div>
                 </div>
 
+                <a href="/hipocrates/controllers/del_acompanhante.php?id_acompanhante=<?= $acompanhante['id_acompanhante'] ?>">
+                    <button>
+                        Deletar
+                    </button>
+                </a>
+
+                <a href="/hipocrates/views/editar_acompanhante.php?id_acompanhante=<?= $acompanhante['id_acompanhante'] ?>">
+                    <button>
+                        Editar
+                    </button>
+                </a>
+
             </fieldset>
         </section>
     <?php endforeach; ?>
@@ -178,9 +192,20 @@ $lista_consulta = Consulta::listar($_SESSION['usuario']['id_usuario']);
             <fieldset>
                 <div class="img-pessoais">
                     <div class="form-item">
+                        <label for="nome_medico">Medico:</label>
+                        <input type="text" name="nome_medico" id="nome_medico" value="<?= Consulta::buscarNomeMedico($consulta['id_medico']) ?>" disabled>
+                    </div>
+
+                    <div class="form-item">
+                        <label for="especialidade">Tipo:</label>
+                        <input type="text" name="especialidade" id="especialidade" value="<?= Consulta::buscarTipoMedico($consulta['id_medico']) ?>" disabled>
+                    </div>
+
+                    <div class="form-item">
                         <label for="data_consulta">Data:</label>
                         <input type="text" name="data_consulta" id="data_consulta" value="<?= $consulta['data_consulta'] ?>" disabled>
                     </div>
+
                 </div>
             </fieldset>
         </section>

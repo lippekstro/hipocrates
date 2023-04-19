@@ -63,14 +63,13 @@ class Acompanhante
 
     public function editar()
     {
-        $query = "UPDATE acompanhante SET nome = :nome, cpf = :cpf, telefone = :telefone, tipo = :tipo, id_paciente = :id_paciente WHERE id_acompanhante = :id_acompanhante";
+        $query = "UPDATE acompanhante SET nome = :nome, cpf = :cpf, telefone = :telefone, tipo = :tipo WHERE id_acompanhante = :id_acompanhante";
         $conexao = Conexao::conectar();
         $stmt = $conexao->prepare($query);
         $stmt->bindValue(":nome", $this->nome);
         $stmt->bindValue(":cpf", $this->cpf);
         $stmt->bindValue(":telefone", $this->telefone);
         $stmt->bindValue(":tipo", $this->tipo);
-        $stmt->bindValue(":id_paciente", $this->id_paciente);
         $stmt->bindValue(":id_acompanhante", $this->id_acompanhante);
         $stmt->execute();
     }

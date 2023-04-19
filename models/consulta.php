@@ -74,4 +74,26 @@ class Consulta
         $stmt->bindValue(':id_consulta', $this->id_consulta);
         $stmt->execute();
     }
+
+    public static function buscarNomeMedico($id_medico)
+    {
+        $query = "SELECT nome FROM consulta INNER JOIN medico ON consulta.id_medico = " . ":id_medico";
+        $conexao = Conexao::conectar();
+        $stmt = $conexao->prepare($query);
+        $stmt->bindValue(':id_medico', $id_medico);
+        $stmt->execute();
+        $resultado = $stmt->fetchColumn();
+        return $resultado;
+    }
+
+    public static function buscarTipoMedico($id_medico)
+    {
+        $query = "SELECT especialidade FROM consulta INNER JOIN medico ON consulta.id_medico = " . ":id_medico";
+        $conexao = Conexao::conectar();
+        $stmt = $conexao->prepare($query);
+        $stmt->bindValue(':id_medico', $id_medico);
+        $stmt->execute();
+        $resultado = $stmt->fetchColumn();
+        return $resultado;
+    }
 }
