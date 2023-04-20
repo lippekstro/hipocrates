@@ -62,3 +62,39 @@ uploadButton.addEventListener("click", () => {
 fileUpload.addEventListener("change", () => {
   console.log(fileUpload.files[0].name);
 });
+
+const passwordInput = document.getElementById("password");
+const passwordDisplay = document.getElementById("password-display");
+
+passwordInput.addEventListener("input", () => {
+  passwordDisplay.textContent = passwordInput.value;
+});
+
+const confirmPasswordInput = document.getElementById("confirm-password");
+const confirmPasswordDisplay = document.getElementById(
+  "confirm-password-display"
+);
+
+confirmPasswordInput.addEventListener("input", () => {
+  confirmPasswordDisplay.textContent = confirmPasswordInput.value;
+});
+
+const mostrarSenhaCheckbox = document.getElementById("mostrar-senha");
+const senhaInput = document.getElementById("password");
+const confirmarSenhaInput = document.getElementById("confirm-password");
+
+mostrarSenhaCheckbox.addEventListener("change", () => {
+  if (mostrarSenhaCheckbox.checked) {
+    senhaInput.type = "text";
+  } else {
+    senhaInput.type = "password";
+  }
+});
+
+mostrarSenhaCheckbox.addEventListener("change", () => {
+  if (mostrarSenhaCheckbox.checked) {
+    confirmarSenhaInput.type = "text";
+  } else {
+    confirmarSenhaInput.type = "password";
+  }
+});
