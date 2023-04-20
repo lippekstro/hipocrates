@@ -39,7 +39,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/templates/cabecalho.php"
     </picture>
   </div> -->
 
-<!--   <div class="mySlides">
+  <!--   <div class="mySlides">
     <div class="txt-img">
       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis libero vel est explicabo officia consequatur soluta blanditiis, eos odit ab pariatur, quae quibusdam inventore in dicta? Fuga vel rerum dolor.</p>
     </div>
@@ -48,7 +48,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/templates/cabecalho.php"
     </picture>
   </div> -->
 
-<!--   <div class="mySlides">
+  <!--   <div class="mySlides">
     <div class="txt-img">
       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis libero vel est explicabo officia consequatur soluta blanditiis, eos odit ab pariatur, quae quibusdam inventore in dicta? Fuga vel rerum dolor.</p>
     </div>
@@ -75,6 +75,14 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/templates/cabecalho.php"
 </div>
 </main>
 
+<script>
+  setInterval(function() {
+    let nextButton = document.querySelector('.next');
+    if (nextButton) {
+      nextButton.click();
+    }
+  }, 5000);
+</script>
 <?php
 require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/templates/rodape.php"
 ?>
