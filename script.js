@@ -24,3 +24,32 @@ $(document).ready(function () {
     reverse: true,
   });
 });
+
+const inputCns = document.getElementById("cns");
+
+inputCns.addEventListener("input", function (e) {
+  let valor = e.target.value.replace(/\D/g, "");
+  valor = valor.substring(0, 15);
+  valor = valor.replace(/(\d{3})(\d{4})(\d{4})(\d{4})/, "$1 $2 $3 $4");
+  e.target.value = valor;
+});
+
+const inputNumero = document.getElementById("numero");
+
+inputNumero.addEventListener("keydown", function (e) {
+  // Permite backspace, delete, tab, escape e enter
+  if (
+    e.key === "Backspace" ||
+    e.key === "Delete" ||
+    e.key === "Tab" ||
+    e.key === "Escape" ||
+    e.key === "Enter"
+  ) {
+    return;
+  }
+
+  // Verifica se a tecla pressionada é um número
+  if (isNaN(parseInt(e.key))) {
+    e.preventDefault();
+  }
+});
