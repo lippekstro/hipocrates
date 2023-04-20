@@ -37,7 +37,6 @@ inputCns.addEventListener("input", function (e) {
 const inputNumero = document.getElementById("numero");
 
 inputNumero.addEventListener("keydown", function (e) {
-  // Permite backspace, delete, tab, escape e enter
   if (
     e.key === "Backspace" ||
     e.key === "Delete" ||
@@ -48,7 +47,6 @@ inputNumero.addEventListener("keydown", function (e) {
     return;
   }
 
-  // Verifica se a tecla pressionada é um número
   if (isNaN(parseInt(e.key))) {
     e.preventDefault();
   }
