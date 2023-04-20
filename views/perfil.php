@@ -205,8 +205,12 @@ $lista_consulta = Consulta::listar($_SESSION['usuario']['id_usuario']);
                         <label for="data_consulta">Data:</label>
                         <input type="text" name="data_consulta" id="data_consulta" value="<?= date("d/m/Y h:i", strtotime($consulta['data_consulta'])) ?>" disabled>
                     </div>
-
                 </div>
+                <a href="/hipocrates/controllers/del_agendamento.php?id_consulta=<?= $consulta['id_consulta'] ?>">
+                    <button class="btn-perigo">
+                        Cancelar Consulta
+                    </button>
+                </a>
             </fieldset>
         </section>
     <?php endforeach; ?>

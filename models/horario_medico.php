@@ -84,7 +84,17 @@ class Horario_medico{
         $query = "UPDATE horario_medico SET disponivel = :disponivel WHERE id_horario = :id_horario";
         $conexao = Conexao::conectar();
         $stmt = $conexao->prepare($query);
-        $stmt->bindValue(":disponivel", $this->disponivel);
+        $stmt->bindValue(":disponivel", '0');
+        $stmt->bindValue(":id_horario", $this->id_horario);
+        $stmt->execute();
+    }
+
+    public function devolveHorario()
+    {
+        $query = "UPDATE horario_medico SET disponivel = :disponivel WHERE id_horario = :id_horario";
+        $conexao = Conexao::conectar();
+        $stmt = $conexao->prepare($query);
+        $stmt->bindValue(":disponivel", '1');
         $stmt->bindValue(":id_horario", $this->id_horario);
         $stmt->execute();
     }

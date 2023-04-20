@@ -50,15 +50,6 @@ create table medico (
     especialidade enum('odontologia', 'psicologia', 'clinico geral') not null
 );
 
-create table consulta (
-    id_consulta int primary key auto_increment,
-    id_medico int,
-    id_paciente int,
-    data_consulta datetime,
-    foreign key (id_medico) references medico(id_medico),
-    foreign key (id_paciente) references paciente(id_paciente)
-);
-
 create table horario_medico (
     id_horario int primary key auto_increment,
     data_hora_inicio datetime,
@@ -66,4 +57,16 @@ create table horario_medico (
     disponivel boolean DEFAULT 1,
     id_medico int,
     foreign key (id_medico) references medico(id_medico)
-)
+);
+
+create table consulta (
+    id_consulta int primary key auto_increment,
+    id_medico int,
+    id_paciente int,
+    data_consulta datetime,
+    id_horario int,
+    foreign key (id_medico) references medico(id_medico),
+    foreign key (id_paciente) references paciente(id_paciente),
+    foreign key (id_horario) references horario_medico(id_horario)
+);
+

@@ -52,23 +52,23 @@ $consultas = Consulta::listar($_SESSION['usuario']['id_usuario']);
             <fieldset>
                 <div class="img-pessoais">
                     <div class="form-item">
-                        <label for="nome_acompanhante">Nome do Paciente:</label>
-                        <input type="text" name="nome_acompanhante" id="nome_acompanhante" value="<?= Consulta::buscarNomePaciente($consulta['id_paciente']) ?>" disabled>
+                        <label for="nome_paciente">Nome do Paciente:</label>
+                        <input type="text" name="nome_paciente" id="nome_paciente" value="<?= Consulta::buscarNomePaciente($consulta['id_paciente']) ?>" disabled>
                     </div>
 
                     <div class="form-item">
-                        <label for="cpf_acompanhante">Data:</label>
-                        <input type="text" name="cpf_acompanhante" id="cpf_acompanhante" value="<?= date("d/m/Y h:i", strtotime($consulta['data_consulta'])) ?>" disabled>
+                        <label for="data_consulta">Data:</label>
+                        <input type="text" name="data_consulta" id="data_consulta" value="<?= date("d/m/Y h:i", strtotime($consulta['data_consulta'])) ?>" disabled>
                     </div>
                 </div>
 
-                <!-- <a href="/hipocrates/controllers/del_acompanhante.php?id_acompanhante=<?= $acompanhante['id_acompanhante'] ?>">
-                    <button>
-                        Deletar
+                <a href="/hipocrates/controllers/del_agendamento.php?id_consulta=<?= $consulta['id_consulta'] ?>">
+                    <button class="btn-perigo">
+                        Cancelar Consulta
                     </button>
                 </a>
 
-                <a href="/hipocrates/views/editar_acompanhante.php?id_acompanhante=<?= $acompanhante['id_acompanhante'] ?>">
+                <!--  <a href="/hipocrates/views/editar_acompanhante.php?id_acompanhante=<?= $acompanhante['id_acompanhante'] ?>">
                     <button>
                         Editar
                     </button>

@@ -13,7 +13,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/templates/cabecalho.php"
 
             <div class="form-item">
                 <label for="rg">RG</label>
-                <input type="text" name="rg" id="rg" required>
+                <input type="text" name="rg" id="rg" maxlength="13" required>
             </div>
 
             <div class="form-item">
@@ -28,12 +28,12 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/templates/cabecalho.php"
 
             <div class="form-item">
                 <label for="cpf">CPF</label>
-                <input type="text" name="cpf" id="cpf" required>
+                <input type="text" name="cpf" id="cpf" maxlength="11" required>
             </div>
 
             <div class="form-item">
                 <label for="cns">CNS</label>
-                <input type="text" name="cns" id="cns" required>
+                <input type="text" name="cns" id="cns" maxlength="15" required>
             </div>
 
             <div class="form-item">
@@ -46,7 +46,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/templates/cabecalho.php"
 
             <div class="form-item">
                 <label for="nascimento">Nascimento</label>
-                <input type="date" name="nascimento" id="nascimento" required>
+                <input type="date" name="nascimento" id="nascimento" max="<?= date('Y-m-d') ?>" required>
             </div>
 
             <div class="form-item">
@@ -87,7 +87,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/templates/cabecalho.php"
             <legend>Contato</legend>
             <div class="form-item">
                 <label for="telefone">Telefone</label>
-                <input type="text" name="telefone" id="telefone" required>
+                <input type="text" name="telefone" id="telefone" maxlength="15" required>
             </div>
             <div class="form-item">
                 <label for="email">Email</label>
@@ -141,7 +141,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/templates/cabecalho.php"
             <legend>Endereço</legend>
             <div class="form-item">
                 <label for="cep">CEP</label>
-                <input type="text" name="cep" id="cep" required>
+                <input type="text" name="cep" id="cep" maxlength="8" required>
             </div>
             <div class="form-item">
                 <label for="logradouro">Logradouro</label>
@@ -149,7 +149,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/templates/cabecalho.php"
             </div>
             <div class="form-item">
                 <label for="numero">Numero</label>
-                <input type="text" name="numero" id="numero" required>
+                <input type="text" name="numero" id="numero" maxlength="6" required>
             </div>
             <div class="form-item">
                 <label for="complemento">Complemento</label>

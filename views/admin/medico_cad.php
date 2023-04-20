@@ -13,12 +13,12 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/templates/cabecalho.php"
 
             <div class="form-item">
                 <label for="cpf">CPF</label>
-                <input type="text" name="cpf" id="cpf" required>
+                <input type="text" name="cpf" id="cpf" maxlength="11" required>
             </div>
 
             <div class="form-item">
                 <label for="crm">CRM</label>
-                <input type="text" name="crm" id="crm" required>
+                <input type="text" name="crm" id="crm" maxlength="6" required>
             </div>
 
             <div class="form-item">

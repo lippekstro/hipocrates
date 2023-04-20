@@ -1,5 +1,6 @@
 <?php
 require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/config/sessions.php";
+date_default_timezone_set('America/Sao_Paulo');
 ?>
 
 <!DOCTYPE html>

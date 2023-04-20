@@ -15,10 +15,10 @@ try {
     $consulta->id_medico = $id_medico;
     $consulta->id_paciente = $id_paciente;
     $consulta->data_consulta = $data_consulta;
+    $consulta->id_horario = $id_horario;
     $consulta->criar();
 
     $horario = new Horario_medico($id_horario);
-    $horario->disponivel = '0';
     $horario->removeHorario();
 
 
