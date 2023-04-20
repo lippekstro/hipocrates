@@ -4,12 +4,14 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/models/paciente.php";
 require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/models/endereco.php";
 require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/models/acompanhante.php";
 require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/models/consulta.php";
+require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/models/doacao.php";
 
 $paciente = new Paciente($_SESSION['usuario']['id_usuario']);
 $endereco = new Endereco($paciente->id_endereco);
 
 $lista_acompanhantes = Acompanhante::listar($_SESSION['usuario']['id_usuario']);
 $lista_consulta = Consulta::listar($_SESSION['usuario']['id_usuario']);
+$lista_doacoes = Doacao::listar($_SESSION['usuario']['id_usuario']);
 
 
 ?>
@@ -211,6 +213,40 @@ $lista_consulta = Consulta::listar($_SESSION['usuario']['id_usuario']);
                         Cancelar Consulta
                     </button>
                 </a>
+            </fieldset>
+        </section>
+    <?php endforeach; ?>
+<?php endif; ?>
+
+<?php if (count($lista_doacoes) > 0) : ?>
+    <h1>Doações</h1>
+    <?php foreach ($lista_doacoes as $doacao) : ?>
+        <section class="perfil">
+            <fieldset>
+                <div class="img-pessoais">
+                    <div class="form-item">
+                        <label for="tipo_doacao">Tipo:</label>
+                        <input type="text" name="tipo_doacao" id="tipo_doacao" value="<?= $doacao['tipo_doacao'] ?>" disabled>
+                    </div>
+
+                    <div class="form-item">
+                        <label for="data_doacao">Proxima Doação:</label>
+                        <input type="text" name="data_doacao" id="data_doacao" value="<?= date("d/m/Y", strtotime($doacao['proxima_doacao'])) ?>" disabled>
+                    </div>
+                </div>
+
+                <a onclick="confirmarDelete(event, this)" href="/hipocrates/controllers/del_doacao.php?id_doacao=<?= $doacao['id_doacao'] ?>">
+                    <button class="btn-perigo">
+                        Cancelar
+                    </button>
+                </a>
+
+                <a href="/hipocrates/views/editar_doacao.php?id_doacao=<?= $doacao['id_doacao'] ?>">
+                    <button class="btn-alerta">
+                        Editar
+                    </button>
+                </a>
+
             </fieldset>
         </section>
     <?php endforeach; ?>

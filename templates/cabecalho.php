@@ -37,6 +37,7 @@ date_default_timezone_set('America/Sao_Paulo');
         </button>
         <div class="dropdown-container">
             <a href="/hipocrates/views/agendamento.php">Agendamento <span class="material-symbols-outlined">edit_calendar</span></a>
+            <a href="/hipocrates/views/doacao.php">Doação <span class="material-symbols-outlined">bloodtype</span></a>
         </div>
 
         <a href="/hipocrates/views/contato.php">Contato <span class="material-symbols-outlined">call</span></a>

@@ -70,3 +70,11 @@ create table consulta (
     foreign key (id_horario) references horario_medico(id_horario)
 );
 
+create table doacao (
+    id_doacao int primary key auto_increment,
+    id_paciente int,
+    tipo_doacao enum('sangue', 'medula') not null,
+    ultima_doacao date,
+    proxima_doacao date,
+    foreign key (id_paciente) references paciente (id_paciente)
+);

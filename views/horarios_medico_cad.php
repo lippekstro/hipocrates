@@ -10,7 +10,7 @@ $amanha_formatado = $amanha->format('Y-m-d');
         <fieldset>
             <legend>Inicio</legend>
             <div class="form-item">
-                <label for="data_inicio">Nome</label>
+                <label for="data_inicio">Data</label>
                 <input type="date" name="data_inicio" id="data_inicio" min="<?= $amanha_formatado; ?>" required>
             </div>
 
@@ -23,7 +23,7 @@ $amanha_formatado = $amanha->format('Y-m-d');
         <fieldset>
             <legend>Fim</legend>
             <div class="form-item">
-                <label for="data_fim">Nome</label>
+                <label for="data_fim">Data</label>
                 <input type="date" name="data_fim" id="data_fim" min="<?= $amanha_formatado; ?>" required>
             </div>
 

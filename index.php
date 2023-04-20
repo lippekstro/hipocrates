@@ -17,19 +17,19 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/templates/cabecalho.php"
       <!--  <source media="(min-width: 468px)" srcset="med1.jfif"> -->
       <!-- Source para telas de smartphones -->
       <!--  <source media="(max-width: 467px)" srcset="med1_2.jfif"> -->
-      <img src="/hipocrates/imgs/2.webp">
+      <img src="/hipocrates/imgs/6.webp">
     </picture>
   </div>
 
-<!--   <div class="mySlides">
+  <div class="mySlides">
     <div class="txt-img">
-      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis libero vel est explicabo officia consequatur soluta blanditiis, eos odit ab pariatur, quae quibusdam inventore in dicta? Fuga vel rerum dolor.</p>
+      <p>Salve vidas doando sangue! A plataforma Hipocrates torna fácil agendar doações. Faça a diferença hoje e ajude a salvar vidas. Doe sangue!</p>
     </div>
     <picture>
-      <img src="/hipocrates/imgs/2.webp">
+      <img src="/hipocrates/imgs/1.webp">
     </picture>
   </div>
- -->
+
   <!-- <div class="mySlides">
     <div class="txt-img">
       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis libero vel est explicabo officia consequatur soluta blanditiis, eos odit ab pariatur, quae quibusdam inventore in dicta? Fuga vel rerum dolor.</p>
@@ -66,7 +66,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/templates/cabecalho.php"
       <!-- <source media="(min-width: 468px)" srcset="med6.jfif"> -->
       <!-- Source para telas de smartphones -->
       <!-- <source media="(max-width: 467px)" srcset="med6_2.jfif"> -->
-      <img src="/hipocrates/imgs/6.webp">
+      <img src="/hipocrates/imgs/5.webp">
     </picture>
   </div>
 
