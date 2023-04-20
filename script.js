@@ -53,3 +53,14 @@ inputNumero.addEventListener("keydown", function (e) {
     e.preventDefault();
   }
 });
+
+const uploadButton = document.querySelector(".upload-button");
+const fileUpload = document.querySelector("#file-upload");
+
+uploadButton.addEventListener("click", () => {
+  fileUpload.click();
+});
+
+fileUpload.addEventListener("change", () => {
+  console.log(fileUpload.files[0].name);
+});

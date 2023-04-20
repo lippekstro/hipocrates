@@ -47,11 +47,26 @@ body {
 .container_forms form {
     position: relative;
     margin-top: 16px;
-    min-height: 980px;
+    min-height: 800px;
     width: 100%;
     background-color: #fff;
     overflow: hidden;
+    overflow-y: scroll;
 }
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+* {
+  scrollbar-width: none;
+}
+
+*::-webkit-scrollbar {
+  width: 0;
+}
+
+
 
 .container_forms form .form_phases {
     position: absolute;
@@ -123,7 +138,7 @@ form .fields_form .input_field {
     color: #333;
 }
 
-.container_forms form button, .voltar {
+.container_forms form button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -149,23 +164,28 @@ form button:hover {
     background-color: #265df2;
 }
 
-form button i,
-form .voltar i {
+form button i {
     margin: 0 6px;
-}
-
-form .voltar i {
-    transform: rotate(180deg);
 }
 
 form .button_forms {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: right;
 }
 
-form .button_forms button, .voltar {
-    margin-right: 14px;
+.upload-button {
+  position: relative;
+}
+
+.upload-button input[type="file"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
 }
 
 @media (max-width: 750px) {
@@ -180,10 +200,36 @@ form .button_forms button, .voltar {
     form .fields_form .input_field {
         width: calc(100% / 2 - 15px);
     }
+
+    form .button_forms {
+        justify-content: center;
+    }
 }
 
 @media (max-width: 550px) {
     form .fields_form .input_field {
-        width: 100%;
+        width: 65%;
+    }
+
+    form .button_forms {
+        justify-content: left;
+    }
+}
+
+@media (max-width: 425px) {
+    form .fields_form .input_field {
+        width: 75%;
+    }
+}
+
+@media (max-width: 375px) {
+    form .fields_form .input_field {
+        width: 65%;
+    }
+}
+
+@media (max-width: 320px) {
+    form .fields_form .input_field {
+        width: 52%;
     }
 }
