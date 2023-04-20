@@ -340,8 +340,8 @@ address {
 
   #cad-user input,
   #cad-user select,
-  #perfil input,
-  #perfil select {
+  .perfil input,
+  .perfil select {
     width: 100%;
   }
 
@@ -392,6 +392,16 @@ address {
   .img-pessoais {
     display: flex;
   }
+
+  .img-pessoais .form-item {
+    flex-direction: column;
+  }
+
+  .perfil input,
+  .perfil select {
+    width: 100%;
+  }
+
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -403,6 +413,15 @@ address {
 
   .login {
     width: 70%;
+  }
+
+  .img-pessoais .form-item {
+    flex-direction: row;
+  }
+
+  .perfil input,
+  .perfil select {
+    width: 60%;
   }
 }
 

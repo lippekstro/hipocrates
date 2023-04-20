@@ -17,65 +17,49 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/templates/cabecalho.php"
       <!--  <source media="(min-width: 468px)" srcset="med1.jfif"> -->
       <!-- Source para telas de smartphones -->
       <!--  <source media="(max-width: 467px)" srcset="med1_2.jfif"> -->
-      <img src="/hipocrates/imgs/1.webp">
-    </picture>
-  </div>
-
-  <div class="mySlides">
-    <div class="txt-img">
-      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis libero vel est explicabo officia consequatur soluta blanditiis, eos odit ab pariatur, quae quibusdam inventore in dicta? Fuga vel rerum dolor.</p>
-    </div>
-    <picture>
-      <!-- Source para telas de notebook -->
-      <!-- <source media="(min-width: 468px)" srcset="med2.jfif"> -->
-      <!-- Source para telas de smartphones -->
-      <!-- <source media="(max-width: 467px)" srcset="med2_2.jfif"> -->
       <img src="/hipocrates/imgs/2.webp">
     </picture>
   </div>
 
-  <div class="mySlides">
+<!--   <div class="mySlides">
     <div class="txt-img">
       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis libero vel est explicabo officia consequatur soluta blanditiis, eos odit ab pariatur, quae quibusdam inventore in dicta? Fuga vel rerum dolor.</p>
     </div>
     <picture>
-      <!-- Source para telas de notebook -->
-      <!-- <source media="(min-width: 468px)" srcset="med3.jfif"> -->
-      <!-- Source para telas de smartphones -->
-      <!-- <source media="(max-width: 467px)" srcset="med3_2.jfif"> -->
-      <img src="/hipocrates/imgs/3.webp">
+      <img src="/hipocrates/imgs/2.webp">
     </picture>
   </div>
-
-  <div class="mySlides">
+ -->
+  <!-- <div class="mySlides">
     <div class="txt-img">
       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis libero vel est explicabo officia consequatur soluta blanditiis, eos odit ab pariatur, quae quibusdam inventore in dicta? Fuga vel rerum dolor.</p>
     </div>
     <picture>
-      <!-- Source para telas de notebook -->
-      <!-- <source media="(min-width: 468px)" srcset="med4.jfif"> -->
-      <!-- Source para telas de smartphones -->
-      <!-- <source media="(max-width: 467px)" srcset="med4_2.jfif"> -->
+          <img src="/hipocrates/imgs/3.webp">
+    </picture>
+  </div> -->
+
+<!--   <div class="mySlides">
+    <div class="txt-img">
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis libero vel est explicabo officia consequatur soluta blanditiis, eos odit ab pariatur, quae quibusdam inventore in dicta? Fuga vel rerum dolor.</p>
+    </div>
+    <picture>
       <img src="/hipocrates/imgs/4.webp">
     </picture>
-  </div>
+  </div> -->
 
-  <div class="mySlides">
+<!--   <div class="mySlides">
     <div class="txt-img">
       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis libero vel est explicabo officia consequatur soluta blanditiis, eos odit ab pariatur, quae quibusdam inventore in dicta? Fuga vel rerum dolor.</p>
     </div>
     <picture>
-      <!-- Source para telas de notebook -->
-      <!-- <source media="(min-width: 468px)" srcset="med5.jfif"> -->
-      <!-- Source para telas de smartphones -->
-      <!-- <source media="(max-width: 467px)" srcset="med5_2.jfif"> -->
       <img src="/hipocrates/imgs/5.webp">
     </picture>
-  </div>
+  </div> -->
 
   <div class="mySlides">
     <div class="txt-img">
-      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis libero vel est explicabo officia consequatur soluta blanditiis, eos odit ab pariatur, quae quibusdam inventore in dicta? Fuga vel rerum dolor.</p>
+      <p>Acesse seu perfil de paciente e tenha controle total sobre suas consultas e dados. Adicione e gerencie seus acompanhantes de forma prática e fácil.</p>
     </div>
     <picture>
       <!-- Source para telas de notebook -->

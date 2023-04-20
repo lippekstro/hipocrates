@@ -12,9 +12,9 @@ create table endereco (
 create table paciente (
     id_paciente int primary key auto_increment,
     nome varchar(200) not null,
-    rg varchar(13) not null,
-    cpf varchar(11) not null,
-    cns varchar(15) not null,
+    rg varchar(13) not null unique,
+    cpf varchar(11) not null unique,
+    cns varchar(15) not null unique,
     telefone varchar(15) not null,
     email varchar(100) not null,
     genero enum('M', 'F') not null,
@@ -33,7 +33,7 @@ create table paciente (
 create table acompanhante (
     id_acompanhante int primary key auto_increment,
     nome varchar(200) not null,
-    cpf varchar(11) not null,
+    cpf varchar(11) not null unique,
     telefone varchar(15) not null,
     tipo enum('pais', 'conjuges', 'irmaos', 'filhos', 'outros') not null,
     id_paciente int,
@@ -43,8 +43,8 @@ create table acompanhante (
 create table medico (
     id_medico int primary key auto_increment,
     nome varchar(200) not null,
-    cpf varchar(11) not null,
-    crm varchar(6) not null,
+    cpf varchar(11) not null unique,
+    crm varchar(6) not null unique,
     foto longblob,
     senha varchar(200) not null,
     especialidade enum('odontologia', 'psicologia', 'clinico geral') not null

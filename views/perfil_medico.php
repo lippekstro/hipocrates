@@ -62,7 +62,7 @@ $consultas = Consulta::listar($_SESSION['usuario']['id_usuario']);
                     </div>
                 </div>
 
-                <a href="/hipocrates/controllers/del_agendamento.php?id_consulta=<?= $consulta['id_consulta'] ?>">
+                <a onclick="confirmarDelete(event, this)" href="/hipocrates/controllers/del_agendamento.php?id_consulta=<?= $consulta['id_consulta'] ?>">
                     <button class="btn-perigo">
                         Cancelar Consulta
                     </button>

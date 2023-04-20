@@ -88,7 +88,7 @@ $hoje_formatado = $hoje->format('Y-m-d');
                                     <input type="hidden" name="id_medico" value="<?= $medico['id_medico'] ?>">
                                     <input type="hidden" name="data_hora_inicio" value="<?= $horario['data_hora_inicio'] ?>">
                                     <input type="hidden" name="id_horario" value="<?= $horario['id_horario'] ?>">
-                                    <button type="submit" style="background-color: #00A6FB;"><?= date('H:i', strtotime($horario['data_hora_inicio'])) ?> - <?= date('H:i', strtotime($horario['data_hora_fim'])) ?></button>
+                                    <button onclick="confirmarDelete(event, this)" type="submit" style="background-color: #00A6FB;"><?= date('H:i', strtotime($horario['data_hora_inicio'])) ?> - <?= date('H:i', strtotime($horario['data_hora_fim'])) ?></button>
                                 </form>
                             </li>
                         <?php endforeach; ?>

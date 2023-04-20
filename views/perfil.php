@@ -168,7 +168,7 @@ $lista_consulta = Consulta::listar($_SESSION['usuario']['id_usuario']);
                     </div>
                 </div>
 
-                <a href="/hipocrates/controllers/del_acompanhante.php?id_acompanhante=<?= $acompanhante['id_acompanhante'] ?>">
+                <a onclick="confirmarDelete(event, this)" href="/hipocrates/controllers/del_acompanhante.php?id_acompanhante=<?= $acompanhante['id_acompanhante'] ?>">
                     <button class="btn-perigo">
                         Deletar
                     </button>
@@ -206,7 +206,7 @@ $lista_consulta = Consulta::listar($_SESSION['usuario']['id_usuario']);
                         <input type="text" name="data_consulta" id="data_consulta" value="<?= date("d/m/Y h:i", strtotime($consulta['data_consulta'])) ?>" disabled>
                     </div>
                 </div>
-                <a href="/hipocrates/controllers/del_agendamento.php?id_consulta=<?= $consulta['id_consulta'] ?>">
+                <a onclick="confirmarDelete(event, this)" href="/hipocrates/controllers/del_agendamento.php?id_consulta=<?= $consulta['id_consulta'] ?>">
                     <button class="btn-perigo">
                         Cancelar Consulta
                     </button>
