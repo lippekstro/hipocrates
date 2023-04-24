@@ -16,7 +16,7 @@ body {
 }
 
 .container_forms {
-    position: absolute;
+    position: relative;
     max-width: 1300px;
     width: 100%;
     border-radius: 6px;
@@ -46,8 +46,8 @@ body {
 
 .container_forms form {
     position: relative;
-    /* margin-top: 16px; */
-    min-height: 800px;
+    margin-top: 16px;
+    min-height: 980px;
     width: 100%;
     background-color: #fff;
     overflow: hidden;
@@ -79,7 +79,7 @@ body {
     flex-wrap: wrap;
 }
 
-.details_contact{
+.details_contact {
     width: 100%;
 }
 
@@ -123,7 +123,7 @@ form .fields_form .input_field {
     color: #333;
 }
 
-.container_forms form button, .voltar{
+.container_forms form button, .voltar {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -140,43 +140,50 @@ form .fields_form .input_field {
     cursor: pointer;
 }
 
-.container_forms form .textbutton{
+.container_forms form .textbutton {
     font-size: 14px;
     font-weight: 400;
 }
-form button:hover{
+
+form button:hover {
     background-color: #265df2;
 }
+
 form button i,
-form .voltar i{
+form .voltar i {
     margin: 0 6px;
 }
-form .voltar i{
+
+form .voltar i {
     transform: rotate(180deg);
 }
-form .button_forms{
+
+form .button_forms {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-form .button_forms   button , .voltar{
+
+form .button_forms button, .voltar {
     margin-right: 14px;
 }
 
 @media (max-width: 750px) {
-    .container_forms form{
+    .container_forms form {
         overflow-y: scroll;
     }
-    .container_forms form::-webkit-scrollbar{
-       display: none;
+
+    .container_forms form::-webkit-scrollbar {
+        display: none;
     }
-    form .fields_form .input_field{
+
+    form .fields_form .input_field {
         width: calc(100% / 2 - 15px);
     }
 }
 
 @media (max-width: 550px) {
-    form .fields_form .input_field{
+    form .fields_form .input_field {
         width: 100%;
     }
 }
