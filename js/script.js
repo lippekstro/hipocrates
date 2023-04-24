@@ -1,23 +1,27 @@
-let arrow = document.querySelectorAll(".arrow");
-for (var i = 0; i < arrow.length; i++) {
-  arrow[i].addEventListener("click", (e) => {
-    let arrowParent = e.target.parentElement.parentElement;
-    arrowParent.classList.toggle("showMenu");
+(function () {
+  const arrows = document.querySelectorAll(".arrow");
+  arrows.forEach((arrow) => {
+    arrow.addEventListener("click", (event) => {
+      const arrowParent = event.target.parentElement.parentElement;
+      arrowParent.classList.toggle("showMenu");
+    });
   });
-}
 
-let sidebar = document.querySelector(".sidebar");
-let sidebarBtn = document.querySelector(".bx-menu");
-console.log(sidebarBtn);
-sidebarBtn.addEventListener("click", () => {
-  sidebar.classList.toggle("close");
-});
+  const sidebar = document.querySelector(".sidebar");
+  const sidebarButton = document.querySelector(".bx-menu");
+  sidebarButton.addEventListener("click", () => {
+    sidebar.classList.toggle("close");
+  });
 
-document.getElementById("next").onclick = function () {
-  let lists = document.querySelectorAll(".item");
-  document.getElementById("slide").appendChild(lists[0]);
-};
-document.getElementById("prev").onclick = function () {
-  let lists = document.querySelectorAll(".item");
-  document.getElementById("slide").prepend(lists[lists.length - 1]);
-};
+  const nextButton = document.getElementById("next");
+  nextButton.onclick = function () {
+    const lists = document.querySelectorAll(".item");
+    document.getElementById("slide").appendChild(lists[0]);
+  };
+
+  const prevButton = document.getElementById("prev");
+  prevButton.onclick = function () {
+    const lists = document.querySelectorAll(".item");
+    document.getElementById("slide").prepend(lists[lists.length - 1]);
+  };
+})();
