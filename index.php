@@ -81,7 +81,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/templates/cabecalho.php"
     if (nextButton) {
       nextButton.click();
     }
-  }, 5000);
+  }, 10000);
 </script>
 <?php
 require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/templates/rodape.php"

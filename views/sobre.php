@@ -16,6 +16,22 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/templates/cabecalho.php";
     </div>
 </section>
 
+<section id="hip-foto">
+    <figure>
+    <figcaption style="color: white; text-align: center;">
+        Hipocrates de Kos
+    </figcaption>
+        <img src="/hipocrates/imgs/Hippocrates.jpg" alt="" width="100%">
+    </figure>
+
+    <div class="text1">
+        <fieldset>
+            <p>Hipócrates de Kos, também conhecido como Hipócrates II, foi um médico grego do período clássico considerado uma das figuras mais marcantes da história da medicina. Ele é tradicionalmente referido como o "Pai da Medicina" em reconhecimento às suas contribuições duradouras para o campo, como o uso de prognóstico e observação clínica, a categorização sistemática de doenças ou a formulação da teoria humoral.</p>
+        </fieldset>
+    </div>
+
+</section>
+
 <?php
 require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/templates/rodape.php";
 ?>
