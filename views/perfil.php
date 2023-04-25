@@ -30,7 +30,7 @@ $lista_doacoes = Doacao::listar($_SESSION['usuario']['id_usuario']);
             <fieldset>
                 <div class="form-item">
                     <label for="cpf">CPF:</label>
-                    <input type="text" id="cpf" value="<?= $paciente->cpf ?>" disabled>
+                    <input type="text" id="cpf" value="<?= $paciente->cpf ?>" class="cpf-mask" disabled>
                 </div>
 
                 <div class="form-item">
@@ -76,7 +76,7 @@ $lista_doacoes = Doacao::listar($_SESSION['usuario']['id_usuario']);
         <fieldset>
             <div class="form-item">
                 <label for="telefone">Telefone:</label>
-                <input type="text" id="telefone" value="<?= $paciente->telefone ?>" disabled>
+                <input type="text" id="telefone" value="<?= $paciente->telefone ?>" class="telefone-mask" disabled>
             </div>
 
             <div class="form-item">
@@ -101,7 +101,7 @@ $lista_doacoes = Doacao::listar($_SESSION['usuario']['id_usuario']);
         <div class="img-pessoais">
             <div class="form-item">
                 <label for="cep">CEP:</label>
-                <input type="text" id="cep" value="<?= $endereco->cep ?>" disabled>
+                <input type="text" id="cep" value="<?= $endereco->cep ?>" class="cep-mask" disabled>
             </div>
             <div class="form-item">
                 <label for="logradouro">Logradouro:</label>
@@ -156,12 +156,12 @@ $lista_doacoes = Doacao::listar($_SESSION['usuario']['id_usuario']);
 
                     <div class="form-item">
                         <label for="cpf_acompanhante">CPF:</label>
-                        <input type="text" name="cpf_acompanhante" id="cpf_acompanhante" value="<?= $acompanhante['cpf'] ?>" disabled>
+                        <input type="text" name="cpf_acompanhante" id="cpf_acompanhante" value="<?= $acompanhante['cpf'] ?>" class="cpf-mask" disabled>
                     </div>
 
                     <div class="form-item">
                         <label for="telefone_acompanhante">Telefone:</label>
-                        <input type="text" name="telefone_acompanhante" id="telefone_acompanhante" value="<?= $acompanhante['telefone'] ?>" disabled>
+                        <input type="text" name="telefone_acompanhante" id="telefone_acompanhante" value="<?= $acompanhante['telefone'] ?>" class="telefone-mask" disabled>
                     </div>
 
                     <div class="form-item">
@@ -251,6 +251,32 @@ $lista_doacoes = Doacao::listar($_SESSION['usuario']['id_usuario']);
         </section>
     <?php endforeach; ?>
 <?php endif; ?>
+
+<script>
+    window.addEventListener('load', function() {
+        var cpfInputs = document.querySelectorAll('.cpf-mask');
+        var telefoneInputs = document.querySelectorAll('.telefone-mask');
+        var cepInputs = document.querySelectorAll('.cep-mask');
+
+        cpfInputs.forEach(function(cpfInput) {
+            var cpfValue = cpfInput.value;
+            var cpfMasked = cpfValue.replace(/^(\d{3})(\d{3})(\d{3})(\d{2})$/, "$1.$2.$3-$4");
+            cpfInput.value = cpfMasked;
+        });
+
+        telefoneInputs.forEach(function(telefoneInput) {
+            var telefoneValue = telefoneInput.value;
+            var telefoneMasked = telefoneValue.replace(/^(\d{2})(\d{5})(\d{4})$/, "($1) $2-$3");
+            telefoneInput.value = telefoneMasked;
+        });
+
+        cepInputs.forEach(function(cepInput) {
+            var cepValue = cepInput.value;
+            var cepMasked = cepValue.replace(/^(\d{2})(\d{3})(\d{3})$/, "$1.$2-$3");
+            cepInput.value = cepMasked;
+        });
+    });
+</script>
 
 <?php
 require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/templates/rodape.php";

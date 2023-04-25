@@ -17,7 +17,7 @@ require_once $_SERVER["DOCUMENT_ROOT"] . "/hipocrates/templates/cabecalho.php";
             <input type="text" name="cpf" placeholder="Digite seu CPF" maxlength="14" autocomplete="off" autofocus required>
             <input type="password" name="senha" placeholder="Digite sua senha" required>
 
-            <span>Esqueceu sua senha? <a href="/hipocrates/views/senha.php">Redefinir</a></span>
+            <!-- <span>Esqueceu sua senha? <a href="/hipocrates/views/senha.php">Redefinir</a></span> -->
             <span><a href="/hipocrates/views/paciente_cad.php">Cadastre-se</a></span>
 
             <button type="submit" class="btn-sucesso">
