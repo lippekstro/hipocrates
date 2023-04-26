@@ -47,7 +47,7 @@ body {
 .container_forms form {
     position: relative;
     margin-top: 16px;
-    min-height: 800px;
+    min-height: 500px;
     width: 100%;
     background-color: #fff;
     overflow: hidden;
@@ -155,7 +155,7 @@ form .fields_form .input_field {
     cursor: pointer;
 }
 
-.container_forms form .textbutton {
+.container_forms form .text_button {
     font-size: 14px;
     font-weight: 400;
 }
@@ -194,6 +194,16 @@ form .button_forms {
 
 input[type="file"] {
     display: none;
+}
+
+.check-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.check-box input {
+    margin: 0.5rem;
 }
 
 @media (max-width: 750px) {
