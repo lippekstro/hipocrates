@@ -19,6 +19,7 @@ date_default_timezone_set('America/Sao_Paulo');
     <link rel="stylesheet" href="/hipocrates/css/login.css">
     <link rel="stylesheet" href="/hipocrates/css/perfil.css">
     <link rel="stylesheet" href="/hipocrates/css/style.css" />
+    <link rel="stylesheet" href="css/cadastro.css" />
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
