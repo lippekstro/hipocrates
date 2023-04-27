@@ -63,38 +63,23 @@ fileUpload.addEventListener("change", () => {
   console.log(fileUpload.files[0].name);
 });
 
-const passwordInput = document.getElementById("password");
-const passwordDisplay = document.getElementById("password-display");
+const senha = document.getElementById("senha");
+const confirmarSenha = document.getElementById("confirmarSenha");
+const senhaErro = document.getElementById("senhaErro");
+const mostrarSenha = document.getElementById("mostrarSenha");
 
-passwordInput.addEventListener("input", () => {
-  passwordDisplay.textContent = passwordInput.value;
-});
-
-const confirmPasswordInput = document.getElementById("confirm-password");
-const confirmPasswordDisplay = document.getElementById(
-  "confirm-password-display"
-);
-
-confirmPasswordInput.addEventListener("input", () => {
-  confirmPasswordDisplay.textContent = confirmPasswordInput.value;
-});
-
-const mostrarSenhaCheckbox = document.getElementById("mostrar-senha");
-const senhaInput = document.getElementById("password");
-const confirmarSenhaInput = document.getElementById("confirm-password");
-
-mostrarSenhaCheckbox.addEventListener("change", () => {
-  if (mostrarSenhaCheckbox.checked) {
-    senhaInput.type = "text";
+confirmarSenha.addEventListener("input", function () {
+  if (senha.value !== confirmarSenha.value) {
+    senhaErro.textContent = "As senhas não coincidem!";
   } else {
-    senhaInput.type = "password";
+    senhaErro.textContent = "";
   }
 });
 
-mostrarSenhaCheckbox.addEventListener("change", () => {
-  if (mostrarSenhaCheckbox.checked) {
-    confirmarSenhaInput.type = "text";
+mostrarSenha.addEventListener("change", function () {
+  if (mostrarSenha.checked) {
+    confirmarSenha.setAttribute("type", "text");
   } else {
-    confirmarSenhaInput.type = "password";
+    confirmarSenha.setAttribute("type", "password");
   }
 });
